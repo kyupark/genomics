@@ -1,0 +1,21 @@
+16:32:35 **** Incremental Build of configuration Debug for project geno-image ****
+make all 
+Building file: ../src/dataextractor/DataExtractor.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspace/bamtools/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/dataextractor/DataExtractor.d" -MT"src/dataextractor/DataExtractor.o" -o "src/dataextractor/DataExtractor.o" "../src/dataextractor/DataExtractor.cpp"
+../src/dataextractor/DataExtractor.cpp: In member function ‘bool DataExtractor::DataExtractor::load_file(std::string)’:
+../src/dataextractor/DataExtractor.cpp:25:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/dataextractor/DataExtractor.cpp: At global scope:
+../src/dataextractor/DataExtractor.cpp:53:5: error: prototype for ‘int DataExtractor::DataExtractor::get_image(std::ostream&, std::ostream&, const int&, const int&, int)’ does not match any in class ‘DataExtractor::DataExtractor’
+ int DataExtractor::get_image(ostream& red_c, ostream& green_c,
+     ^
+In file included from ../src/dataextractor/DataExtractor.cpp:8:0:
+../src/dataextractor/DataExtractor.hpp:34:6: error: candidate is: int DataExtractor::DataExtractor::get_image(std::ostream&, std::ostream&, int, int64_t, int)
+  int get_image(ostream& red_c, ostream& green_c,
+      ^
+make: *** [src/dataextractor/DataExtractor.o] Error 1
+
+16:32:36 Build Finished (took 1s.188ms)
+

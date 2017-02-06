@@ -1,0 +1,6 @@
+15:39:18 **** Build of configuration Default for project bamtools_cmake ****
+make all 
+make: *** No rule to make target `all'.  Stop.
+
+15:39:18 Build Finished (took 82ms)
+
