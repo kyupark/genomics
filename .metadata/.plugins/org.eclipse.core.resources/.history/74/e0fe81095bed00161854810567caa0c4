@@ -1,0 +1,31 @@
+/*
+ * ReadClipper.hpp
+ *
+ *  Created on: Feb 7, 2017
+ *      Author: el114
+ */
+
+#ifndef READCLIPPER_HPP_
+#define READCLIPPER_HPP_
+
+#include <string>
+#include <iostream>
+#include <api/BamWriter.h>
+#include <api/BamReader.h>
+
+namespace QT {
+
+using namesapce std;
+
+class ReadClipper {
+public:
+	ReadClipper();
+	~ReadClipper();
+
+	static bool ClipRead(string& file_name);
+};
+
+
+} /* namespace QT */
+
+#endif /* READCLIPPER_HPP_ */

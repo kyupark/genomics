@@ -1,0 +1,17 @@
+/*
+ * ReadClipper.hpp
+ *
+ *  Created on: Feb 7, 2017
+ *      Author: el114
+ */
+
+#ifndef READCLIPPER_HPP_
+#define READCLIPPER_HPP_
+
+class ReadClipper {
+public:
+	ReadClipper();
+	virtual ~ReadClipper();
+};
+
+#endif /* READCLIPPER_HPP_ */

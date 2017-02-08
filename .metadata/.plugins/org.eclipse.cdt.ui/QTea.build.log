@@ -1,0 +1,14 @@
+13:16:46 **** Incremental Build of configuration Release for project QTea ****
+make all 
+Building file: ../src/QTea.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/QTea.d" -MT"src/QTea.o" -o "src/QTea.o" "../src/QTea.cpp"
+In file included from ../src/QTea.cpp:10:0:
+../src/ReadClipper.hpp:22:34: fatal error: boost/lexical_cast.hpp: No such file or directory
+ #include <boost/lexical_cast.hpp>
+                                  ^
+compilation terminated.
+make: *** [src/QTea.o] Error 1
+
+13:16:48 Build Finished (took 1s.346ms)
+

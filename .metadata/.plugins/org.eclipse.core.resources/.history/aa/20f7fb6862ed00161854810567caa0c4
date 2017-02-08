@@ -1,0 +1,18 @@
+//============================================================================
+// Name        : QT.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+
+using namespace QT;
+using namespace std;
+
+int main() {
+	string file_name = "/home/el174/vincent_lim/tea_test/exome/crcA56B_normal.softclips.consd.bam";
+	ReadClipper::clip_read(file_name)
+	return 0;
+}
