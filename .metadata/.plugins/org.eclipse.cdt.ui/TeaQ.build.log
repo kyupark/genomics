@@ -1,8 +1,15 @@
-16:04:29 **** Incremental Build of configuration Release for project TeaQ ****
+20:15:30 **** Incremental Build of configuration Release for project TeaQ ****
 make all 
 Building file: ../src/ReadClipper.cpp
 Invoking: Cross G++ Compiler
 g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+../src/ReadClipper.cpp: In static member function ‘static bool TeaQ::ReadClipper::generate_contigs(std::string&, std::string)’:
+../src/ReadClipper.cpp:296:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      if (log_line.find("***") == -1 && cursor == 1) {
+                                   ^
+../src/ReadClipper.cpp:299:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      if (log_line.find("***") == -1 && cursor < 2) {
+                                   ^
 Finished building: ../src/ReadClipper.cpp
  
 Building target: TeaQ
@@ -11,5 +18,5 @@ g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/gen
 Finished building target: TeaQ
  
 
-16:04:37 Build Finished (took 8s.98ms)
+20:15:34 Build Finished (took 4s.811ms)
 

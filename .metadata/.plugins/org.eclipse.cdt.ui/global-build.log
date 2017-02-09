@@ -786,3 +786,1214 @@ Invoking: Cross G++ Linker
 g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
 Finished building target: TeaQ
  
+17:07:26 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+../src/ReadClipper.cpp:255:69: error: no ‘bool TeaQ::ReadClipper::generate_contigs(std::string&, std::string)’ member function declared in class ‘TeaQ::ReadClipper’
+ bool ReadClipper::generate_contigs(string& file_name, string options) {
+                                                                     ^
+make: *** [src/ReadClipper.o] Error 1
+17:08:53 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+../src/ReadClipper.cpp: In static member function ‘static bool TeaQ::ReadClipper::generate_contigs(std::string&, std::string)’:
+../src/ReadClipper.cpp:258:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/ReadClipper.cpp
+ 
+Building file: ../src/TeaQ.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/TeaQ.d" -MT"src/TeaQ.o" -o "src/TeaQ.o" "../src/TeaQ.cpp"
+Finished building: ../src/TeaQ.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:12:09 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+../src/ReadClipper.cpp: In static member function ‘static bool TeaQ::ReadClipper::generate_contigs(std::string&, std::string)’:
+../src/ReadClipper.cpp:259:34: error: no matching function for call to ‘getline(std::ifstream&, std::string&, const char [3])’
+  while(getline(in_f, line, "\n\n")) {
+                                  ^
+../src/ReadClipper.cpp:259:34: note: candidates are:
+In file included from ../src/ReadClipper.hpp:11:0,
+                 from ../src/ReadClipper.cpp:8:
+/usr/include/stdio.h:673:20: note: __ssize_t getline(char**, size_t*, FILE*)
+ extern _IO_ssize_t getline (char **__restrict __lineptr,
+                    ^
+/usr/include/stdio.h:673:20: note:   no known conversion for argument 2 from ‘std::string {aka std::basic_string<char>}’ to ‘size_t* {aka long unsigned int*}’
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2793:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(std::basic_istream<_CharT, _Traits>&, std::basic_string<_CharT, _Traits, _Alloc>&)
+     getline(basic_istream<_CharT, _Traits>& __is,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2793:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:259:34: note:   candidate expects 2 arguments, 3 provided
+  while(getline(in_f, line, "\n\n")) {
+                                  ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:53:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.tcc:1068:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(std::basic_istream<_CharT, _Traits>&, std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+     getline(basic_istream<_CharT, _Traits>& __in,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.tcc:1068:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:259:34: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘const char*’)
+  while(getline(in_f, line, "\n\n")) {
+                                  ^
+../src/ReadClipper.cpp:264:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [src/ReadClipper.o] Error 1
+17:12:38 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+../src/ReadClipper.cpp: In static member function ‘static bool TeaQ::ReadClipper::generate_contigs(std::string&, std::string)’:
+../src/ReadClipper.cpp:259:34: error: no matching function for call to ‘getline(std::ifstream&, std::string&, const char [3])’
+  while(getline(in_f, line, "\n\n")) {
+                                  ^
+../src/ReadClipper.cpp:259:34: note: candidates are:
+In file included from ../src/ReadClipper.hpp:11:0,
+                 from ../src/ReadClipper.cpp:8:
+/usr/include/stdio.h:673:20: note: __ssize_t getline(char**, size_t*, FILE*)
+ extern _IO_ssize_t getline (char **__restrict __lineptr,
+                    ^
+/usr/include/stdio.h:673:20: note:   no known conversion for argument 2 from ‘std::string {aka std::basic_string<char>}’ to ‘size_t* {aka long unsigned int*}’
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2793:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(std::basic_istream<_CharT, _Traits>&, std::basic_string<_CharT, _Traits, _Alloc>&)
+     getline(basic_istream<_CharT, _Traits>& __is,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2793:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:259:34: note:   candidate expects 2 arguments, 3 provided
+  while(getline(in_f, line, "\n\n")) {
+                                  ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:53:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.tcc:1068:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(std::basic_istream<_CharT, _Traits>&, std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+     getline(basic_istream<_CharT, _Traits>& __in,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.tcc:1068:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:259:34: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘const char*’)
+  while(getline(in_f, line, "\n\n")) {
+                                  ^
+../src/ReadClipper.cpp:264:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [src/ReadClipper.o] Error 1
+17:12:49 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+../src/ReadClipper.cpp: In static member function ‘static bool TeaQ::ReadClipper::generate_contigs(std::string&, std::string)’:
+../src/ReadClipper.cpp:259:34: error: no matching function for call to ‘getline(std::ifstream&, std::string&, const char [3])’
+  while(getline(in_f, line, "\n\n")) {
+                                  ^
+../src/ReadClipper.cpp:259:34: note: candidates are:
+In file included from ../src/ReadClipper.hpp:11:0,
+                 from ../src/ReadClipper.cpp:8:
+/usr/include/stdio.h:673:20: note: __ssize_t getline(char**, size_t*, FILE*)
+ extern _IO_ssize_t getline (char **__restrict __lineptr,
+                    ^
+/usr/include/stdio.h:673:20: note:   no known conversion for argument 2 from ‘std::string {aka std::basic_string<char>}’ to ‘size_t* {aka long unsigned int*}’
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2793:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(std::basic_istream<_CharT, _Traits>&, std::basic_string<_CharT, _Traits, _Alloc>&)
+     getline(basic_istream<_CharT, _Traits>& __is,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2793:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:259:34: note:   candidate expects 2 arguments, 3 provided
+  while(getline(in_f, line, "\n\n")) {
+                                  ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:53:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.tcc:1068:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(std::basic_istream<_CharT, _Traits>&, std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+     getline(basic_istream<_CharT, _Traits>& __in,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.tcc:1068:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:259:34: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘const char*’)
+  while(getline(in_f, line, "\n\n")) {
+                                  ^
+../src/ReadClipper.cpp:264:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [src/ReadClipper.o] Error 1
+17:21:47 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+../src/ReadClipper.cpp: In static member function ‘static bool TeaQ::ReadClipper::generate_contigs(std::string&, std::string)’:
+../src/ReadClipper.cpp:264:39: error: no match for ‘operator+’ (operand types are ‘std::basic_string<char>’ and ‘int64_t {aka long int}’)
+    cap3_cmd = "cap3" + options + "> " + count + ".log";
+                                       ^
+../src/ReadClipper.cpp:264:39: note: candidates are:
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/bits/stl_algobase.h:67:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/char_traits.h:39,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/stl_iterator.h:333:5: note: template<class _Iterator> std::reverse_iterator<_Iterator> std::operator+(typename std::reverse_iterator<_Iterator>::difference_type, const std::reverse_iterator<_Iterator>&)
+     operator+(typename reverse_iterator<_Iterator>::difference_type __n,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/stl_iterator.h:333:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:264:41: note:   mismatched types ‘const std::reverse_iterator<_Iterator>’ and ‘int64_t {aka long int}’
+    cap3_cmd = "cap3" + options + "> " + count + ".log";
+                                         ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/bits/stl_algobase.h:67:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/char_traits.h:39,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/stl_iterator.h:1118:5: note: template<class _Iterator> std::move_iterator<_Iterator> std::operator+(typename std::move_iterator<_Iterator>::difference_type, const std::move_iterator<_Iterator>&)
+     operator+(typename move_iterator<_Iterator>::difference_type __n,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/stl_iterator.h:1118:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:264:41: note:   mismatched types ‘const std::move_iterator<_Iterator>’ and ‘int64_t {aka long int}’
+    cap3_cmd = "cap3" + options + "> " + count + ".log";
+                                         ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2365:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2365:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:264:41: note:   mismatched types ‘const std::basic_string<_CharT, _Traits, _Alloc>’ and ‘int64_t {aka long int}’
+    cap3_cmd = "cap3" + options + "> " + count + ".log";
+                                         ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:53:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.tcc:692:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator+(const _CharT* __lhs,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.tcc:692:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:264:41: note:   mismatched types ‘const _CharT*’ and ‘std::basic_string<char>’
+    cap3_cmd = "cap3" + options + "> " + count + ".log";
+                                         ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:53:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.tcc:708:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator+(_CharT __lhs, const basic_string<_CharT, _Traits, _Alloc>& __rhs)
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.tcc:708:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:264:41: note:   mismatched types ‘const std::basic_string<_CharT, _Traits, _Alloc>’ and ‘int64_t {aka long int}’
+    cap3_cmd = "cap3" + options + "> " + count + ".log";
+                                         ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2402:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2402:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:264:41: note:   mismatched types ‘const _CharT*’ and ‘long int’
+    cap3_cmd = "cap3" + options + "> " + count + ".log";
+                                         ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2418:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs, _CharT __rhs)
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2418:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:264:41: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘long int’)
+    cap3_cmd = "cap3" + options + "> " + count + ".log";
+                                         ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2430:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(std::basic_string<_CharT, _Traits, _Alloc>&&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2430:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:264:41: note:   mismatched types ‘const std::basic_string<_CharT, _Traits, _Alloc>’ and ‘int64_t {aka long int}’
+    cap3_cmd = "cap3" + options + "> " + count + ".log";
+                                         ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2436:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>&&)
+     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2436:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:264:41: note:   mismatched types ‘std::basic_string<_CharT, _Traits, _Alloc>’ and ‘int64_t {aka long int}’
+    cap3_cmd = "cap3" + options + "> " + count + ".log";
+                                         ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2442:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(std::basic_string<_CharT, _Traits, _Alloc>&&, std::basic_string<_CharT, _Traits, _Alloc>&&)
+     operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2442:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:264:41: note:   mismatched types ‘std::basic_string<_CharT, _Traits, _Alloc>’ and ‘int64_t {aka long int}’
+    cap3_cmd = "cap3" + options + "> " + count + ".log";
+                                         ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2454:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, std::basic_string<_CharT, _Traits, _Alloc>&&)
+     operator+(const _CharT* __lhs,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2454:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:264:41: note:   mismatched types ‘const _CharT*’ and ‘std::basic_string<char>’
+    cap3_cmd = "cap3" + options + "> " + count + ".log";
+                                         ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2460:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, std::basic_string<_CharT, _Traits, _Alloc>&&)
+     operator+(_CharT __lhs,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2460:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:264:41: note:   mismatched types ‘std::basic_string<_CharT, _Traits, _Alloc>’ and ‘int64_t {aka long int}’
+    cap3_cmd = "cap3" + options + "> " + count + ".log";
+                                         ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2466:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(std::basic_string<_CharT, _Traits, _Alloc>&&, const _CharT*)
+     operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2466:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:264:41: note:   mismatched types ‘const _CharT*’ and ‘long int’
+    cap3_cmd = "cap3" + options + "> " + count + ".log";
+                                         ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2472:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(std::basic_string<_CharT, _Traits, _Alloc>&&, _CharT)
+     operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2472:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:264:41: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘long int’)
+    cap3_cmd = "cap3" + options + "> " + count + ".log";
+                                         ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/vector:65:0,
+                 from ../src/ReadClipper.hpp:17,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/stl_bvector.h:293:3: note: std::_Bit_iterator std::operator+(std::ptrdiff_t, const std::_Bit_iterator&)
+   operator+(ptrdiff_t __n, const _Bit_iterator& __x)
+   ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/stl_bvector.h:293:3: note:   no known conversion for argument 1 from ‘std::basic_string<char>’ to ‘std::ptrdiff_t {aka long int}’
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/stl_bvector.h:379:3: note: std::_Bit_const_iterator std::operator+(std::ptrdiff_t, const std::_Bit_const_iterator&)
+   operator+(ptrdiff_t __n, const _Bit_const_iterator& __x)
+   ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/stl_bvector.h:379:3: note:   no known conversion for argument 1 from ‘std::basic_string<char>’ to ‘std::ptrdiff_t {aka long int}’
+In file included from /opt/boost-1.57.0/include/boost/config/no_tr1/complex.hpp:21:0,
+                 from /opt/boost-1.57.0/include/boost/math/special_functions/math_fwd.hpp:30,
+                 from /opt/boost-1.57.0/include/boost/math/special_functions/sign.hpp:17,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/detail/inf_nan.hpp:34,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/detail/converter_lexical_streams.hpp:64,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/detail/converter_lexical.hpp:53,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/try_lexical_convert.hpp:34,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast.hpp:32,
+                 from ../src/ReadClipper.hpp:20,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/complex:324:5: note: template<class _Tp> std::complex<_Tp> std::operator+(const std::complex<_Tp>&, const std::complex<_Tp>&)
+     operator+(const complex<_Tp>& __x, const complex<_Tp>& __y)
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/complex:324:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:264:41: note:   ‘std::basic_string<char>’ is not derived from ‘const std::complex<_Tp>’
+    cap3_cmd = "cap3" + options + "> " + count + ".log";
+                                         ^
+In file included from /opt/boost-1.57.0/include/boost/config/no_tr1/complex.hpp:21:0,
+                 from /opt/boost-1.57.0/include/boost/math/special_functions/math_fwd.hpp:30,
+                 from /opt/boost-1.57.0/include/boost/math/special_functions/sign.hpp:17,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/detail/inf_nan.hpp:34,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/detail/converter_lexical_streams.hpp:64,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/detail/converter_lexical.hpp:53,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/try_lexical_convert.hpp:34,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast.hpp:32,
+                 from ../src/ReadClipper.hpp:20,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/complex:333:5: note: template<class _Tp> std::complex<_Tp> std::operator+(const std::complex<_Tp>&, const _Tp&)
+     operator+(const complex<_Tp>& __x, const _Tp& __y)
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/complex:333:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:264:41: note:   ‘std::basic_string<char>’ is not derived from ‘const std::complex<_Tp>’
+    cap3_cmd = "cap3" + options + "> " + count + ".log";
+                                         ^
+In file included from /opt/boost-1.57.0/include/boost/config/no_tr1/complex.hpp:21:0,
+                 from /opt/boost-1.57.0/include/boost/math/special_functions/math_fwd.hpp:30,
+                 from /opt/boost-1.57.0/include/boost/math/special_functions/sign.hpp:17,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/detail/inf_nan.hpp:34,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/detail/converter_lexical_streams.hpp:64,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/detail/converter_lexical.hpp:53,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/try_lexical_convert.hpp:34,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast.hpp:32,
+                 from ../src/ReadClipper.hpp:20,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/complex:342:5: note: template<class _Tp> std::complex<_Tp> std::operator+(const _Tp&, const std::complex<_Tp>&)
+     operator+(const _Tp& __x, const complex<_Tp>& __y)
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/complex:342:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:264:41: note:   mismatched types ‘const std::complex<_Tp>’ and ‘int64_t {aka long int}’
+    cap3_cmd = "cap3" + options + "> " + count + ".log";
+                                         ^
+In file included from /opt/boost-1.57.0/include/boost/config/no_tr1/complex.hpp:21:0,
+                 from /opt/boost-1.57.0/include/boost/math/special_functions/math_fwd.hpp:30,
+                 from /opt/boost-1.57.0/include/boost/math/special_functions/sign.hpp:17,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/detail/inf_nan.hpp:34,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/detail/converter_lexical_streams.hpp:64,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/detail/converter_lexical.hpp:53,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/try_lexical_convert.hpp:34,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast.hpp:32,
+                 from ../src/ReadClipper.hpp:20,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/complex:443:5: note: template<class _Tp> std::complex<_Tp> std::operator+(const std::complex<_Tp>&)
+     operator+(const complex<_Tp>& __x)
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/complex:443:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:264:41: note:   ‘std::basic_string<char>’ is not derived from ‘const std::complex<_Tp>’
+    cap3_cmd = "cap3" + options + "> " + count + ".log";
+                                         ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/bits/stl_algobase.h:67:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/char_traits.h:39,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/stl_iterator.h:902:5: note: template<class _Iterator, class _Container> __gnu_cxx::__normal_iterator<_Iterator, _Container> __gnu_cxx::operator+(typename __gnu_cxx::__normal_iterator<_Iterator, _Container>::difference_type, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+     operator+(typename __normal_iterator<_Iterator, _Container>::difference_type
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/stl_iterator.h:902:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:264:41: note:   mismatched types ‘const __gnu_cxx::__normal_iterator<_Iterator, _Container>’ and ‘int64_t {aka long int}’
+    cap3_cmd = "cap3" + options + "> " + count + ".log";
+                                         ^
+make: *** [src/ReadClipper.o] Error 1
+17:22:30 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building file: ../src/TeaQ.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/TeaQ.d" -MT"src/TeaQ.o" -o "src/TeaQ.o" "../src/TeaQ.cpp"
+../src/TeaQ.cpp: In function ‘int main()’:
+../src/TeaQ.cpp:19:32: error: ‘filename’ was not declared in this scope
+  ReadClipper::generate_contigs(filename);
+                                ^
+make: *** [src/TeaQ.o] Error 1
+17:22:47 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/TeaQ.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/TeaQ.d" -MT"src/TeaQ.o" -o "src/TeaQ.o" "../src/TeaQ.cpp"
+Finished building: ../src/TeaQ.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:23:06 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:24:26 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:26:04 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+../src/ReadClipper.cpp:270:17: warning: missing terminating " character [enabled by default]
+   ss << line << "\" << endl;
+                 ^
+../src/ReadClipper.cpp:270:3: error: missing terminating " character
+   ss << line << "\" << endl;
+   ^
+../src/ReadClipper.cpp: In static member function ‘static bool TeaQ::ReadClipper::generate_contigs(std::string&, std::string)’:
+../src/ReadClipper.cpp:271:2: error: expected primary-expression before ‘}’ token
+  }
+  ^
+../src/ReadClipper.cpp:271:2: error: expected ‘;’ before ‘}’ token
+make: *** [src/ReadClipper.o] Error 1
+17:26:27 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:27:08 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:27:31 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:28:38 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:29:03 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:29:27 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:30:38 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:33:33 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:34:53 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:38:50 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:42:56 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+../src/ReadClipper.cpp: In static member function ‘static bool TeaQ::ReadClipper::generate_contigs(std::string&, std::string)’:
+../src/ReadClipper.cpp:273:17: error: no matching function for call to ‘std::basic_ofstream<char>::open()’
+    temp_fa.open();
+                 ^
+../src/ReadClipper.cpp:273:17: note: candidates are:
+In file included from ../src/ReadClipper.hpp:15:0,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/fstream:713:7: note: void std::basic_ofstream<_CharT, _Traits>::open(const char*, std::ios_base::openmode) [with _CharT = char; _Traits = std::char_traits<char>; std::ios_base::openmode = std::_Ios_Openmode]
+       open(const char* __s,
+       ^
+/opt/gcc/4.8.5/include/c++/4.8.5/fstream:713:7: note:   candidate expects 2 arguments, 0 provided
+/opt/gcc/4.8.5/include/c++/4.8.5/fstream:734:7: note: void std::basic_ofstream<_CharT, _Traits>::open(const string&, std::ios_base::openmode) [with _CharT = char; _Traits = std::char_traits<char>; std::string = std::basic_string<char>; std::ios_base::openmode = std::_Ios_Openmode]
+       open(const std::string& __s,
+       ^
+/opt/gcc/4.8.5/include/c++/4.8.5/fstream:734:7: note:   candidate expects 2 arguments, 0 provided
+make: *** [src/ReadClipper.o] Error 1
+17:46:45 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:47:38 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:49:45 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:56:06 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:57:16 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:57:57 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+18:03:07 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+18:07:24 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+../src/ReadClipper.cpp: In static member function ‘static bool TeaQ::ReadClipper::generate_contigs(std::string&, std::string)’:
+../src/ReadClipper.cpp:275:43: error: no match for ‘operator+’ (operand types are ‘std::basic_string<char>’ and ‘int64_t {aka long int}’)
+    cmd_cap3 = "cap3 " + temp_fa_file_name + count + " " + options +
+                                           ^
+../src/ReadClipper.cpp:275:43: note: candidates are:
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/bits/stl_algobase.h:67:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/char_traits.h:39,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/stl_iterator.h:333:5: note: template<class _Iterator> std::reverse_iterator<_Iterator> std::operator+(typename std::reverse_iterator<_Iterator>::difference_type, const std::reverse_iterator<_Iterator>&)
+     operator+(typename reverse_iterator<_Iterator>::difference_type __n,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/stl_iterator.h:333:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:275:45: note:   mismatched types ‘const std::reverse_iterator<_Iterator>’ and ‘int64_t {aka long int}’
+    cmd_cap3 = "cap3 " + temp_fa_file_name + count + " " + options +
+                                             ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/bits/stl_algobase.h:67:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/char_traits.h:39,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/stl_iterator.h:1118:5: note: template<class _Iterator> std::move_iterator<_Iterator> std::operator+(typename std::move_iterator<_Iterator>::difference_type, const std::move_iterator<_Iterator>&)
+     operator+(typename move_iterator<_Iterator>::difference_type __n,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/stl_iterator.h:1118:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:275:45: note:   mismatched types ‘const std::move_iterator<_Iterator>’ and ‘int64_t {aka long int}’
+    cmd_cap3 = "cap3 " + temp_fa_file_name + count + " " + options +
+                                             ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2365:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2365:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:275:45: note:   mismatched types ‘const std::basic_string<_CharT, _Traits, _Alloc>’ and ‘int64_t {aka long int}’
+    cmd_cap3 = "cap3 " + temp_fa_file_name + count + " " + options +
+                                             ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:53:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.tcc:692:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator+(const _CharT* __lhs,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.tcc:692:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:275:45: note:   mismatched types ‘const _CharT*’ and ‘std::basic_string<char>’
+    cmd_cap3 = "cap3 " + temp_fa_file_name + count + " " + options +
+                                             ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:53:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.tcc:708:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator+(_CharT __lhs, const basic_string<_CharT, _Traits, _Alloc>& __rhs)
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.tcc:708:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:275:45: note:   mismatched types ‘const std::basic_string<_CharT, _Traits, _Alloc>’ and ‘int64_t {aka long int}’
+    cmd_cap3 = "cap3 " + temp_fa_file_name + count + " " + options +
+                                             ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2402:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2402:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:275:45: note:   mismatched types ‘const _CharT*’ and ‘long int’
+    cmd_cap3 = "cap3 " + temp_fa_file_name + count + " " + options +
+                                             ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2418:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs, _CharT __rhs)
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2418:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:275:45: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘long int’)
+    cmd_cap3 = "cap3 " + temp_fa_file_name + count + " " + options +
+                                             ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2430:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(std::basic_string<_CharT, _Traits, _Alloc>&&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2430:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:275:45: note:   mismatched types ‘const std::basic_string<_CharT, _Traits, _Alloc>’ and ‘int64_t {aka long int}’
+    cmd_cap3 = "cap3 " + temp_fa_file_name + count + " " + options +
+                                             ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2436:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>&&)
+     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2436:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:275:45: note:   mismatched types ‘std::basic_string<_CharT, _Traits, _Alloc>’ and ‘int64_t {aka long int}’
+    cmd_cap3 = "cap3 " + temp_fa_file_name + count + " " + options +
+                                             ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2442:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(std::basic_string<_CharT, _Traits, _Alloc>&&, std::basic_string<_CharT, _Traits, _Alloc>&&)
+     operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2442:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:275:45: note:   mismatched types ‘std::basic_string<_CharT, _Traits, _Alloc>’ and ‘int64_t {aka long int}’
+    cmd_cap3 = "cap3 " + temp_fa_file_name + count + " " + options +
+                                             ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2454:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, std::basic_string<_CharT, _Traits, _Alloc>&&)
+     operator+(const _CharT* __lhs,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2454:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:275:45: note:   mismatched types ‘const _CharT*’ and ‘std::basic_string<char>’
+    cmd_cap3 = "cap3 " + temp_fa_file_name + count + " " + options +
+                                             ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2460:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, std::basic_string<_CharT, _Traits, _Alloc>&&)
+     operator+(_CharT __lhs,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2460:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:275:45: note:   mismatched types ‘std::basic_string<_CharT, _Traits, _Alloc>’ and ‘int64_t {aka long int}’
+    cmd_cap3 = "cap3 " + temp_fa_file_name + count + " " + options +
+                                             ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2466:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(std::basic_string<_CharT, _Traits, _Alloc>&&, const _CharT*)
+     operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2466:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:275:45: note:   mismatched types ‘const _CharT*’ and ‘long int’
+    cmd_cap3 = "cap3 " + temp_fa_file_name + count + " " + options +
+                                             ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2472:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(std::basic_string<_CharT, _Traits, _Alloc>&&, _CharT)
+     operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2472:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:275:45: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘long int’)
+    cmd_cap3 = "cap3 " + temp_fa_file_name + count + " " + options +
+                                             ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/vector:65:0,
+                 from ../src/ReadClipper.hpp:17,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/stl_bvector.h:293:3: note: std::_Bit_iterator std::operator+(std::ptrdiff_t, const std::_Bit_iterator&)
+   operator+(ptrdiff_t __n, const _Bit_iterator& __x)
+   ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/stl_bvector.h:293:3: note:   no known conversion for argument 1 from ‘std::basic_string<char>’ to ‘std::ptrdiff_t {aka long int}’
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/stl_bvector.h:379:3: note: std::_Bit_const_iterator std::operator+(std::ptrdiff_t, const std::_Bit_const_iterator&)
+   operator+(ptrdiff_t __n, const _Bit_const_iterator& __x)
+   ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/stl_bvector.h:379:3: note:   no known conversion for argument 1 from ‘std::basic_string<char>’ to ‘std::ptrdiff_t {aka long int}’
+In file included from /opt/boost-1.57.0/include/boost/config/no_tr1/complex.hpp:21:0,
+                 from /opt/boost-1.57.0/include/boost/math/special_functions/math_fwd.hpp:30,
+                 from /opt/boost-1.57.0/include/boost/math/special_functions/sign.hpp:17,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/detail/inf_nan.hpp:34,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/detail/converter_lexical_streams.hpp:64,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/detail/converter_lexical.hpp:53,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/try_lexical_convert.hpp:34,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast.hpp:32,
+                 from ../src/ReadClipper.hpp:20,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/complex:324:5: note: template<class _Tp> std::complex<_Tp> std::operator+(const std::complex<_Tp>&, const std::complex<_Tp>&)
+     operator+(const complex<_Tp>& __x, const complex<_Tp>& __y)
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/complex:324:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:275:45: note:   ‘std::basic_string<char>’ is not derived from ‘const std::complex<_Tp>’
+    cmd_cap3 = "cap3 " + temp_fa_file_name + count + " " + options +
+                                             ^
+In file included from /opt/boost-1.57.0/include/boost/config/no_tr1/complex.hpp:21:0,
+                 from /opt/boost-1.57.0/include/boost/math/special_functions/math_fwd.hpp:30,
+                 from /opt/boost-1.57.0/include/boost/math/special_functions/sign.hpp:17,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/detail/inf_nan.hpp:34,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/detail/converter_lexical_streams.hpp:64,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/detail/converter_lexical.hpp:53,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/try_lexical_convert.hpp:34,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast.hpp:32,
+                 from ../src/ReadClipper.hpp:20,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/complex:333:5: note: template<class _Tp> std::complex<_Tp> std::operator+(const std::complex<_Tp>&, const _Tp&)
+     operator+(const complex<_Tp>& __x, const _Tp& __y)
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/complex:333:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:275:45: note:   ‘std::basic_string<char>’ is not derived from ‘const std::complex<_Tp>’
+    cmd_cap3 = "cap3 " + temp_fa_file_name + count + " " + options +
+                                             ^
+In file included from /opt/boost-1.57.0/include/boost/config/no_tr1/complex.hpp:21:0,
+                 from /opt/boost-1.57.0/include/boost/math/special_functions/math_fwd.hpp:30,
+                 from /opt/boost-1.57.0/include/boost/math/special_functions/sign.hpp:17,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/detail/inf_nan.hpp:34,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/detail/converter_lexical_streams.hpp:64,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/detail/converter_lexical.hpp:53,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/try_lexical_convert.hpp:34,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast.hpp:32,
+                 from ../src/ReadClipper.hpp:20,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/complex:342:5: note: template<class _Tp> std::complex<_Tp> std::operator+(const _Tp&, const std::complex<_Tp>&)
+     operator+(const _Tp& __x, const complex<_Tp>& __y)
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/complex:342:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:275:45: note:   mismatched types ‘const std::complex<_Tp>’ and ‘int64_t {aka long int}’
+    cmd_cap3 = "cap3 " + temp_fa_file_name + count + " " + options +
+                                             ^
+In file included from /opt/boost-1.57.0/include/boost/config/no_tr1/complex.hpp:21:0,
+                 from /opt/boost-1.57.0/include/boost/math/special_functions/math_fwd.hpp:30,
+                 from /opt/boost-1.57.0/include/boost/math/special_functions/sign.hpp:17,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/detail/inf_nan.hpp:34,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/detail/converter_lexical_streams.hpp:64,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/detail/converter_lexical.hpp:53,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast/try_lexical_convert.hpp:34,
+                 from /opt/boost-1.57.0/include/boost/lexical_cast.hpp:32,
+                 from ../src/ReadClipper.hpp:20,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/complex:443:5: note: template<class _Tp> std::complex<_Tp> std::operator+(const std::complex<_Tp>&)
+     operator+(const complex<_Tp>& __x)
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/complex:443:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:275:45: note:   ‘std::basic_string<char>’ is not derived from ‘const std::complex<_Tp>’
+    cmd_cap3 = "cap3 " + temp_fa_file_name + count + " " + options +
+                                             ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/bits/stl_algobase.h:67:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/char_traits.h:39,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/istream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/sstream:38,
+                 from ../src/ReadClipper.hpp:13,
+                 from ../src/ReadClipper.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/stl_iterator.h:902:5: note: template<class _Iterator, class _Container> __gnu_cxx::__normal_iterator<_Iterator, _Container> __gnu_cxx::operator+(typename __gnu_cxx::__normal_iterator<_Iterator, _Container>::difference_type, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+     operator+(typename __normal_iterator<_Iterator, _Container>::difference_type
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/stl_iterator.h:902:5: note:   template argument deduction/substitution failed:
+../src/ReadClipper.cpp:275:45: note:   mismatched types ‘const __gnu_cxx::__normal_iterator<_Iterator, _Container>’ and ‘int64_t {aka long int}’
+    cmd_cap3 = "cap3 " + temp_fa_file_name + count + " " + options +
+                                             ^
+make: *** [src/ReadClipper.o] Error 1
+18:08:13 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+18:14:53 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+18:15:27 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+18:25:26 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+20:10:09 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+../src/ReadClipper.cpp: In static member function ‘static bool TeaQ::ReadClipper::generate_contigs(std::string&, std::string)’:
+../src/ReadClipper.cpp:296:46: error: lvalue required as left operand of assignment
+      if (log_line.find("***") == 0 && cursor = 1) {
+                                              ^
+../src/ReadClipper.cpp:325:10: error: cannot convert ‘std::basic_string<char>’ to ‘int64_t {aka long int}’ in assignment
+      pos = log_line.substr(colon, plus_sign);
+          ^
+make: *** [src/ReadClipper.o] Error 1
+20:10:24 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+../src/ReadClipper.cpp: In static member function ‘static bool TeaQ::ReadClipper::generate_contigs(std::string&, std::string)’:
+../src/ReadClipper.cpp:325:10: error: cannot convert ‘std::basic_string<char>’ to ‘int64_t {aka long int}’ in assignment
+      pos = log_line.substr(colon, plus_sign);
+          ^
+make: *** [src/ReadClipper.o] Error 1
+20:11:12 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+20:13:52 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+20:15:30 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+../src/ReadClipper.cpp: In static member function ‘static bool TeaQ::ReadClipper::generate_contigs(std::string&, std::string)’:
+../src/ReadClipper.cpp:296:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      if (log_line.find("***") == -1 && cursor == 1) {
+                                   ^
+../src/ReadClipper.cpp:299:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      if (log_line.find("***") == -1 && cursor < 2) {
+                                   ^
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
