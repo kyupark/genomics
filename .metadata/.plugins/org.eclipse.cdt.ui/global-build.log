@@ -1997,3 +1997,294 @@ Invoking: Cross G++ Linker
 g++ -L/opt/boost-1.57.0/lib -L"/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
 Finished building target: TeaQ
  
+10:05:57 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+make: Nothing to be done for `all'.
+10:33:56 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+In file included from ../src/ReadClipper.cpp:8:0:
+../src/ReadClipper.hpp:18:27: fatal error: api/BamReader.h: No such file or directory
+ #include <api/BamReader.h>
+                           ^
+compilation terminated.
+make: *** [src/ReadClipper.o] Error 1
+10:35:00 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+../src/ReadClipper.cpp: In static member function ‘static bool TeaQ::ReadClipper::generate_contigs(std::string&, std::string)’:
+../src/ReadClipper.cpp:296:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      if (log_line.find("***") == -1 && cursor == 1) {
+                                   ^
+../src/ReadClipper.cpp:299:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      if (log_line.find("***") == -1 && cursor < 2) {
+                                   ^
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+10:35:19 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+make: Nothing to be done for `all'.
+10:35:28 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+make: Nothing to be done for `all'.
+10:36:28 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+../src/ReadClipper.cpp: In static member function ‘static bool TeaQ::ReadClipper::generate_contigs(std::string&, std::string)’:
+../src/ReadClipper.cpp:296:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      if (log_line.find("***") == -1 && cursor == 1) {
+                                   ^
+../src/ReadClipper.cpp:299:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      if (log_line.find("***") == -1 && cursor < 2) {
+                                   ^
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+10:37:00 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+../src/ReadClipper.cpp: In static member function ‘static bool TeaQ::ReadClipper::generate_contigs(std::string&, std::string)’:
+../src/ReadClipper.cpp:296:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      if (log_line.find("***") == -1 && cursor == 1) {
+                                   ^
+../src/ReadClipper.cpp:299:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      if (log_line.find("***") == -1 && cursor < 2) {
+                                   ^
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+10:45:04 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+10:46:40 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+10:48:11 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+10:52:06 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+11:32:51 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+11:33:12 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+11:34:14 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+11:34:54 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+11:36:09 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+11:37:19 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+11:41:02 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+11:44:59 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+11:48:42 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+11:50:16 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+11:51:19 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+../src/ReadClipper.cpp: In static member function ‘static bool TeaQ::ReadClipper::generate_contigs(std::string&, std::string)’:
+../src/ReadClipper.cpp:329:31: error: ‘no_of_reads’ was not declared in this scope
+    cout << "No of Reads: " << no_of_reads << endl;
+                               ^
+make: *** [src/ReadClipper.o] Error 1
+11:51:37 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+11:52:29 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+12:09:28 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 

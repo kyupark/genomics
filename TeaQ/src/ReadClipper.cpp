@@ -255,9 +255,10 @@ bool ReadClipper::filter_reads(string& file_name, int64_t minimum_base_gap) {
 bool ReadClipper::generate_contigs(string& file_name, string options) {
 	ifstream in_f(file_name + ".filtered_f", ifstream::binary);
 	string line;
-	stringstream ss;
+
 	string cmd_cap3;
-	string temp_fa_log_file_name;
+	string log_file_name;
+	string cap_info_file_name;
 
 	string cap3_output_dir = file_name + ".cap3_output";
 	string cmd_rmdir = "rm -rf " + cap3_output_dir;
@@ -278,62 +279,86 @@ bool ReadClipper::generate_contigs(string& file_name, string options) {
 			temp_fa << line << endl;
 		}
 		else {
+			stringstream ss;
 			temp_fa_file_name = temp_fa_file_prefix + "." + to_string(count);
-			temp_fa_log_file_name = temp_fa_file_name + ".log";
+			log_file_name = temp_fa_file_name + ".log";
+			cap_info_file_name = temp_fa_file_name + ".cap.info";
 
 			temp_fa.close();
 			cmd_cap3 = "cap3 " + temp_fa_file_name + " " + options +
-					" > " + temp_fa_log_file_name;
+					" > " + log_file_name;
 			cout << cmd_cap3 << endl;
 			system(cmd_cap3.c_str());
 
-			ifstream in(temp_fa_log_file_name, ifstream::binary);
-			string log_line;
-			int64_t cursor = 0;
+			ifstream in(cap_info_file_name, ifstream::binary);
+			string info_line;
+			stringstream ss_contigs;
 			int64_t no_of_reads = 0;
-			if (getline(in, log_line)) {
-				while(getline(in, log_line)) {
-					if (log_line.find("***") == -1 && cursor == 1) {
-						++no_of_reads;
-					}
-					if (log_line.find("***") == -1 && cursor < 2) {
-						++cursor;
-						continue;
+
+			while(getline(in, info_line)) {
+				int64_t cursor = 0;
+				int64_t cursor1 = 0;
+				int64_t cursor2 = 0;
+
+				string chr;
+				string pos;
+				int64_t cursor_colon;
+
+				cout << info_line << endl;
+				cursor = info_line.find("Clip");
+				if (cursor != -1) {
+					++no_of_reads;
+					cursor1 = info_line.find("chr");
+					cursor2 = info_line.find(" left");
+					info_line = info_line.substr(cursor1, cursor2-5);
+					cout << info_line << endl;
+
+					cursor_colon = info_line.find(":");
+
+					chr = info_line.substr(0, cursor_colon);
+					pos = info_line.substr(cursor_colon+1);
+
+					if (no_of_reads == 1) {
+
+						ss << chr << "\t" << pos;
 					}
 					else {
-						getline(in, log_line);
-						break;
+						ss << "," << pos;
 					}
 				}
-
-				no_of_reads -= 2;
-
-				int64_t colon;
-				int64_t plus_sign;
-				string ref;
-				string pos;
-				stringstream ss_contigs;
-
-				for (int64_t i = 0; i != no_of_reads; ++i) {
-					getline(in, log_line);
-					colon = log_line.find(":");
-
-					if (i == 0) {
-						cout << log_line << endl << " colon:" << colon;
-						ref = log_line.substr(0, colon);
-						contigs << ref << ":";
-					}
-					plus_sign = log_line.find("+");
-					cout << " +:" << plus_sign << endl;
-					pos = log_line.substr(colon, plus_sign);
-
-					if (i != 0) {
-						contigs << ",";
-					}
-					contigs << pos;
-				}
-				break;
 			}
+
+			ss << "\t" << no_of_reads;
+			cout << ss.str() << endl;
+
+//				int64_t colon;
+//				int64_t plus_sign;
+//				string ref;
+//				string pos;
+//				stringstream ss_contigs;
+//
+//				for (int64_t i = 0; i != no_of_reads; ++i) {
+//					getline(in, log_line);
+//					colon = log_line.find(":");
+//
+//					if (colon != -1) {
+//						if (i == 0) {
+//							cout << log_line << endl << " colon:" << colon;
+//							ref = log_line.substr(0, colon);
+//							contigs << ref << ":";
+//						}
+//						plus_sign = log_line.find("+");
+//						cout << " +:" << plus_sign << endl;
+//						pos = log_line.substr(colon, plus_sign);
+//
+//						if (i != 0) {
+//							contigs << ",";
+//						}
+//						contigs << pos;
+//					}
+//				}
+//				break;
+//			}
 
 			++count;
 			temp_fa_file_name = cap3_output_dir + "/temp.fa" + "." + to_string(count);
