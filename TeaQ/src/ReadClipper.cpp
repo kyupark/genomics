@@ -15,33 +15,46 @@ ReadClipper::~ReadClipper() {
 	// TODO Auto-generated destructor stub
 }
 
-bool ReadClipper::clip_reads(string& file_name, int64_t minimum_read_length) {
+//bool ReadClipper::clip_sort_filter(string& bam_file_name,
+//		int64_t minimum_read_length = 5,
+//		int64_t minimum_base_gap = 2,
+//		string cap3_options = "-i 21 -j 31 -o 16 -s 251 -p 70") {
+//
+//	clip_reads(string& file_name, int64_t minimum_read_length);
+//	filter_reads(string& file_name, int64_t minimum_base_gap);
+//	generate_contigs(string& file_name, string cap3_options);
+//
+//}
+
+bool ReadClipper::clip_reads(string& bam_file_name, int64_t minimum_read_length) {
 	cout << "Clipping Reads" << endl;
 
-	ifstream in(file_name, ifstream::binary);
-	string line;
-
 	BamReader reader;
-
-	if ( !reader.Open(file_name)) {
+	if ( !reader.Open(bam_file_name)) {
 		cerr << "Could not open input BAM file" << endl;
 		return false;
 	}
 
 	BamAlignment al;
-	string clipped_f_file_name = file_name + ".clipped_f";
-	string clipped_r_file_name = file_name + ".clipped_r";
-	ofstream clipped_f(clipped_f_file_name);
-	cout << "Writing " << clipped_f_file_name << endl;
-	ofstream clipped_r(clipped_r_file_name);
-	cout << "Writing " << clipped_r_file_name << endl;
+	auto& refData = reader.GetReferenceData();
+	string f_clipped_file_name = bam_file_name + ".f_clipped";
+	string r_clipped_file_name = bam_file_name + ".r_clipped";
+	ofstream f_clipped(f_clipped_file_name);
+	cout << "Writing " << f_clipped_file_name << endl;
+	ofstream r_clipped(r_clipped_file_name);
+	cout << "Writing " << r_clipped_file_name << endl;
 
+//	int count = 0;
 	while(reader.GetNextAlignment(al)) {
+//		++count;
+//		if (count == 50) {
+//			break;
+//		}
 		if (al.IsDuplicate()) {
 			continue;
 		}
 
-		int64_t refID = al.RefID;
+		string refID = to_string(al.RefID);
 		int64_t pos = al.Position;
 		string bases = al.QueryBases;
 
@@ -77,58 +90,51 @@ bool ReadClipper::clip_reads(string& file_name, int64_t minimum_read_length) {
 			cursor += len;
 			pos += len;
 
-			/*
-			// checking because some reads do not have accurate cigar info
-			// skip writing file
-			if (cursor > bases_length) {
-				break;
-			}
-			*/
 		}
 
-		//if (cursor == bases_length) {
-			clipped_f << ss_f.str();
-			clipped_r << ss_r.str();
-		//}
+		cout << ss_f.str();
+
+		f_clipped << ss_f.str();
+		r_clipped << ss_r.str();
+
 	}
 
-	cout << "Closing " << clipped_f_file_name << endl;
-	clipped_f.close();
+	cout << "Closing " << f_clipped_file_name << endl;
+	f_clipped.close();
 
-	cout << "Closing " << clipped_r_file_name << endl;
-	clipped_r.close();
+	cout << "Closing " << r_clipped_file_name << endl;
+	r_clipped.close();
 
-	cout << "Sorting " << clipped_f_file_name << endl;
-	string sort_f_cmd = "sort -g -k1 -k2 " + clipped_f_file_name + " -o " + clipped_f_file_name; // + ".sorted";
+	cout << "Sorting " << f_clipped_file_name << endl;
+	string sort_f_cmd = "sort -g -k1 -k2 " + f_clipped_file_name + " -o " + f_clipped_file_name;
 	system(sort_f_cmd.c_str());
 
-	cout << "Sorting " << clipped_r_file_name << endl;
-	string sort_r_cmd = "sort -g -k1 -k2 " + clipped_r_file_name + " -o " + clipped_r_file_name; // + ".sorted";
+	cout << "Sorting " << r_clipped_file_name << endl;
+	string sort_r_cmd = "sort -g -k1 -k2 " + r_clipped_file_name + " -o " + r_clipped_file_name;
 	system(sort_r_cmd.c_str());
 
 
 	return true;
 }
 
-bool ReadClipper::filter_reads(string& file_name, int64_t minimum_base_gap) {
+bool ReadClipper::filter_reads(string& bam_file_name, int64_t minimum_base_gap) {
 	cout << "Filtering Reads" << endl;
 
-	ifstream in_f(file_name + ".clipped_f", ifstream::binary);
-	ifstream in_r(file_name + ".clipped_r", ifstream::binary);
+	ifstream in_f(bam_file_name + ".f_clipped", ifstream::binary);
+	ifstream in_r(bam_file_name + ".r_clipped", ifstream::binary);
 
 	string line;
 
-	string al_prev_refID;
+	string al_prev_refName;
 	int64_t al_prev_pos;
 	string al_prev_bases;
 
-	int64_t al_current_refID_int;
-	string al_current_refID;
+	string al_current_refName;
 	int64_t al_current_pos;
 	string al_current_bases;
 
-	string filtered_f_file_name = file_name + ".filtered_f";
-	string filtered_r_file_name = file_name + ".filtered_r";
+	string filtered_f_file_name = bam_file_name + ".f_filtered";
+	string filtered_r_file_name = bam_file_name + ".r_filtered";
 	ofstream filtered_f(filtered_f_file_name);
 	cout << "Writing " << filtered_f_file_name << endl;
 	ofstream filtered_r(filtered_r_file_name);
@@ -146,102 +152,37 @@ bool ReadClipper::filter_reads(string& file_name, int64_t minimum_base_gap) {
 		if(!line.empty()){
 
 			getline(linestream, value, '\t');
-			al_current_refID_int = boost::lexical_cast<int64_t>(value);
-			++al_current_refID_int;
-
-			if (al_current_refID_int == 23) {
-				al_current_refID = "chrX";
-			}
-			else if (al_current_refID_int == 24) {
-				al_current_refID = "chrY";
-			}
-			else {
-				al_current_refID = "chr" + to_string(al_current_refID_int);
-			}
-
+			al_current_refName = value;
 			getline(linestream, value, '\t');
 			al_current_pos = boost::lexical_cast<int64_t>(value);
 			getline(linestream, value, '\t');
 			al_current_bases = value;
 
-			if (al_current_refID == al_prev_refID
+			if (al_current_refName == al_prev_refName
 					&& al_current_pos - al_prev_pos <= minimum_base_gap) {
-				filtered_f << ">" << al_prev_refID << ":" << al_prev_pos << endl;
-				filtered_f << al_prev_bases << endl;
+				filtered_f  << al_prev_refName << "\t" << al_prev_pos << "\t" << al_prev_bases << endl;
 				is_group = true;
 			}
 			else {
 				if (is_group) {
-					filtered_f << ">" << al_prev_refID << ":" << al_prev_pos << endl;
-					filtered_f << al_prev_bases << endl;
-					filtered_f << endl;
+					filtered_f << al_prev_refName << "\t" << al_prev_pos << "\t" << al_prev_bases << endl << endl;
 				}
 				is_group = false;
 			}
 
-			al_prev_refID = al_current_refID;
+			al_prev_refName = al_current_refName;
 			al_prev_pos = al_current_pos;
 			al_prev_bases = al_current_bases;
 		}
 	}
 
-	al_prev_refID = "";
+	al_prev_refName = "";
 	al_prev_pos = 0;
 	al_prev_bases = "";
 
-	al_current_refID = "";
+	al_current_refName = "";
 	al_current_pos = 0;
 	al_current_bases = "";
-
-	while(getline(in_r, line)){
-
-			stringstream linestream(line);
-			string value;
-
-			//stringstream ss;
-
-			if(!line.empty()){
-
-				getline(linestream, value, '\t');
-				al_current_refID_int = boost::lexical_cast<int64_t>(value);
-				++al_current_refID_int;
-
-				if (al_current_refID_int == 23) {
-					al_current_refID = "chrX";
-				}
-				else if (al_current_refID_int == 24) {
-					al_current_refID = "chrY";
-				}
-				else {
-					al_current_refID = "chr" + to_string(al_current_refID_int);
-				}
-
-				getline(linestream, value, '\t');
-				al_current_pos = boost::lexical_cast<int64_t>(value);
-				getline(linestream, value, '\t');
-				al_current_bases = value;
-
-				if (al_current_refID == al_prev_refID
-						&& al_current_pos - al_prev_pos <= minimum_base_gap) {
-					filtered_r << ">" << al_prev_refID << ":" << al_prev_pos << endl;
-					filtered_r << al_prev_bases << endl;
-
-					is_group = true;
-				}
-				else {
-					if (is_group) {
-						filtered_r << ">" << al_prev_refID << ":" << al_prev_pos << endl;
-						filtered_r << al_prev_bases << endl;
-						filtered_r << endl;
-					}
-					is_group = false;
-				}
-
-				al_prev_refID = al_current_refID;
-				al_prev_pos = al_current_pos;
-				al_prev_bases = al_current_bases;
-			}
-		}
 
 	filtered_f.close();
 	cout << "Closing " << filtered_f_file_name << endl;
@@ -251,16 +192,15 @@ bool ReadClipper::filter_reads(string& file_name, int64_t minimum_base_gap) {
 	return true;
 }
 
-
-bool ReadClipper::generate_contigs(string& file_name, string options) {
-	ifstream in_f(file_name + ".filtered_f", ifstream::binary);
+bool ReadClipper::generate_contigs(string& bam_file_name, string cap3_options) {
+	ifstream in_f(bam_file_name + ".f_filtered", ifstream::binary);
 	string line;
 
 	string cmd_cap3;
 	string log_file_name;
 	string cap_info_file_name;
 
-	string cap3_output_dir = file_name + ".cap3_output";
+	string cap3_output_dir = bam_file_name + ".cap3_output";
 	string cmd_rmdir = "rm -rf " + cap3_output_dir;
 	system(cmd_rmdir.c_str());
 	string cmd_mkdir = "mkdir " + cap3_output_dir;
@@ -270,105 +210,168 @@ bool ReadClipper::generate_contigs(string& file_name, string options) {
 	string temp_fa_file_name = temp_fa_file_prefix + ".0";
 	ofstream temp_fa(temp_fa_file_name);
 
-	string contigs_file_name = file_name + ".contigs";
+	string contigs_file_name = bam_file_name + ".f_contigs";
 	ofstream contigs(contigs_file_name);
 
+	string tea_file_name = bam_file_name + ".f_tea";
+	ofstream tea(tea_file_name);
+
 	int64_t count = 0;
+	string chr;
+	int64_t cpos = 0;
+	int64_t pos;
+	string pos_combined;
+	string base;
+	string base_combined;
+	string contig;
+	int64_t no_of_reads = 0;
+
 	while(getline(in_f, line)){
 		if (!line.empty()) {
-			temp_fa << line << endl;
+			++no_of_reads;
+
+			int64_t chr_index = line.find_first_of("\t");
+			int64_t base_index = line.find_last_of("\t");
+
+			chr = line.substr(0, chr_index);
+			pos = boost::lexical_cast<int64_t>(line.substr(chr_index+1, base_index-chr_index-1));
+			base = line.substr(base_index+1);
+			temp_fa << ">" << chr << ":" << pos << endl;
+			temp_fa << base << endl;
+
+			if (cpos == 0){
+				cpos = pos;
+			}
+			else if (cpos < pos) {
+				cpos = pos;
+			}
+
+			if (pos_combined.length() == 0) {
+				pos_combined = to_string(pos);
+				base_combined = base;
+			}
+			else {
+				pos_combined += "," + to_string(pos);
+				base_combined += "," + base;
+			}
 		}
 		else {
-			stringstream ss;
+			//stringstream ss;
+
 			temp_fa_file_name = temp_fa_file_prefix + "." + to_string(count);
 			log_file_name = temp_fa_file_name + ".log";
-			cap_info_file_name = temp_fa_file_name + ".cap.info";
+			string cap_contigs_file_name = temp_fa_file_name + ".cap.contigs";
+			string cap_singlets_file_name = temp_fa_file_name + ".cap.singlets";
 
 			temp_fa.close();
-			cmd_cap3 = "cap3 " + temp_fa_file_name + " " + options +
+			cmd_cap3 = "cap3 " + temp_fa_file_name + " " + cap3_options +
 					" > " + log_file_name;
 			cout << cmd_cap3 << endl;
 			system(cmd_cap3.c_str());
 
-			ifstream in(cap_info_file_name, ifstream::binary);
-			string info_line;
-			stringstream ss_contigs;
-			int64_t no_of_reads = 0;
+			int64_t s_chr_index = 0;
+			int64_t s_pos_index = 0;
 
-			while(getline(in, info_line)) {
-				int64_t cursor = 0;
-				int64_t cursor1 = 0;
-				int64_t cursor2 = 0;
+			string line_contig;
+			ifstream in_contigs(cap_contigs_file_name, ifstream::binary);
+			getline(in_contigs, line_contig);
 
-				string chr;
-				string pos;
-				int64_t cursor_colon;
+			// TODO need to handle multi line singlets
+			// if contigs file is empty, check singlets file and get the longest
+			if (line_contig.empty()) {
+				string longest_singlet;
+				string line_singlets;
+				ifstream in_singlets(cap_singlets_file_name, ifstream::binary);
+				if (!getline(in_singlets, line_singlets)) {
+					break;
+				}
 
-				cout << info_line << endl;
-				cursor = info_line.find("Clip");
-				if (cursor != -1) {
-					++no_of_reads;
-					cursor1 = info_line.find("chr");
-					cursor2 = info_line.find(" left");
-					info_line = info_line.substr(cursor1, cursor2-5);
-					cout << info_line << endl;
+				s_chr_index = line_singlets.find(">");
+				s_pos_index = line_singlets.find(":");
+				if (s_chr_index == string::npos
+						|| s_pos_index == string::npos) {
+					break;
+				}
 
-					cursor_colon = info_line.find(":");
+				chr = line_singlets.substr(s_chr_index+1, s_pos_index-s_chr_index-1);
+				pos = boost::lexical_cast<int64_t>(line_singlets.substr(s_pos_index+1));
 
-					chr = info_line.substr(0, cursor_colon);
-					pos = info_line.substr(cursor_colon+1);
-
-					if (no_of_reads == 1) {
-
-						ss << chr << "\t" << pos;
+				while (getline(in_singlets, line_singlets)) {
+					if (line_singlets.length() > longest_singlet.length()) {
+						longest_singlet = line_singlets;
 					}
+
+					if (!getline(in_singlets, line_singlets)) {
+						break;
+					}
+
+					s_chr_index = line_singlets.find(">");
+					s_pos_index = line_singlets.find(":");
+					if (s_chr_index == string::npos
+							|| s_pos_index == string::npos) {
+						break;
+					}
+
+					chr = line_singlets.substr(s_chr_index+1, s_pos_index-s_chr_index-1);
+					pos = boost::lexical_cast<int64_t>(line_singlets.substr(s_pos_index+1));
+
+				}
+				contig = longest_singlet;
+			}
+			// if contigs file is not empty,
+			else {
+				getline(in_contigs, line_contig);
+				contig = line_contig;
+
+				// append multiline contig
+				while(getline(in_contigs, line_contig)) {
+					if (line_contig.find(">") == string::npos) {
+						contig += line_contig;
+					}
+					// more than one contig
 					else {
-						ss << "," << pos;
+						cerr << "More than one contig: " << cap_contigs_file_name << endl;
+						break;
 					}
 				}
 			}
 
-			ss << "\t" << no_of_reads;
-			cout << ss.str() << endl;
+			tea << chr << "\t" << cpos << "\t" << no_of_reads << "\t" << contig << "\t";
+			tea << pos_combined << "\t" << base_combined << endl;
 
-//				int64_t colon;
-//				int64_t plus_sign;
-//				string ref;
-//				string pos;
-//				stringstream ss_contigs;
-//
-//				for (int64_t i = 0; i != no_of_reads; ++i) {
-//					getline(in, log_line);
-//					colon = log_line.find(":");
-//
-//					if (colon != -1) {
-//						if (i == 0) {
-//							cout << log_line << endl << " colon:" << colon;
-//							ref = log_line.substr(0, colon);
-//							contigs << ref << ":";
-//						}
-//						plus_sign = log_line.find("+");
-//						cout << " +:" << plus_sign << endl;
-//						pos = log_line.substr(colon, plus_sign);
-//
-//						if (i != 0) {
-//							contigs << ",";
-//						}
-//						contigs << pos;
-//					}
-//				}
-//				break;
-//			}
+			contigs << ">" << chr << ":" << cpos << endl;
+			contigs << contig << endl;
+
+
+			string rm_temp_file_cmd = "rm -rf " + temp_fa_file_name+ "*";
+			system(rm_temp_file_cmd.c_str());
 
 			++count;
 			temp_fa_file_name = cap3_output_dir + "/temp.fa" + "." + to_string(count);
 			temp_fa.open(temp_fa_file_name);
+
+			// reinitializing variables
+			chr = "";
+			cpos = 0;
+			pos = 0;
+			pos_combined = "";
+			base = "";
+			base_combined = "";
+			contig = "";
+			no_of_reads = 0;
 		}
 	}
 	contigs.close();
 
 	return true;
 }
+
+//bwa aln bwa_idx/human_youngTE_revisedPolyA.fa test.bam.contigs > test.bam.contigs.sai
+//bwa samse -n 100 bwa_idx/human_youngTE_revisedPolyA.fa test.bam.contigs.sai test.bam.contigs  > test.bam.contigs.bam
+
+//bwa mem bwa_idx/human_youngTE_revisedPolyA.fa test.bam.contigs > test.bam.contigs.mem.bam
+
+
 
 } /* namespace QT */
 

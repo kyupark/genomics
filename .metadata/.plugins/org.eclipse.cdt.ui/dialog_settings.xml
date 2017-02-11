@@ -19,6 +19,8 @@
 		<item value="true" key="askReindex"/>
 		<item value="0" key="askReindex.detail"/>
 	</section>
+	<section name="CRenameRefactoringInputPage">
+	</section>
 	<section name="completion_proposal_size">
 	</section>
 </section>
