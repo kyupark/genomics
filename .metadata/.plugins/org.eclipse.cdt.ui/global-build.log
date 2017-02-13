@@ -3909,3 +3909,162 @@ Invoking: Cross G++ Linker
 g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
 Finished building target: TeaQ
  
+10:49:39 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+../src/ReadClipper.cpp: In static member function ‘static bool TeaQ::ReadClipper::clip_reads(std::string&, int64_t)’:
+../src/ReadClipper.cpp:39:8: warning: unused variable ‘refData’ [-Wunused-variable]
+  auto& refData = reader.GetReferenceData();
+        ^
+../src/ReadClipper.cpp: In static member function ‘static bool TeaQ::ReadClipper::generate_contigs(std::string&, std::string)’:
+../src/ReadClipper.cpp:291:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (s_chr_index == string::npos
+                                ^
+../src/ReadClipper.cpp:292:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       || s_pos_index == string::npos) {
+                                 ^
+../src/ReadClipper.cpp:310:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      if (s_chr_index == string::npos
+                                 ^
+../src/ReadClipper.cpp:311:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        || s_pos_index == string::npos) {
+                                  ^
+Finished building: ../src/ReadClipper.cpp
+ 
+Building file: ../src/TeaQ.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/TeaQ.d" -MT"src/TeaQ.o" -o "src/TeaQ.o" "../src/TeaQ.cpp"
+Finished building: ../src/TeaQ.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+10:50:58 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+../src/ReadClipper.cpp: In function ‘void TeaQ::clip(std::string&, int64_t)’:
+../src/ReadClipper.cpp:50:8: warning: unused variable ‘refData’ [-Wunused-variable]
+  auto& refData = reader.GetReferenceData();
+        ^
+../src/ReadClipper.cpp: In function ‘void TeaQ::contiggen(std::string, char, std::string)’:
+../src/ReadClipper.cpp:292:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (s_chr_index == string::npos
+                                ^
+../src/ReadClipper.cpp:293:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       || s_pos_index == string::npos) {
+                                 ^
+../src/ReadClipper.cpp:311:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      if (s_chr_index == string::npos
+                                 ^
+../src/ReadClipper.cpp:312:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        || s_pos_index == string::npos) {
+                                  ^
+../src/ReadClipper.cpp: At global scope:
+../src/ReadClipper.cpp:395:21: error: no ‘bool TeaQ::ReadClipper::clip_filter_contiggen(std::string&, int64_t, int64_t, std::string)’ member function declared in class ‘TeaQ::ReadClipper’
+  string cap3_options) {
+                     ^
+make: *** [src/ReadClipper.o] Error 1
+10:59:51 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+../src/ReadClipper.cpp: In function ‘void TeaQ::clip(std::string&, int64_t)’:
+../src/ReadClipper.cpp:50:8: warning: unused variable ‘refData’ [-Wunused-variable]
+  auto& refData = reader.GetReferenceData();
+        ^
+../src/ReadClipper.cpp: In function ‘void TeaQ::contiggen(std::string, char, std::string)’:
+../src/ReadClipper.cpp:292:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (s_chr_index == string::npos
+                                ^
+../src/ReadClipper.cpp:293:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       || s_pos_index == string::npos) {
+                                 ^
+../src/ReadClipper.cpp:311:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      if (s_chr_index == string::npos
+                                 ^
+../src/ReadClipper.cpp:312:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        || s_pos_index == string::npos) {
+                                  ^
+../src/ReadClipper.cpp: In static member function ‘static bool TeaQ::ReadClipper::clip_filter_contiggen(std::string&, int64_t, int64_t, std::string)’:
+../src/ReadClipper.cpp:400:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/ReadClipper.cpp
+ 
+Building file: ../src/TeaQ.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/TeaQ.d" -MT"src/TeaQ.o" -o "src/TeaQ.o" "../src/TeaQ.cpp"
+../src/TeaQ.cpp: In function ‘int main()’:
+../src/TeaQ.cpp:18:2: error: ‘clip_reads’ is not a member of ‘TeaQ::ReadClipper’
+  ReadClipper::clip_reads(bam_file_name, 5);
+  ^
+../src/TeaQ.cpp:19:2: error: ‘filter_reads’ is not a member of ‘TeaQ::ReadClipper’
+  ReadClipper::filter_reads(bam_file_name, 2);
+  ^
+../src/TeaQ.cpp:20:2: error: ‘generate_contigs’ is not a member of ‘TeaQ::ReadClipper’
+  ReadClipper::generate_contigs(bam_file_name);
+  ^
+make: *** [src/TeaQ.o] Error 1
+11:00:50 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/TeaQ.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/TeaQ.d" -MT"src/TeaQ.o" -o "src/TeaQ.o" "../src/TeaQ.cpp"
+Finished building: ../src/TeaQ.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+11:04:42 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/TeaQ.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/TeaQ.d" -MT"src/TeaQ.o" -o "src/TeaQ.o" "../src/TeaQ.cpp"
+Finished building: ../src/TeaQ.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+11:12:43 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/TeaQ.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/TeaQ.d" -MT"src/TeaQ.o" -o "src/TeaQ.o" "../src/TeaQ.cpp"
+../src/TeaQ.cpp:12:20: fatal error: bwtaln.h: No such file or directory
+ #include <bwtaln.h>
+                    ^
+compilation terminated.
+make: *** [src/TeaQ.o] Error 1
+11:13:15 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/TeaQ.cpp
+Invoking: Cross G++ Compiler
+g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/TeaQ.d" -MT"src/TeaQ.o" -o "src/TeaQ.o" "../src/TeaQ.cpp"
+../src/TeaQ.cpp:12:20: fatal error: bwtaln.h: No such file or directory
+ #include <bwtaln.h>
+                    ^
+compilation terminated.
+make: *** [src/TeaQ.o] Error 1
+11:14:21 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/TeaQ.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/TeaQ.d" -MT"src/TeaQ.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/TeaQ.o" "../src/TeaQ.cpp"
+Finished building: ../src/TeaQ.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 

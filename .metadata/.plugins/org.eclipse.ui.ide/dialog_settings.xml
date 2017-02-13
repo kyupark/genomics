@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/home/el114/kyu/code/bwa-0.6.2"/>
+		<item value="/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.7.8"/>
 		<item value="/home/el114/kyu/code/bamtools"/>
 		<item value="/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/CAP3"/>
 		<item value="/n/no_backup/park/elim/kyu/eclipse/workspaces/genomics/bamtools"/>

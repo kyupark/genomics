@@ -33,8 +33,9 @@
 								<option id="gnu.cpp.compiler.option.debugging.level.147023580" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.other.other.1469874887" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" useByScannerDiscovery="false" value="-c -fmessage-length=0 -std=c++11 -static-libstdc++" valueType="string"/>
 								<option id="gnu.cpp.compiler.option.include.paths.1455163811" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/bamtools/src}&quot;"/>
 									<listOptionValue builtIn="false" value="/opt/boost-1.57.0/include"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/bwa-0.6.2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/bamtools/src}&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1077019945" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
@@ -119,13 +120,14 @@
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.450601870" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
-							<tool commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GCCErrorParser" id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.360125648" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler">
+							<tool commandLinePattern="${COMMAND} -I/opt/boost-1.57.0/include ${FLAGS} -I&quot;/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2&quot; ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GCCErrorParser" id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.360125648" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler">
 								<option id="gnu.cpp.compiler.option.optimization.level.985595391" name="Optimization Level" superClass="gnu.cpp.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.debugging.level.2029186150" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.other.other.411408953" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" useByScannerDiscovery="false" value="-I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++" valueType="string"/>
 								<option id="gnu.cpp.compiler.option.dialect.std.1840147398" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.1361888015" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="/opt/boost-1.57.0/include"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/bwa-0.6.2}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/bamtools/src}&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.600205502" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>

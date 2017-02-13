@@ -1,26 +1,9 @@
-16:25:59 **** Incremental Build of configuration Release for project TeaQ ****
+11:14:21 **** Incremental Build of configuration Release for project TeaQ ****
 make all 
-Building file: ../src/ReadClipper.cpp
+Building file: ../src/TeaQ.cpp
 Invoking: Cross G++ Compiler
-g++ -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
-../src/ReadClipper.cpp: In static member function ‘static bool TeaQ::ReadClipper::clip_reads(std::string&, int64_t)’:
-../src/ReadClipper.cpp:39:8: warning: unused variable ‘refData’ [-Wunused-variable]
-  auto& refData = reader.GetReferenceData();
-        ^
-../src/ReadClipper.cpp: In static member function ‘static bool TeaQ::ReadClipper::generate_contigs(std::string&, std::string)’:
-../src/ReadClipper.cpp:290:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-     if (s_chr_index == string::npos
-                                ^
-../src/ReadClipper.cpp:291:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-       || s_pos_index == string::npos) {
-                                 ^
-../src/ReadClipper.cpp:309:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-      if (s_chr_index == string::npos
-                                 ^
-../src/ReadClipper.cpp:310:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-        || s_pos_index == string::npos) {
-                                  ^
-Finished building: ../src/ReadClipper.cpp
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/TeaQ.d" -MT"src/TeaQ.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/TeaQ.o" "../src/TeaQ.cpp"
+Finished building: ../src/TeaQ.cpp
  
 Building target: TeaQ
 Invoking: Cross G++ Linker
@@ -28,5 +11,5 @@ g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspace
 Finished building target: TeaQ
  
 
-16:26:07 Build Finished (took 8s.62ms)
+11:14:26 Build Finished (took 5s.105ms)
 
