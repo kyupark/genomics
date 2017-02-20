@@ -16,14 +16,19 @@ ReadClipper::~ReadClipper() {
 }
 
 void sort(string clipped_file_name){
-	string sort_f_cmd = "sort -g -k1 -k2 " + clipped_file_name + " -o " + clipped_file_name;
-	system(sort_f_cmd.c_str());
+	string cmd_sort = "sort -g -k1 -k2 " + clipped_file_name + " -o " + clipped_file_name;
+	system(cmd_sort.c_str());
 	cout << "Sorted " << clipped_file_name << endl;
 }
 
-void rm_temp(string temp_fa_file_name) {
-	string rm_temp_file_cmd = "rm -rf " + temp_fa_file_name+ "*";
-	system(rm_temp_file_cmd.c_str());
+void rm_temp_all(string temp_file_name) {
+	string cmd_rm_temp_all = "rm -rf " + temp_file_name+ "*";
+	system(cmd_rm_temp_all.c_str());
+}
+
+void rm_temp(string temp_file_name) {
+	string cmd_rm_temp = "rm -rf " + temp_file_name;
+	system(cmd_rm_temp.c_str());
 }
 
 void do_join(std::thread& t) {
@@ -35,7 +40,6 @@ void join_all(std::vector<std::thread>& tv) {
     	do_join(t);
     }
 }
-
 
 void clip(string& bam_file_name, int64_t minimum_read_length) {
 	cout << "Clipping Reads" << endl;
@@ -67,29 +71,36 @@ void clip(string& bam_file_name, int64_t minimum_read_length) {
 		stringstream ss_f;
 		stringstream ss_r;
 
+//		if (refID == "0" && al.IsReverseStrand() == true && pos > 9714486 && pos < 9714686) {
+//			cout << refID << ":" << pos << "\t ";
+//
+//			for(auto& c : al.CigarData) {
+//
+//				cout << c.Type << c.Length ;
+//			}
+//			cout << "\t" << bases << endl;
+//		}
+
 		int64_t cursor = 0;
 		for(std::vector<int64_t>::size_type i = 0; i != al.CigarData.size(); ++i) {
 			auto& a_cigar = al.CigarData[i];
 			char& type = a_cigar.Type;
 			int64_t len = a_cigar.Length;
 
-//			stream << pos << "\t" << bases << endl;
-			if (type == 'S' && len >= minimum_read_length) {
-				// forward
-				if (!al.IsReverseStrand()){
-					if (i == 0){
-						ss_f << refID << "\t" << pos + 1 << "\t" << bases.substr(cursor, len) << endl;
+			if (type == 'D') continue;
+			else if (type == 'S') {
+				if (i == 0) {
+					if (!al.IsReverseStrand() && len >= minimum_read_length) {
+						ss_f << refID << "\t" << pos << "\t" << bases.substr(cursor, len) << endl;
 					}
+					else continue;
 				}
-				// reverse
-				else {
-					if (i == al.CigarData.size()-1) {
-						ss_r  << refID << "\t" << pos + 1 << "\t" << bases.substr(cursor, len) << endl;
+				else if (i == al.CigarData.size()-1) {
+					if (al.IsReverseStrand() && len >= minimum_read_length) {
+						ss_r << refID << "\t" << pos << "\t" << bases.substr(cursor, len) << endl;
 					}
+					else continue;
 				}
-			}
-			else if (type == 'D') {
-				continue;
 			}
 
 			cursor += len;
@@ -110,8 +121,8 @@ void clip(string& bam_file_name, int64_t minimum_read_length) {
 
 	vector<std::thread> threads;
 
-	threads.push_back(thread(sort, f_clipped_file_name));
-	threads.push_back(thread(sort, r_clipped_file_name));
+//	threads.push_back(thread(sort, f_clipped_file_name));
+//	threads.push_back(thread(sort, r_clipped_file_name));
 
 	join_all(threads);
 }
@@ -141,8 +152,6 @@ void filter(string bam_file_name, char f_or_r, int64_t minimum_base_gap) {
 
 		stringstream linestream(line);
 		string value;
-
-		//stringstream ss;
 
 		if(!line.empty()){
 
@@ -197,7 +206,38 @@ void run_filter(string& bam_file_name, int64_t minimum_base_gap) {
 }
 
 
-void contiggen(string bam_file_name, char f_or_r, string cap3_options) {
+void bwa_aln_samse(string& contigs_file_name, string& ref_fa_file_name) {
+	//bwa aln bwa_idx/human_youngTE_revisedPolyA.fa test.bam.contigs > test.bam.contigs.sai
+	//bwa samse -n 100 bwa_idx/human_youngTE_revisedPolyA.fa test.bam.contigs.sai test.bam.contigs  > test.bam.contigs.bam
+
+	string cmd_load_bwa ="module load seq/bwa/0.6.2 & sleep 1s";
+	system(cmd_load_bwa.c_str());
+
+	string bwa_sai_file_name = contigs_file_name + ".sai";
+	string cmd_bwa_aln =
+			"bwa aln "
+			+ ref_fa_file_name + " "
+			+ contigs_file_name
+			+ " > " + bwa_sai_file_name;
+	system(cmd_bwa_aln.c_str());
+
+//	vector<std::thread> threads;
+//	threads.push_back(thread(rm_temp, contigs_file_name));
+
+	string cmd_bwa_samse =
+			"bwa samse -n 100 "
+			+ ref_fa_file_name + " "
+			+ bwa_sai_file_name + " "
+			+ contigs_file_name
+			+ " > " + contigs_file_name + ".bam";
+	system(cmd_bwa_samse.c_str());
+
+//	threads.push_back(thread(rm_temp, bwa_sai_file_name));
+//	join_all(threads);
+}
+
+
+void contiggen(string bam_file_name, char f_or_r, string cap3_options, string ref_fa_file_name) {
 	vector<std::thread> threads;
 
 	ifstream in(bam_file_name + ".filtered_" + f_or_r , ifstream::binary);
@@ -217,10 +257,8 @@ void contiggen(string bam_file_name, char f_or_r, string cap3_options) {
 	string contigs_file_name = bam_file_name + ".contigs_" + f_or_r;
 	ofstream contigs(contigs_file_name);
 
-	string tea_file_name = bam_file_name + ".tea_" + f_or_r;
-	ofstream tea(tea_file_name);
-
 	string chr;
+	int64_t refID;
 	int64_t cpos = 0;
 	int64_t pos;
 	string pos_combined;
@@ -245,7 +283,7 @@ void contiggen(string bam_file_name, char f_or_r, string cap3_options) {
 			if (cpos == 0){
 				cpos = pos;
 			}
-			else if (cpos < pos) {
+			else if (cpos > pos) {
 				cpos = pos;
 			}
 
@@ -280,8 +318,8 @@ void contiggen(string bam_file_name, char f_or_r, string cap3_options) {
 
 			// if contigs file is empty, check singlets file and get the longest
 			if (line_contigs.empty()) {
-				string longest_singlet;
-				string line_singlets;
+				string longest_singlet="";
+				string line_singlets="";
 				ifstream in_singlets(cap_singlets_file_name, ifstream::binary);
 				if (!getline(in_singlets, line_singlets)) {
 					break;
@@ -329,7 +367,7 @@ void contiggen(string bam_file_name, char f_or_r, string cap3_options) {
 					if (line_contigs.find(">") == string::npos) {
 						contig += line_contigs;
 					}
-					// more than one contig
+					// TODO handle more than one contig
 					else {
 						cerr << "More than one contig: " << cap_contigs_file_name << endl;
 						break;
@@ -337,13 +375,10 @@ void contiggen(string bam_file_name, char f_or_r, string cap3_options) {
 				}
 			}
 
-			tea << chr << ":" << cpos << "\t" << no_of_reads << "\t" << contig << "\t";
-			tea << pos_combined << "\t" << base_combined << endl;
-
-			contigs << ">" << chr << ":" << cpos << endl;
+			contigs << ">" << chr << ";" << cpos << ";" << f_or_r << ";" << no_of_reads << ";" << pos_combined << ";" << base_combined << endl;
 			contigs << contig << endl;
 
-			threads.push_back(thread(rm_temp, temp_fa_file_name));
+			threads.push_back(thread(rm_temp_all, temp_fa_file_name));
 
 			++count;
 			temp_fa_file_name = temp_fa_file_prefix + "." + to_string(count);
@@ -362,11 +397,17 @@ void contiggen(string bam_file_name, char f_or_r, string cap3_options) {
 	}
 	contigs.close();
 
+//	threads.push_back(thread(rm_temp, bam_file_name+ ".clipped_" + f_or_r));
+//	threads.push_back(thread(rm_temp, bam_file_name+ ".filtered_" + f_or_r));
+
+	bwa_aln_samse(contigs_file_name, ref_fa_file_name);
+
 	join_all(threads);
 }
 
 
-void run_contiggen(string& bam_file_name, string cap3_options) {
+
+void run_contiggen(string& bam_file_name, string& cap3_options, string& ref_fa_file_name) {
 	cout << "Generating Reads" << endl;
 
 	string cap3_output_dir = bam_file_name + ".cap3_output";
@@ -377,28 +418,77 @@ void run_contiggen(string& bam_file_name, string cap3_options) {
 
 	vector<std::thread> threads;
 
-	threads.push_back(thread(contiggen, bam_file_name, 'f', cap3_options));
-	threads.push_back(thread(contiggen, bam_file_name, 'r', cap3_options));
+	threads.push_back(thread(contiggen, bam_file_name, 'f', cap3_options, ref_fa_file_name));
+	threads.push_back(thread(contiggen, bam_file_name, 'r', cap3_options, ref_fa_file_name));
 
 	join_all(threads);
 }
 
-//bwa aln bwa_idx/human_youngTE_revisedPolyA.fa test.bam.contigs > test.bam.contigs.sai
-//bwa samse -n 100 bwa_idx/human_youngTE_revisedPolyA.fa test.bam.contigs.sai test.bam.contigs  > test.bam.contigs.bam
 
-//bwa mem bwa_idx/human_youngTE_revisedPolyA.fa test.bam.contigs > test.bam.contigs.mem.bam
+
+
+void bwa_mem(string& contigs_file_name, string& ref_fa_file_name) {
+	//bwa mem bwa_idx/human_youngTE_revisedPolyA.fa test.bam.contigs > test.bam.contigs.mem.bam
+
+	string cmd_load_bwa ="module load seq/bwa/0.7.8 & sleep 1s";
+	system(cmd_load_bwa.c_str());
+
+	string cmd_bwa_mem =
+			"bwa mem "
+			+ ref_fa_file_name + " "
+			+ contigs_file_name
+			+ " > " + contigs_file_name + ".mem.bam";
+	system(cmd_bwa_mem.c_str());
+}
+
+void run_bwa(string& contigs_file_name, string& ref_fa_file_name) {
+	bwa_aln_samse(contigs_file_name, ref_fa_file_name);
+	//bwa_mem(contigs_file_name, ref_fa_file_name);
+
+}
+
+
+void filter_family(string& bam_file_name) {
+	string contigs_f_bam_file_name = bam_file_name + ".contigs_f.bam";
+	string contigs_r_bam_file_name = bam_file_name + ".contigs_r.bam";
+	string tea_file_name = bam_file_name + ".tea";
+
+	string awk_script_file_name = "/home/el114/kyu/code/TeaQ/script/teaify.awk";
+	string cmd_awk = awk_script_file_name + " " +
+			contigs_f_bam_file_name + " " +
+			contigs_r_bam_file_name + " > " + tea_file_name;
+	system(cmd_awk.c_str());
+
+	sort(tea_file_name);
+}
+
+void give_refName(string& bam_file_name) {
+
+}
+
 
 bool ReadClipper::clip_filter_contiggen(
 	string& bam_file_name,
+	string ref_fa_file_name,
 	int64_t minimum_read_length,
 	int64_t minimum_base_gap,
-	string cap3_options) {
+	string cap3_options ) {
 
 	clip(bam_file_name, minimum_read_length);
 	run_filter(bam_file_name, minimum_base_gap);
-	run_contiggen(bam_file_name, cap3_options);
-}
 
+	run_contiggen(bam_file_name, cap3_options, ref_fa_file_name);
+
+	string f_contigs_file_name = bam_file_name + ".contigs_f";
+	string r_contigs_file_name = bam_file_name + ".contigs_r";
+
+	run_bwa(f_contigs_file_name, ref_fa_file_name);
+	run_bwa(r_contigs_file_name, ref_fa_file_name);
+
+	filter_family(bam_file_name);
+
+	return true;
+}
 
 } /* namespace TeaQ */
 
