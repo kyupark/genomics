@@ -31,6 +31,11 @@ void rm_temp(string temp_file_name) {
 	system(cmd_rm_temp.c_str());
 }
 
+void mkdir(string bam_file_name) {
+	string cmd_mkdir = "mkdir " + bam_file_name + "-tea-debug";
+	system(cmd_mkdir.c_str());
+}
+
 void do_join(std::thread& t) {
     t.join();
 }
@@ -52,8 +57,8 @@ void clip(string& bam_file_name, int64_t minimum_read_length) {
 
 	BamAlignment al;
 	auto& refData = reader.GetReferenceData();
-	string f_clipped_file_name = bam_file_name + ".clipped_f";
-	string r_clipped_file_name = bam_file_name + ".clipped_r";
+	string f_clipped_file_name = bam_file_name + "-tea-debug/01-clipped-f";
+	string r_clipped_file_name = bam_file_name + "-tea-debug/01-clipped-r";
 	ofstream f_clipped(f_clipped_file_name);
 	cout << "Writing " << f_clipped_file_name << endl;
 	ofstream r_clipped(r_clipped_file_name);
@@ -130,7 +135,7 @@ void clip(string& bam_file_name, int64_t minimum_read_length) {
 
 void filter(string bam_file_name, char f_or_r, int64_t minimum_base_gap) {
 
-	ifstream in(bam_file_name + ".clipped_" + f_or_r , ifstream::binary);
+	ifstream in(bam_file_name + "-tea-debug/01-clipped-" + f_or_r , ifstream::binary);
 
 	string line;
 
@@ -142,7 +147,7 @@ void filter(string bam_file_name, char f_or_r, int64_t minimum_base_gap) {
 	int64_t al_current_pos;
 	string al_current_bases;
 
-	string filtered_file_name = bam_file_name + ".filtered_" + f_or_r ;
+	string filtered_file_name = bam_file_name + "-tea-debug/02-filtered_" + f_or_r ;
 	ofstream filtered(filtered_file_name);
 	cout << "Writing " << filtered_file_name << endl;
 
@@ -229,7 +234,7 @@ void bwa_aln_samse(string& contigs_file_name, string& ref_fa_file_name) {
 			+ ref_fa_file_name + " "
 			+ bwa_sai_file_name + " "
 			+ contigs_file_name
-			+ " > " + contigs_file_name + ".bam";
+			+ " > " + contigs_file_name + ".samse_refid";
 	system(cmd_bwa_samse.c_str());
 
 //	threads.push_back(thread(rm_temp, bwa_sai_file_name));
@@ -247,14 +252,14 @@ void contiggen(string bam_file_name, char f_or_r, string cap3_options, string re
 	string log_file_name;
 	string cap_info_file_name;
 
-	string cap3_output_dir = bam_file_name + ".cap3_output";
+	string cap3_output_dir = bam_file_name + "-tea-debug/03-cap3-output";
 
 	int64_t count = 0;
 	string temp_fa_file_prefix = cap3_output_dir + "/temp.fa." + f_or_r;
 	string temp_fa_file_name = temp_fa_file_prefix + "." + to_string(count);
 	ofstream temp_fa(temp_fa_file_name);
 
-	string contigs_file_name = bam_file_name + ".contigs_" + f_or_r;
+	string contigs_file_name = bam_file_name + "-tea-debug/04-contigs_" + f_or_r;
 	ofstream contigs(contigs_file_name);
 
 	string chr;
@@ -410,7 +415,7 @@ void contiggen(string bam_file_name, char f_or_r, string cap3_options, string re
 void run_contiggen(string& bam_file_name, string& cap3_options, string& ref_fa_file_name) {
 	cout << "Generating Reads" << endl;
 
-	string cap3_output_dir = bam_file_name + ".cap3_output";
+	string cap3_output_dir = bam_file_name + "-tea-debug/03-cap3-output";
 	string cmd_rmdir = "rm -rf " + cap3_output_dir;
 	system(cmd_rmdir.c_str());
 	string cmd_mkdir = "mkdir " + cap3_output_dir;
@@ -423,8 +428,6 @@ void run_contiggen(string& bam_file_name, string& cap3_options, string& ref_fa_f
 
 	join_all(threads);
 }
-
-
 
 
 void bwa_mem(string& contigs_file_name, string& ref_fa_file_name) {
@@ -449,21 +452,53 @@ void run_bwa(string& contigs_file_name, string& ref_fa_file_name) {
 
 
 void filter_family(string& bam_file_name) {
-	string contigs_f_bam_file_name = bam_file_name + ".contigs_f.bam";
-	string contigs_r_bam_file_name = bam_file_name + ".contigs_r.bam";
-	string tea_file_name = bam_file_name + ".tea";
+	string contigs_f_bam_file_name = bam_file_name + "-tea-debug/04-contigs-f";
+	string contigs_r_bam_file_name = bam_file_name + "-tea-debug/04-contigs-f";
+	string samse_file_name = bam_file_name + "-tea-debug/05-samse-refid";
 
+	cout << "Filtering reads without family and combining f and r files" << endl;
 	string awk_script_file_name = "/home/el114/kyu/code/TeaQ/script/teaify.awk";
 	string cmd_awk = awk_script_file_name + " " +
 			contigs_f_bam_file_name + " " +
-			contigs_r_bam_file_name + " > " + tea_file_name;
+			contigs_r_bam_file_name + " > " + samse_file_name;
 	system(cmd_awk.c_str());
 
-	sort(tea_file_name);
+	sort(samse_file_name);
 }
 
 void give_refName(string& bam_file_name) {
+	BamReader reader;
+	if ( !reader.Open(bam_file_name)) {
+		cerr << "Could not open input BAM file" << endl;
+		//return false;
+	}
 
+	auto& refData = reader.GetReferenceData();
+	string line;
+	string samse_refid_file_name = bam_file_name + "-tea-debug/05-samse_refid";
+	ifstream in_tea(samse_refid_file_name, ifstream::binary);
+
+	string samse_file_name = bam_file_name + ".samse";
+	ofstream output(samse_file_name);
+
+	int64_t first_tab;
+	int64_t refID;
+	string rest_of_line;
+
+	cout << "Giving refName instead of refID" << endl;
+	while(getline(in_tea, line)) {
+		first_tab = line.find_first_of("\t");
+		if (first_tab == string::npos) {
+			continue;
+		}
+		refID = boost::lexical_cast<int64_t>(line.substr(0, first_tab));
+		rest_of_line = line.substr(first_tab);
+
+		output << refData[refID].RefName << rest_of_line << endl;
+	}
+	output.close();
+
+	rm_temp(samse_refid_file_name);
 }
 
 
@@ -473,6 +508,8 @@ bool ReadClipper::clip_filter_contiggen(
 	int64_t minimum_read_length,
 	int64_t minimum_base_gap,
 	string cap3_options ) {
+
+	mkdir(bam_file_name);
 
 	clip(bam_file_name, minimum_read_length);
 	run_filter(bam_file_name, minimum_base_gap);
@@ -486,6 +523,8 @@ bool ReadClipper::clip_filter_contiggen(
 	run_bwa(r_contigs_file_name, ref_fa_file_name);
 
 	filter_family(bam_file_name);
+
+	give_refName(bam_file_name);
 
 	return true;
 }

@@ -14,7 +14,7 @@
 using namespace TeaQ;
 using namespace std;
 
-int main() {
+int main ( int argc, char *argv[] ) {
         string bam_file_name = "/home/el114/kyu/data/test.bam";
         //ReadClipper::clip_filter_sort(bam_file_name, 5, 2);
 
