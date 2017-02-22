@@ -16,7 +16,7 @@ ReadClipper::~ReadClipper() {
 }
 
 void sort(string clipped_file_name){
-	string cmd_sort = "sort -g -k1 -k2 " + clipped_file_name + " -o " + clipped_file_name;
+	string cmd_sort = "sort -g -k1 -k2 " + clipped_file_name + " -o " + clipped_file_name + "-sorted";
 	system(cmd_sort.c_str());
 	cout << "Sorted " << clipped_file_name << endl;
 }
@@ -126,8 +126,8 @@ void clip(string& bam_file_name, int64_t minimum_read_length) {
 
 	vector<std::thread> threads;
 
-//	threads.push_back(thread(sort, f_clipped_file_name));
-//	threads.push_back(thread(sort, r_clipped_file_name));
+	threads.push_back(thread(sort, f_clipped_file_name));
+	threads.push_back(thread(sort, r_clipped_file_name));
 
 	join_all(threads);
 }
@@ -135,7 +135,7 @@ void clip(string& bam_file_name, int64_t minimum_read_length) {
 
 void filter(string bam_file_name, char f_or_r, int64_t minimum_base_gap) {
 
-	ifstream in(bam_file_name + "-tea-debug/01-clipped-" + f_or_r , ifstream::binary);
+	ifstream in(bam_file_name + "-tea-debug/01-clipped-" + f_or_r + "-sorted", ifstream::binary);
 
 	string line;
 
@@ -147,11 +147,15 @@ void filter(string bam_file_name, char f_or_r, int64_t minimum_base_gap) {
 	int64_t al_current_pos;
 	string al_current_bases;
 
-	string filtered_file_name = bam_file_name + "-tea-debug/02-filtered_" + f_or_r ;
+	string filtered_file_name = bam_file_name + "-tea-debug/02-filtered-" + f_or_r ;
 	ofstream filtered(filtered_file_name);
 	cout << "Writing " << filtered_file_name << endl;
 
-	bool is_group = false;
+	bool is_previous_space = true;
+	int64_t count = 0;
+	int tab1 = 0;
+	int tab2 = 0;
+	int tab3 = 0;
 
 	while(getline(in, line)){
 
@@ -167,16 +171,39 @@ void filter(string bam_file_name, char f_or_r, int64_t minimum_base_gap) {
 			getline(linestream, value, '\t');
 			al_current_bases = value;
 
-			if (al_current_refID == al_prev_refID
-					&& al_current_pos - al_prev_pos <= minimum_base_gap) {
-				filtered  << al_prev_refID << "\t" << al_prev_pos << "\t" << al_prev_bases << endl;
-				is_group = true;
+			if (count == 0) {
+				++count;
 			}
-			else {
-				if (is_group) {
-					filtered << al_prev_refID << "\t" << al_prev_pos << "\t" << al_prev_bases << endl << endl;
+			else if (count == 1) {
+				if (al_current_refID == al_prev_refID
+						&& abs(al_current_pos-al_prev_pos) <= minimum_base_gap) {
+					filtered << al_prev_refID << "\t" << al_prev_pos << "\t" << al_prev_bases << endl;
+					filtered << al_current_refID << "\t" << al_current_pos << "\t" << al_current_bases << endl;
+					is_previous_space = false;
+					++count;
 				}
-				is_group = false;
+				else {
+					count = 0;
+					if (!is_previous_space) {
+						filtered << endl;
+						is_previous_space = true;
+					}
+				}
+			}
+			else if (count > 1) {
+				if (al_current_refID == al_prev_refID
+						&& abs(al_current_pos-al_prev_pos) <= minimum_base_gap) {
+					filtered << al_current_refID << "\t" << al_current_pos << "\t" << count << al_current_bases << endl;
+					is_previous_space = false;
+					++count;
+				}
+				else {
+					count = 0;
+					if (!is_previous_space) {
+						filtered << endl;
+						is_previous_space = true;
+					}
+				}
 			}
 
 			al_prev_refID = al_current_refID;
@@ -234,7 +261,7 @@ void bwa_aln_samse(string& contigs_file_name, string& ref_fa_file_name) {
 			+ ref_fa_file_name + " "
 			+ bwa_sai_file_name + " "
 			+ contigs_file_name
-			+ " > " + contigs_file_name + ".samse_refid";
+			+ " > " + contigs_file_name + ".samse-refid";
 	system(cmd_bwa_samse.c_str());
 
 //	threads.push_back(thread(rm_temp, bwa_sai_file_name));
@@ -245,21 +272,21 @@ void bwa_aln_samse(string& contigs_file_name, string& ref_fa_file_name) {
 void contiggen(string bam_file_name, char f_or_r, string cap3_options, string ref_fa_file_name) {
 	vector<std::thread> threads;
 
-	ifstream in(bam_file_name + ".filtered_" + f_or_r , ifstream::binary);
+	ifstream in(bam_file_name + "-tea-debug/02-filtered-" + f_or_r , ifstream::binary);
 	string line;
 
 	string cmd_cap3;
 	string log_file_name;
 	string cap_info_file_name;
 
-	string cap3_output_dir = bam_file_name + "-tea-debug/03-cap3-output";
+	string cap3_output_dir = bam_file_name + "-tea-debug/03-cap3-output/";
 
 	int64_t count = 0;
-	string temp_fa_file_prefix = cap3_output_dir + "/temp.fa." + f_or_r;
+	string temp_fa_file_prefix = cap3_output_dir + "temp.fa." + f_or_r;
 	string temp_fa_file_name = temp_fa_file_prefix + "." + to_string(count);
 	ofstream temp_fa(temp_fa_file_name);
 
-	string contigs_file_name = bam_file_name + "-tea-debug/04-contigs_" + f_or_r;
+	string contigs_file_name = bam_file_name + "-tea-debug/04-contigs-" + f_or_r;
 	ofstream contigs(contigs_file_name);
 
 	string chr;
@@ -452,12 +479,12 @@ void run_bwa(string& contigs_file_name, string& ref_fa_file_name) {
 
 
 void filter_family(string& bam_file_name) {
-	string contigs_f_bam_file_name = bam_file_name + "-tea-debug/04-contigs-f";
-	string contigs_r_bam_file_name = bam_file_name + "-tea-debug/04-contigs-f";
-	string samse_file_name = bam_file_name + "-tea-debug/05-samse-refid";
+	string contigs_f_bam_file_name = bam_file_name + "-tea-debug/04-contigs-f.samse-refid";
+	string contigs_r_bam_file_name = bam_file_name + "-tea-debug/04-contigs-r.samse-refid";
+	string samse_file_name = bam_file_name + "-tea-debug/05-combined-samse-refid";
 
 	cout << "Filtering reads without family and combining f and r files" << endl;
-	string awk_script_file_name = "/home/el114/kyu/code/TeaQ/script/teaify.awk";
+	string awk_script_file_name = "/home/el114/kyu/bin/script/teaify-0.1.awk";
 	string cmd_awk = awk_script_file_name + " " +
 			contigs_f_bam_file_name + " " +
 			contigs_r_bam_file_name + " > " + samse_file_name;
@@ -475,7 +502,7 @@ void give_refName(string& bam_file_name) {
 
 	auto& refData = reader.GetReferenceData();
 	string line;
-	string samse_refid_file_name = bam_file_name + "-tea-debug/05-samse_refid";
+	string samse_refid_file_name = bam_file_name + "-tea-debug/05-combined-samse-refid-sorted";
 	ifstream in_tea(samse_refid_file_name, ifstream::binary);
 
 	string samse_file_name = bam_file_name + ".samse";
@@ -516,8 +543,8 @@ bool ReadClipper::clip_filter_contiggen(
 
 	run_contiggen(bam_file_name, cap3_options, ref_fa_file_name);
 
-	string f_contigs_file_name = bam_file_name + ".contigs_f";
-	string r_contigs_file_name = bam_file_name + ".contigs_r";
+	string f_contigs_file_name = bam_file_name + "-tea-debug/04-contigs-f";
+	string r_contigs_file_name = bam_file_name + "-tea-debug/04-contigs-r";
 
 	run_bwa(f_contigs_file_name, ref_fa_file_name);
 	run_bwa(r_contigs_file_name, ref_fa_file_name);

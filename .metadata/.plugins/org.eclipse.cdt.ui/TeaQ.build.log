@@ -1,4 +1,4 @@
-19:10:26 **** Incremental Build of configuration Release for project TeaQ ****
+19:39:06 **** Incremental Build of configuration Release for project TeaQ ****
 make all 
 Building file: ../src/ReadClipper.cpp
 Invoking: Cross G++ Compiler
@@ -7,24 +7,34 @@ g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/works
 ../src/ReadClipper.cpp:59:8: warning: unused variable ‘refData’ [-Wunused-variable]
   auto& refData = reader.GetReferenceData();
         ^
+../src/ReadClipper.cpp: In function ‘void TeaQ::filter(std::string, char, int64_t)’:
+../src/ReadClipper.cpp:156:6: warning: unused variable ‘tab1’ [-Wunused-variable]
+  int tab1 = 0;
+      ^
+../src/ReadClipper.cpp:157:6: warning: unused variable ‘tab2’ [-Wunused-variable]
+  int tab2 = 0;
+      ^
+../src/ReadClipper.cpp:158:6: warning: unused variable ‘tab3’ [-Wunused-variable]
+  int tab3 = 0;
+      ^
 ../src/ReadClipper.cpp: In function ‘void TeaQ::contiggen(std::string, char, std::string, std::string)’:
-../src/ReadClipper.cpp:335:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/ReadClipper.cpp:362:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
      if (s_chr_index == string::npos
                                 ^
-../src/ReadClipper.cpp:336:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/ReadClipper.cpp:363:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
        || s_pos_index == string::npos) {
                                  ^
-../src/ReadClipper.cpp:354:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/ReadClipper.cpp:381:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
       if (s_chr_index == string::npos
                                  ^
-../src/ReadClipper.cpp:355:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/ReadClipper.cpp:382:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
         || s_pos_index == string::npos) {
                                   ^
-../src/ReadClipper.cpp:266:10: warning: unused variable ‘refID’ [-Wunused-variable]
+../src/ReadClipper.cpp:293:10: warning: unused variable ‘refID’ [-Wunused-variable]
   int64_t refID;
           ^
 ../src/ReadClipper.cpp: In function ‘void TeaQ::give_refName(std::string&)’:
-../src/ReadClipper.cpp:491:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/ReadClipper.cpp:518:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
    if (first_tab == string::npos) {
                             ^
 Finished building: ../src/ReadClipper.cpp
@@ -35,5 +45,5 @@ g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspace
 Finished building target: TeaQ
  
 
-19:10:33 Build Finished (took 6s.778ms)
+19:39:12 Build Finished (took 6s.704ms)
 
