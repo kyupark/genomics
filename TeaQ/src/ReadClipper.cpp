@@ -46,6 +46,22 @@ void join_all(std::vector<std::thread>& tv) {
     }
 }
 
+void get_refName(string& bam_file_name) {
+	BamReader reader;
+	if ( !reader.Open(bam_file_name)) {
+		cerr << "Could not open input BAM file" << endl;
+		//return false;
+	}
+
+	auto& refData = reader.GetReferenceData();
+	string refName_file_name = bam_file_name + ".refName";
+	ofstream refName(refName_file_name);
+
+	for (int64_t i=0; i < refData.size(); ++i) {
+		refName << i << "\t" << refData[i].RefName << endl;
+	}
+}
+
 void clip(string& bam_file_name, int64_t minimum_read_length) {
 	cout << "Clipping Reads" << endl;
 
@@ -56,7 +72,6 @@ void clip(string& bam_file_name, int64_t minimum_read_length) {
 	}
 
 	BamAlignment al;
-	auto& refData = reader.GetReferenceData();
 	string f_clipped_file_name = bam_file_name + "-tea-debug/01-clipped-f";
 	string r_clipped_file_name = bam_file_name + "-tea-debug/01-clipped-r";
 	ofstream f_clipped(f_clipped_file_name);
@@ -183,7 +198,7 @@ void filter(string bam_file_name, char f_or_r, int64_t minimum_base_gap) {
 					++count;
 				}
 				else {
-					count = 0;
+					count = 1;
 					if (!is_previous_space) {
 						filtered << endl;
 						is_previous_space = true;
@@ -193,12 +208,12 @@ void filter(string bam_file_name, char f_or_r, int64_t minimum_base_gap) {
 			else if (count > 1) {
 				if (al_current_refID == al_prev_refID
 						&& abs(al_current_pos-al_prev_pos) <= minimum_base_gap) {
-					filtered << al_current_refID << "\t" << al_current_pos << "\t" << count << al_current_bases << endl;
+					filtered << al_current_refID << "\t" << al_current_pos << "\t" << al_current_bases << endl;
 					is_previous_space = false;
 					++count;
 				}
 				else {
-					count = 0;
+					count = 1;
 					if (!is_previous_space) {
 						filtered << endl;
 						is_previous_space = true;
@@ -329,7 +344,6 @@ void contiggen(string bam_file_name, char f_or_r, string cap3_options, string re
 			}
 		}
 		else {
-
 			temp_fa_file_name = temp_fa_file_prefix + "." + to_string(count);
 			log_file_name = temp_fa_file_name + ".log";
 			string cap_contigs_file_name = temp_fa_file_name + ".cap.contigs";
@@ -460,7 +474,7 @@ void run_contiggen(string& bam_file_name, string& cap3_options, string& ref_fa_f
 void bwa_mem(string& contigs_file_name, string& ref_fa_file_name) {
 	//bwa mem bwa_idx/human_youngTE_revisedPolyA.fa test.bam.contigs > test.bam.contigs.mem.bam
 
-	string cmd_load_bwa ="module load seq/bwa/0.7.8 & sleep 1s";
+	string cmd_load_bwa ="module load seq/bwa/0.7.8";
 	system(cmd_load_bwa.c_str());
 
 	string cmd_bwa_mem =
@@ -537,6 +551,8 @@ bool ReadClipper::clip_filter_contiggen(
 	string cap3_options ) {
 
 	mkdir(bam_file_name);
+
+	get_refName(bam_file_name);
 
 	clip(bam_file_name, minimum_read_length);
 	run_filter(bam_file_name, minimum_base_gap);

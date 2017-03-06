@@ -25,9 +25,6 @@ namespace TeaQ {
 using namespace std;
 using namespace BamTools;
 
-const bool FORWARD = true;
-const bool REVERSE = false;
-
 class ReadClipper {
 public:
         ReadClipper();
@@ -43,6 +40,6 @@ public:
 };
 
 
-} /* namespace QT */
+} /* namespace TeaQ */
 
 #endif /* READCLIPPER_HPP_ */

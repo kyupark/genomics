@@ -6,7 +6,7 @@
 // Description : Hello World in C++, Ansi-style
 //============================================================================
 
-// #include <iostream>
+//#include <iostream>
 //#include <bwtaln.h>
 #include "ReadClipper.hpp"
 #include <cstdlib>
@@ -15,7 +15,7 @@ using namespace TeaQ;
 using namespace std;
 
 int main(int argc, char *argv[]) {
-	if (argc < 1 || argc > 3) {
+	if (argc != 2) {
 		cerr << "usage:\t" << argv[0] << " <bam_file_name> <ref_file_name>" << endl;
 		cerr << "\t ref family file (default: /home/el114/kyu/data/bwa_idx/human_youngTE_revisedPolyA.fa)" << endl;
 		return 1;

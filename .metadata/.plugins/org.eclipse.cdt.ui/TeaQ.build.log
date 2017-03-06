@@ -1,49 +1,15 @@
-19:39:06 **** Incremental Build of configuration Release for project TeaQ ****
+15:20:34 **** Incremental Build of configuration Release for project TeaQ ****
 make all 
-Building file: ../src/ReadClipper.cpp
+Building file: ../src/filter-invisible-positives.cpp
 Invoking: Cross G++ Compiler
-g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
-../src/ReadClipper.cpp: In function ‘void TeaQ::clip(std::string&, int64_t)’:
-../src/ReadClipper.cpp:59:8: warning: unused variable ‘refData’ [-Wunused-variable]
-  auto& refData = reader.GetReferenceData();
-        ^
-../src/ReadClipper.cpp: In function ‘void TeaQ::filter(std::string, char, int64_t)’:
-../src/ReadClipper.cpp:156:6: warning: unused variable ‘tab1’ [-Wunused-variable]
-  int tab1 = 0;
-      ^
-../src/ReadClipper.cpp:157:6: warning: unused variable ‘tab2’ [-Wunused-variable]
-  int tab2 = 0;
-      ^
-../src/ReadClipper.cpp:158:6: warning: unused variable ‘tab3’ [-Wunused-variable]
-  int tab3 = 0;
-      ^
-../src/ReadClipper.cpp: In function ‘void TeaQ::contiggen(std::string, char, std::string, std::string)’:
-../src/ReadClipper.cpp:362:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-     if (s_chr_index == string::npos
-                                ^
-../src/ReadClipper.cpp:363:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-       || s_pos_index == string::npos) {
-                                 ^
-../src/ReadClipper.cpp:381:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-      if (s_chr_index == string::npos
-                                 ^
-../src/ReadClipper.cpp:382:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-        || s_pos_index == string::npos) {
-                                  ^
-../src/ReadClipper.cpp:293:10: warning: unused variable ‘refID’ [-Wunused-variable]
-  int64_t refID;
-          ^
-../src/ReadClipper.cpp: In function ‘void TeaQ::give_refName(std::string&)’:
-../src/ReadClipper.cpp:518:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-   if (first_tab == string::npos) {
-                            ^
-Finished building: ../src/ReadClipper.cpp
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+Finished building: ../src/filter-invisible-positives.cpp
  
 Building target: TeaQ
 Invoking: Cross G++ Linker
-g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/filter-invisible-positives.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
 Finished building target: TeaQ
  
 
-19:39:12 Build Finished (took 6s.704ms)
+15:20:38 Build Finished (took 4s.377ms)
 

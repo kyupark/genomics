@@ -8769,3 +8769,1098 @@ Invoking: Cross G++ Linker
 g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
 Finished building target: TeaQ
  
+11:08:49 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+../src/ReadClipper.cpp: In function ‘void TeaQ::clip(std::string&, int64_t)’:
+../src/ReadClipper.cpp:59:8: warning: unused variable ‘refData’ [-Wunused-variable]
+  auto& refData = reader.GetReferenceData();
+        ^
+../src/ReadClipper.cpp: In function ‘void TeaQ::filter(std::string, char, int64_t)’:
+../src/ReadClipper.cpp:156:6: warning: unused variable ‘tab1’ [-Wunused-variable]
+  int tab1 = 0;
+      ^
+../src/ReadClipper.cpp:157:6: warning: unused variable ‘tab2’ [-Wunused-variable]
+  int tab2 = 0;
+      ^
+../src/ReadClipper.cpp:158:6: warning: unused variable ‘tab3’ [-Wunused-variable]
+  int tab3 = 0;
+      ^
+../src/ReadClipper.cpp: In function ‘void TeaQ::contiggen(std::string, char, std::string, std::string)’:
+../src/ReadClipper.cpp:365:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (s_chr_index == string::npos
+                                ^
+../src/ReadClipper.cpp:366:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       || s_pos_index == string::npos) {
+                                 ^
+../src/ReadClipper.cpp:384:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      if (s_chr_index == string::npos
+                                 ^
+../src/ReadClipper.cpp:385:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        || s_pos_index == string::npos) {
+                                  ^
+../src/ReadClipper.cpp:296:10: warning: unused variable ‘refID’ [-Wunused-variable]
+  int64_t refID;
+          ^
+../src/ReadClipper.cpp: In function ‘void TeaQ::give_refName(std::string&)’:
+../src/ReadClipper.cpp:521:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   if (first_tab == string::npos) {
+                            ^
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+11:16:03 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+make: Nothing to be done for `all'.
+11:17:11 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+../src/ReadClipper.cpp: In function ‘void TeaQ::clip(std::string&, int64_t)’:
+../src/ReadClipper.cpp:59:8: warning: unused variable ‘refData’ [-Wunused-variable]
+  auto& refData = reader.GetReferenceData();
+        ^
+../src/ReadClipper.cpp: In function ‘void TeaQ::filter(std::string, char, int64_t)’:
+../src/ReadClipper.cpp:156:6: warning: unused variable ‘tab1’ [-Wunused-variable]
+  int tab1 = 0;
+      ^
+../src/ReadClipper.cpp:157:6: warning: unused variable ‘tab2’ [-Wunused-variable]
+  int tab2 = 0;
+      ^
+../src/ReadClipper.cpp:158:6: warning: unused variable ‘tab3’ [-Wunused-variable]
+  int tab3 = 0;
+      ^
+../src/ReadClipper.cpp: In function ‘void TeaQ::contiggen(std::string, char, std::string, std::string)’:
+../src/ReadClipper.cpp:362:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (s_chr_index == string::npos
+                                ^
+../src/ReadClipper.cpp:363:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       || s_pos_index == string::npos) {
+                                 ^
+../src/ReadClipper.cpp:381:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      if (s_chr_index == string::npos
+                                 ^
+../src/ReadClipper.cpp:382:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        || s_pos_index == string::npos) {
+                                  ^
+../src/ReadClipper.cpp:293:10: warning: unused variable ‘refID’ [-Wunused-variable]
+  int64_t refID;
+          ^
+../src/ReadClipper.cpp: In function ‘void TeaQ::give_refName(std::string&)’:
+../src/ReadClipper.cpp:518:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   if (first_tab == string::npos) {
+                            ^
+Finished building: ../src/ReadClipper.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+16:04:46 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+../src/ReadClipper.cpp: In function ‘void TeaQ::get_refName(std::string&)’:
+../src/ReadClipper.cpp:60:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int64_t i=0; i < refData.size(); ++i) {
+                                     ^
+../src/ReadClipper.cpp: In function ‘void TeaQ::filter(std::string, char, int64_t)’:
+../src/ReadClipper.cpp:171:6: warning: unused variable ‘tab1’ [-Wunused-variable]
+  int tab1 = 0;
+      ^
+../src/ReadClipper.cpp:172:6: warning: unused variable ‘tab2’ [-Wunused-variable]
+  int tab2 = 0;
+      ^
+../src/ReadClipper.cpp:173:6: warning: unused variable ‘tab3’ [-Wunused-variable]
+  int tab3 = 0;
+      ^
+../src/ReadClipper.cpp: In function ‘void TeaQ::contiggen(std::string, char, std::string, std::string)’:
+../src/ReadClipper.cpp:376:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (s_chr_index == string::npos
+                                ^
+../src/ReadClipper.cpp:377:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       || s_pos_index == string::npos) {
+                                 ^
+../src/ReadClipper.cpp:395:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      if (s_chr_index == string::npos
+                                 ^
+../src/ReadClipper.cpp:396:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        || s_pos_index == string::npos) {
+                                  ^
+../src/ReadClipper.cpp:308:10: warning: unused variable ‘refID’ [-Wunused-variable]
+  int64_t refID;
+          ^
+../src/ReadClipper.cpp: In function ‘void TeaQ::give_refName(std::string&)’:
+../src/ReadClipper.cpp:532:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   if (first_tab == string::npos) {
+                            ^
+Finished building: ../src/ReadClipper.cpp
+ 
+Building file: ../src/TeaQ.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/TeaQ.d" -MT"src/TeaQ.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/TeaQ.o" "../src/TeaQ.cpp"
+Finished building: ../src/TeaQ.cpp
+ 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+../src/filter-invisible-positives.cpp:8:17: error: ‘FIP’ is not a namespace-name
+ using namespace FIP;
+                 ^
+../src/filter-invisible-positives.cpp:8:20: error: expected namespace-name before ‘;’ token
+ using namespace FIP;
+                    ^
+../src/filter-invisible-positives.cpp: In function ‘int main(int, char**)’:
+../src/filter-invisible-positives.cpp:13:3: error: ‘cerr’ was not declared in this scope
+   cerr << "usage:\t" << argv[0] << " <bam_file_name> <ref_file_name>" << endl;
+   ^
+../src/filter-invisible-positives.cpp:13:74: error: ‘endl’ was not declared in this scope
+   cerr << "usage:\t" << argv[0] << " <bam_file_name> <ref_file_name>" << endl;
+                                                                          ^
+../src/filter-invisible-positives.cpp:17:2: error: ‘string’ was not declared in this scope
+  string tp_file_name = argv[1]; // string bam_file_name = "/home/el114/kyu/data/test.bam";
+  ^
+../src/filter-invisible-positives.cpp:17:9: error: expected ‘;’ before ‘tp_file_name’
+  string tp_file_name = argv[1]; // string bam_file_name = "/home/el114/kyu/data/test.bam";
+         ^
+../src/filter-invisible-positives.cpp:18:9: error: expected ‘;’ before ‘wes_file_name’
+  string wes_file_name = argv[2]; //"/home/el114/kyu/data/bwa_idx/human_youngTE_revisedPolyA.fa";
+         ^
+../src/filter-invisible-positives.cpp:20:18: error: ‘tp_file_name’ was not declared in this scope
+  filter_and_save(tp_file_name, wes_file_name);
+                  ^
+../src/filter-invisible-positives.cpp:20:32: error: ‘wes_file_name’ was not declared in this scope
+  filter_and_save(tp_file_name, wes_file_name);
+                                ^
+../src/filter-invisible-positives.cpp:20:45: error: ‘filter_and_save’ was not declared in this scope
+  filter_and_save(tp_file_name, wes_file_name);
+                                             ^
+make: *** [src/filter-invisible-positives.o] Error 1
+16:05:56 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+In file included from ../src/filter-invisible-positives.cpp:8:0:
+../src/filter-invisible-positives.hpp: In function ‘int FIP::filter_and_save(std::string&, std::string&)’:
+../src/filter-invisible-positives.hpp:43:12: error: cannot convert ‘boost::iterator_range<__gnu_cxx::__normal_iterator<char*, std::basic_string<char> > >’ to ‘int’ in assignment
+    chr_loc = boost::find_nth(line, '\t', 0);
+            ^
+../src/filter-invisible-positives.hpp:44:12: error: cannot convert ‘boost::iterator_range<__gnu_cxx::__normal_iterator<char*, std::basic_string<char> > >’ to ‘int’ in assignment
+    pbp_loc = boost::find_nth(line, '\t', 5);
+            ^
+../src/filter-invisible-positives.hpp:45:12: error: cannot convert ‘boost::iterator_range<__gnu_cxx::__normal_iterator<char*, std::basic_string<char> > >’ to ‘int’ in assignment
+    nbp_loc = boost::find_nth(line, '\t', 6);
+            ^
+In file included from ../src/filter-invisible-positives.hpp:12:0,
+                 from ../src/filter-invisible-positives.cpp:8:
+/opt/boost-1.57.0/include/boost/algorithm/string/find.hpp: In instantiation of ‘boost::iterator_range<typename boost::range_iterator<C>::type> boost::algorithm::find_nth(Range1T&, const Range2T&, int) [with Range1T = std::basic_string<char>; Range2T = char; typename boost::range_iterator<C>::type = __gnu_cxx::__normal_iterator<char*, std::basic_string<char> >]’:
+../src/filter-invisible-positives.hpp:43:43:   required from here
+/opt/boost-1.57.0/include/boost/algorithm/string/find.hpp:192:93: error: no matching function for call to ‘nth_finder(const char&, int&)’
+             return ::boost::algorithm::find(Input, ::boost::algorithm::nth_finder(Search,Nth));
+                                                                                             ^
+/opt/boost-1.57.0/include/boost/algorithm/string/find.hpp:192:93: note: candidates are:
+In file included from /opt/boost-1.57.0/include/boost/algorithm/string/find.hpp:22:0,
+                 from ../src/filter-invisible-positives.hpp:12,
+                 from ../src/filter-invisible-positives.cpp:8:
+/opt/boost-1.57.0/include/boost/algorithm/string/finder.hpp:134:9: note: template<class RangeT> boost::algorithm::detail::nth_finderF<typename boost::range_const_iterator<RangeT>::type, boost::algorithm::is_equal> boost::algorithm::nth_finder(const RangeT&, int)
+         nth_finder( 
+         ^
+/opt/boost-1.57.0/include/boost/algorithm/string/finder.hpp:134:9: note:   template argument deduction/substitution failed:
+/opt/boost-1.57.0/include/boost/algorithm/string/finder.hpp: In substitution of ‘template<class RangeT> boost::algorithm::detail::nth_finderF<typename boost::range_const_iterator<RangeT>::type, boost::algorithm::is_equal> boost::algorithm::nth_finder(const RangeT&, int) [with RangeT = char]’:
+/opt/boost-1.57.0/include/boost/algorithm/string/find.hpp:192:93:   required from ‘boost::iterator_range<typename boost::range_iterator<C>::type> boost::algorithm::find_nth(Range1T&, const Range2T&, int) [with Range1T = std::basic_string<char>; Range2T = char; typename boost::range_iterator<C>::type = __gnu_cxx::__normal_iterator<char*, std::basic_string<char> >]’
+../src/filter-invisible-positives.hpp:43:43:   required from here
+/opt/boost-1.57.0/include/boost/algorithm/string/finder.hpp:134:9: error: no type named ‘type’ in ‘struct boost::range_const_iterator<char, void>’
+/opt/boost-1.57.0/include/boost/algorithm/string/find.hpp: In instantiation of ‘boost::iterator_range<typename boost::range_iterator<C>::type> boost::algorithm::find_nth(Range1T&, const Range2T&, int) [with Range1T = std::basic_string<char>; Range2T = char; typename boost::range_iterator<C>::type = __gnu_cxx::__normal_iterator<char*, std::basic_string<char> >]’:
+../src/filter-invisible-positives.hpp:43:43:   required from here
+/opt/boost-1.57.0/include/boost/algorithm/string/finder.hpp:152:9: note: template<class RangeT, class PredicateT> boost::algorithm::detail::nth_finderF<typename boost::range_const_iterator<RangeT>::type, PredicateT> boost::algorithm::nth_finder(const RangeT&, int, PredicateT)
+         nth_finder( 
+         ^
+/opt/boost-1.57.0/include/boost/algorithm/string/finder.hpp:152:9: note:   template argument deduction/substitution failed:
+In file included from ../src/filter-invisible-positives.hpp:12:0,
+                 from ../src/filter-invisible-positives.cpp:8:
+/opt/boost-1.57.0/include/boost/algorithm/string/find.hpp:192:93: note:   candidate expects 3 arguments, 2 provided
+             return ::boost::algorithm::find(Input, ::boost::algorithm::nth_finder(Search,Nth));
+                                                                                             ^
+make: *** [src/filter-invisible-positives.o] Error 1
+16:11:25 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+In file included from ../src/filter-invisible-positives.cpp:8:0:
+../src/filter-invisible-positives.hpp: In function ‘int FIP::filter_and_save(std::string&, std::string&)’:
+../src/filter-invisible-positives.hpp:43:12: error: cannot convert ‘boost::iterator_range<__gnu_cxx::__normal_iterator<char*, std::basic_string<char> > >’ to ‘int’ in assignment
+    chr_loc = boost::find_nth(line, "\t", 0);
+            ^
+../src/filter-invisible-positives.hpp:44:12: error: cannot convert ‘boost::iterator_range<__gnu_cxx::__normal_iterator<char*, std::basic_string<char> > >’ to ‘int’ in assignment
+    pbp_loc = boost::find_nth(line, "\t", 5);
+            ^
+../src/filter-invisible-positives.hpp:45:12: error: cannot convert ‘boost::iterator_range<__gnu_cxx::__normal_iterator<char*, std::basic_string<char> > >’ to ‘int’ in assignment
+    nbp_loc = boost::find_nth(line, "\t", 6);
+            ^
+make: *** [src/filter-invisible-positives.o] Error 1
+16:17:09 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+In file included from ../src/filter-invisible-positives.cpp:8:0:
+../src/filter-invisible-positives.hpp: In function ‘int FIP::filter_and_save(std::string&, std::string&)’:
+../src/filter-invisible-positives.hpp:32:2: error: ‘iterator_range’ was not declared in this scope
+  iterator_range<string::iterator> chr_loc=0;
+  ^
+../src/filter-invisible-positives.hpp:32:2: note: suggested alternative:
+In file included from /opt/boost-1.57.0/include/boost/range/iterator.hpp:19:0,
+                 from /opt/boost-1.57.0/include/boost/range/begin.hpp:24,
+                 from /opt/boost-1.57.0/include/boost/range/functions.hpp:18,
+                 from /opt/boost-1.57.0/include/boost/range/iterator_range_core.hpp:38,
+                 from /opt/boost-1.57.0/include/boost/algorithm/string/find.hpp:16,
+                 from ../src/filter-invisible-positives.hpp:12,
+                 from ../src/filter-invisible-positives.cpp:8:
+/opt/boost-1.57.0/include/boost/range/range_fwd.hpp:28:11: note:   ‘boost::iterator_range’
+     class iterator_range;
+           ^
+In file included from ../src/filter-invisible-positives.cpp:8:0:
+../src/filter-invisible-positives.hpp:32:33: error: expected primary-expression before ‘>’ token
+  iterator_range<string::iterator> chr_loc=0;
+                                 ^
+../src/filter-invisible-positives.hpp:32:35: error: ‘chr_loc’ was not declared in this scope
+  iterator_range<string::iterator> chr_loc=0;
+                                   ^
+../src/filter-invisible-positives.hpp:33:33: error: expected primary-expression before ‘>’ token
+  iterator_range<string::iterator> pbp_loc=0;
+                                 ^
+../src/filter-invisible-positives.hpp:33:35: error: ‘pbp_loc’ was not declared in this scope
+  iterator_range<string::iterator> pbp_loc=0;
+                                   ^
+../src/filter-invisible-positives.hpp:34:33: error: expected primary-expression before ‘>’ token
+  iterator_range<string::iterator> nbp_loc=0;
+                                 ^
+../src/filter-invisible-positives.hpp:34:35: error: ‘nbp_loc’ was not declared in this scope
+  iterator_range<string::iterator> nbp_loc=0;
+                                   ^
+make: *** [src/filter-invisible-positives.o] Error 1
+16:17:48 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+In file included from ../src/filter-invisible-positives.cpp:8:0:
+../src/filter-invisible-positives.hpp: In function ‘int FIP::filter_and_save(std::string&, std::string&)’:
+../src/filter-invisible-positives.hpp:33:2: error: ‘iterator_range’ was not declared in this scope
+  iterator_range<string::iterator> chr_loc=0;
+  ^
+../src/filter-invisible-positives.hpp:33:2: note: suggested alternative:
+In file included from /opt/boost-1.57.0/include/boost/range/iterator.hpp:19:0,
+                 from /opt/boost-1.57.0/include/boost/range/begin.hpp:24,
+                 from /opt/boost-1.57.0/include/boost/range/functions.hpp:18,
+                 from /opt/boost-1.57.0/include/boost/range/iterator_range_core.hpp:38,
+                 from /opt/boost-1.57.0/include/boost/algorithm/string/find.hpp:16,
+                 from ../src/filter-invisible-positives.hpp:12,
+                 from ../src/filter-invisible-positives.cpp:8:
+/opt/boost-1.57.0/include/boost/range/range_fwd.hpp:28:11: note:   ‘boost::iterator_range’
+     class iterator_range;
+           ^
+In file included from ../src/filter-invisible-positives.cpp:8:0:
+../src/filter-invisible-positives.hpp:33:33: error: expected primary-expression before ‘>’ token
+  iterator_range<string::iterator> chr_loc=0;
+                                 ^
+../src/filter-invisible-positives.hpp:33:35: error: ‘chr_loc’ was not declared in this scope
+  iterator_range<string::iterator> chr_loc=0;
+                                   ^
+../src/filter-invisible-positives.hpp:34:33: error: expected primary-expression before ‘>’ token
+  iterator_range<string::iterator> pbp_loc=0;
+                                 ^
+../src/filter-invisible-positives.hpp:34:35: error: ‘pbp_loc’ was not declared in this scope
+  iterator_range<string::iterator> pbp_loc=0;
+                                   ^
+../src/filter-invisible-positives.hpp:35:33: error: expected primary-expression before ‘>’ token
+  iterator_range<string::iterator> nbp_loc=0;
+                                 ^
+../src/filter-invisible-positives.hpp:35:35: error: ‘nbp_loc’ was not declared in this scope
+  iterator_range<string::iterator> nbp_loc=0;
+                                   ^
+make: *** [src/filter-invisible-positives.o] Error 1
+16:27:00 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+In file included from ../src/filter-invisible-positives.cpp:8:0:
+../src/filter-invisible-positives.hpp: In function ‘int FIP::filter_and_save(std::string&, std::string&)’:
+../src/filter-invisible-positives.hpp:40:27: error: no matching function for call to ‘getline(std::string&, std::string&, char)’
+    getline(line, chr, '\t'); getline(line, chr, '\t');
+                           ^
+../src/filter-invisible-positives.hpp:40:27: note: candidates are:
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/cstdio:42:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ext/string_conversions.h:43,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2815,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/string:52,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ostream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/iostream:39,
+                 from ../src/filter-invisible-positives.hpp:11,
+                 from ../src/filter-invisible-positives.cpp:8:
+/usr/include/stdio.h:673:20: note: __ssize_t getline(char**, size_t*, FILE*)
+ extern _IO_ssize_t getline (char **__restrict __lineptr,
+                    ^
+/usr/include/stdio.h:673:20: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘char**’
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ostream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/iostream:39,
+                 from ../src/filter-invisible-positives.hpp:11,
+                 from ../src/filter-invisible-positives.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2793:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(std::basic_istream<_CharT, _Traits>&, std::basic_string<_CharT, _Traits, _Alloc>&)
+     getline(basic_istream<_CharT, _Traits>& __is,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2793:5: note:   template argument deduction/substitution failed:
+In file included from ../src/filter-invisible-positives.cpp:8:0:
+../src/filter-invisible-positives.hpp:40:27: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘std::basic_istream<_CharT, _Traits>’
+    getline(line, chr, '\t'); getline(line, chr, '\t');
+                           ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:53:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ostream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/iostream:39,
+                 from ../src/filter-invisible-positives.hpp:11,
+                 from ../src/filter-invisible-positives.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.tcc:1068:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(std::basic_istream<_CharT, _Traits>&, std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+     getline(basic_istream<_CharT, _Traits>& __in,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.tcc:1068:5: note:   template argument deduction/substitution failed:
+In file included from ../src/filter-invisible-positives.cpp:8:0:
+../src/filter-invisible-positives.hpp:40:27: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘std::basic_istream<_CharT, _Traits>’
+    getline(line, chr, '\t'); getline(line, chr, '\t');
+                           ^
+../src/filter-invisible-positives.hpp:40:53: error: no matching function for call to ‘getline(std::string&, std::string&, char)’
+    getline(line, chr, '\t'); getline(line, chr, '\t');
+                                                     ^
+../src/filter-invisible-positives.hpp:40:53: note: candidates are:
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/cstdio:42:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ext/string_conversions.h:43,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2815,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/string:52,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ostream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/iostream:39,
+                 from ../src/filter-invisible-positives.hpp:11,
+                 from ../src/filter-invisible-positives.cpp:8:
+/usr/include/stdio.h:673:20: note: __ssize_t getline(char**, size_t*, FILE*)
+ extern _IO_ssize_t getline (char **__restrict __lineptr,
+                    ^
+/usr/include/stdio.h:673:20: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘char**’
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ostream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/iostream:39,
+                 from ../src/filter-invisible-positives.hpp:11,
+                 from ../src/filter-invisible-positives.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2793:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(std::basic_istream<_CharT, _Traits>&, std::basic_string<_CharT, _Traits, _Alloc>&)
+     getline(basic_istream<_CharT, _Traits>& __is,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2793:5: note:   template argument deduction/substitution failed:
+In file included from ../src/filter-invisible-positives.cpp:8:0:
+../src/filter-invisible-positives.hpp:40:53: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘std::basic_istream<_CharT, _Traits>’
+    getline(line, chr, '\t'); getline(line, chr, '\t');
+                                                     ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:53:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ostream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/iostream:39,
+                 from ../src/filter-invisible-positives.hpp:11,
+                 from ../src/filter-invisible-positives.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.tcc:1068:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(std::basic_istream<_CharT, _Traits>&, std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+     getline(basic_istream<_CharT, _Traits>& __in,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.tcc:1068:5: note:   template argument deduction/substitution failed:
+In file included from ../src/filter-invisible-positives.cpp:8:0:
+../src/filter-invisible-positives.hpp:40:53: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘std::basic_istream<_CharT, _Traits>’
+    getline(line, chr, '\t'); getline(line, chr, '\t');
+                                                     ^
+../src/filter-invisible-positives.hpp:41:27: error: no matching function for call to ‘getline(std::string&, std::string&, char)’
+    getline(line, pbp, '\t'); getline(line, pbp, '\t');
+                           ^
+../src/filter-invisible-positives.hpp:41:27: note: candidates are:
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/cstdio:42:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ext/string_conversions.h:43,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2815,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/string:52,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ostream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/iostream:39,
+                 from ../src/filter-invisible-positives.hpp:11,
+                 from ../src/filter-invisible-positives.cpp:8:
+/usr/include/stdio.h:673:20: note: __ssize_t getline(char**, size_t*, FILE*)
+ extern _IO_ssize_t getline (char **__restrict __lineptr,
+                    ^
+/usr/include/stdio.h:673:20: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘char**’
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ostream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/iostream:39,
+                 from ../src/filter-invisible-positives.hpp:11,
+                 from ../src/filter-invisible-positives.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2793:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(std::basic_istream<_CharT, _Traits>&, std::basic_string<_CharT, _Traits, _Alloc>&)
+     getline(basic_istream<_CharT, _Traits>& __is,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2793:5: note:   template argument deduction/substitution failed:
+In file included from ../src/filter-invisible-positives.cpp:8:0:
+../src/filter-invisible-positives.hpp:41:27: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘std::basic_istream<_CharT, _Traits>’
+    getline(line, pbp, '\t'); getline(line, pbp, '\t');
+                           ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:53:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ostream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/iostream:39,
+                 from ../src/filter-invisible-positives.hpp:11,
+                 from ../src/filter-invisible-positives.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.tcc:1068:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(std::basic_istream<_CharT, _Traits>&, std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+     getline(basic_istream<_CharT, _Traits>& __in,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.tcc:1068:5: note:   template argument deduction/substitution failed:
+In file included from ../src/filter-invisible-positives.cpp:8:0:
+../src/filter-invisible-positives.hpp:41:27: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘std::basic_istream<_CharT, _Traits>’
+    getline(line, pbp, '\t'); getline(line, pbp, '\t');
+                           ^
+../src/filter-invisible-positives.hpp:41:53: error: no matching function for call to ‘getline(std::string&, std::string&, char)’
+    getline(line, pbp, '\t'); getline(line, pbp, '\t');
+                                                     ^
+../src/filter-invisible-positives.hpp:41:53: note: candidates are:
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/cstdio:42:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ext/string_conversions.h:43,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2815,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/string:52,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ostream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/iostream:39,
+                 from ../src/filter-invisible-positives.hpp:11,
+                 from ../src/filter-invisible-positives.cpp:8:
+/usr/include/stdio.h:673:20: note: __ssize_t getline(char**, size_t*, FILE*)
+ extern _IO_ssize_t getline (char **__restrict __lineptr,
+                    ^
+/usr/include/stdio.h:673:20: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘char**’
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ostream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/iostream:39,
+                 from ../src/filter-invisible-positives.hpp:11,
+                 from ../src/filter-invisible-positives.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2793:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(std::basic_istream<_CharT, _Traits>&, std::basic_string<_CharT, _Traits, _Alloc>&)
+     getline(basic_istream<_CharT, _Traits>& __is,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2793:5: note:   template argument deduction/substitution failed:
+In file included from ../src/filter-invisible-positives.cpp:8:0:
+../src/filter-invisible-positives.hpp:41:53: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘std::basic_istream<_CharT, _Traits>’
+    getline(line, pbp, '\t'); getline(line, pbp, '\t');
+                                                     ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:53:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ostream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/iostream:39,
+                 from ../src/filter-invisible-positives.hpp:11,
+                 from ../src/filter-invisible-positives.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.tcc:1068:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(std::basic_istream<_CharT, _Traits>&, std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+     getline(basic_istream<_CharT, _Traits>& __in,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.tcc:1068:5: note:   template argument deduction/substitution failed:
+In file included from ../src/filter-invisible-positives.cpp:8:0:
+../src/filter-invisible-positives.hpp:41:53: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘std::basic_istream<_CharT, _Traits>’
+    getline(line, pbp, '\t'); getline(line, pbp, '\t');
+                                                     ^
+../src/filter-invisible-positives.hpp:42:27: error: no matching function for call to ‘getline(std::string&, std::string&, char)’
+    getline(line, pbp, '\t'); getline(line, pbp, '\t');
+                           ^
+../src/filter-invisible-positives.hpp:42:27: note: candidates are:
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/cstdio:42:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ext/string_conversions.h:43,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2815,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/string:52,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ostream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/iostream:39,
+                 from ../src/filter-invisible-positives.hpp:11,
+                 from ../src/filter-invisible-positives.cpp:8:
+/usr/include/stdio.h:673:20: note: __ssize_t getline(char**, size_t*, FILE*)
+ extern _IO_ssize_t getline (char **__restrict __lineptr,
+                    ^
+/usr/include/stdio.h:673:20: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘char**’
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ostream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/iostream:39,
+                 from ../src/filter-invisible-positives.hpp:11,
+                 from ../src/filter-invisible-positives.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2793:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(std::basic_istream<_CharT, _Traits>&, std::basic_string<_CharT, _Traits, _Alloc>&)
+     getline(basic_istream<_CharT, _Traits>& __is,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2793:5: note:   template argument deduction/substitution failed:
+In file included from ../src/filter-invisible-positives.cpp:8:0:
+../src/filter-invisible-positives.hpp:42:27: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘std::basic_istream<_CharT, _Traits>’
+    getline(line, pbp, '\t'); getline(line, pbp, '\t');
+                           ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:53:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ostream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/iostream:39,
+                 from ../src/filter-invisible-positives.hpp:11,
+                 from ../src/filter-invisible-positives.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.tcc:1068:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(std::basic_istream<_CharT, _Traits>&, std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+     getline(basic_istream<_CharT, _Traits>& __in,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.tcc:1068:5: note:   template argument deduction/substitution failed:
+In file included from ../src/filter-invisible-positives.cpp:8:0:
+../src/filter-invisible-positives.hpp:42:27: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘std::basic_istream<_CharT, _Traits>’
+    getline(line, pbp, '\t'); getline(line, pbp, '\t');
+                           ^
+../src/filter-invisible-positives.hpp:42:53: error: no matching function for call to ‘getline(std::string&, std::string&, char)’
+    getline(line, pbp, '\t'); getline(line, pbp, '\t');
+                                                     ^
+../src/filter-invisible-positives.hpp:42:53: note: candidates are:
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/cstdio:42:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ext/string_conversions.h:43,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2815,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/string:52,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ostream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/iostream:39,
+                 from ../src/filter-invisible-positives.hpp:11,
+                 from ../src/filter-invisible-positives.cpp:8:
+/usr/include/stdio.h:673:20: note: __ssize_t getline(char**, size_t*, FILE*)
+ extern _IO_ssize_t getline (char **__restrict __lineptr,
+                    ^
+/usr/include/stdio.h:673:20: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘char**’
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ostream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/iostream:39,
+                 from ../src/filter-invisible-positives.hpp:11,
+                 from ../src/filter-invisible-positives.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2793:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(std::basic_istream<_CharT, _Traits>&, std::basic_string<_CharT, _Traits, _Alloc>&)
+     getline(basic_istream<_CharT, _Traits>& __is,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2793:5: note:   template argument deduction/substitution failed:
+In file included from ../src/filter-invisible-positives.cpp:8:0:
+../src/filter-invisible-positives.hpp:42:53: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘std::basic_istream<_CharT, _Traits>’
+    getline(line, pbp, '\t'); getline(line, pbp, '\t');
+                                                     ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:53:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ostream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/iostream:39,
+                 from ../src/filter-invisible-positives.hpp:11,
+                 from ../src/filter-invisible-positives.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.tcc:1068:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(std::basic_istream<_CharT, _Traits>&, std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+     getline(basic_istream<_CharT, _Traits>& __in,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.tcc:1068:5: note:   template argument deduction/substitution failed:
+In file included from ../src/filter-invisible-positives.cpp:8:0:
+../src/filter-invisible-positives.hpp:42:53: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘std::basic_istream<_CharT, _Traits>’
+    getline(line, pbp, '\t'); getline(line, pbp, '\t');
+                                                     ^
+../src/filter-invisible-positives.hpp:43:27: error: no matching function for call to ‘getline(std::string&, std::string&, char)’
+    getline(line, nbp, '\t');
+                           ^
+../src/filter-invisible-positives.hpp:43:27: note: candidates are:
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/cstdio:42:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ext/string_conversions.h:43,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2815,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/string:52,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ostream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/iostream:39,
+                 from ../src/filter-invisible-positives.hpp:11,
+                 from ../src/filter-invisible-positives.cpp:8:
+/usr/include/stdio.h:673:20: note: __ssize_t getline(char**, size_t*, FILE*)
+ extern _IO_ssize_t getline (char **__restrict __lineptr,
+                    ^
+/usr/include/stdio.h:673:20: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘char**’
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:52:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ostream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/iostream:39,
+                 from ../src/filter-invisible-positives.hpp:11,
+                 from ../src/filter-invisible-positives.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2793:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(std::basic_istream<_CharT, _Traits>&, std::basic_string<_CharT, _Traits, _Alloc>&)
+     getline(basic_istream<_CharT, _Traits>& __is,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.h:2793:5: note:   template argument deduction/substitution failed:
+In file included from ../src/filter-invisible-positives.cpp:8:0:
+../src/filter-invisible-positives.hpp:43:27: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘std::basic_istream<_CharT, _Traits>’
+    getline(line, nbp, '\t');
+                           ^
+In file included from /opt/gcc/4.8.5/include/c++/4.8.5/string:53:0,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/locale_classes.h:40,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/bits/ios_base.h:41,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ios:42,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/ostream:38,
+                 from /opt/gcc/4.8.5/include/c++/4.8.5/iostream:39,
+                 from ../src/filter-invisible-positives.hpp:11,
+                 from ../src/filter-invisible-positives.cpp:8:
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.tcc:1068:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(std::basic_istream<_CharT, _Traits>&, std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+     getline(basic_istream<_CharT, _Traits>& __in,
+     ^
+/opt/gcc/4.8.5/include/c++/4.8.5/bits/basic_string.tcc:1068:5: note:   template argument deduction/substitution failed:
+In file included from ../src/filter-invisible-positives.cpp:8:0:
+../src/filter-invisible-positives.hpp:43:27: note:   ‘std::string {aka std::basic_string<char>}’ is not derived from ‘std::basic_istream<_CharT, _Traits>’
+    getline(line, nbp, '\t');
+                           ^
+make: *** [src/filter-invisible-positives.o] Error 1
+16:29:21 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+In file included from ../src/filter-invisible-positives.cpp:8:0:
+../src/filter-invisible-positives.hpp: In function ‘int FIP::filter_and_save(std::string&, std::string&)’:
+../src/filter-invisible-positives.hpp:40:24: error: variable ‘std::stringstream ss’ has initializer but incomplete type
+    stringstream ss(line);
+                        ^
+make: *** [src/filter-invisible-positives.o] Error 1
+16:29:52 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+Finished building: ../src/filter-invisible-positives.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o ./src/filter-invisible-positives.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+./src/filter-invisible-positives.o: In function `main':
+/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/TeaQ/Release/../src/filter-invisible-positives.cpp:13: multiple definition of `main'
+./src/TeaQ.o:/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/TeaQ/Release/../src/TeaQ.cpp:17: first defined here
+collect2: error: ld returned 1 exit status
+make: *** [TeaQ] Error 1
+16:30:23 **** Clean-only build of configuration Release for project TeaQ ****
+make clean 
+rm -rf  ./src/ReadClipper.o ./src/TeaQ.o ./src/filter-invisible-positives.o  ./src/ReadClipper.d ./src/TeaQ.d ./src/filter-invisible-positives.d  TeaQ
+ 
+16:30:23 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+../src/ReadClipper.cpp: In function ‘void TeaQ::get_refName(std::string&)’:
+../src/ReadClipper.cpp:60:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int64_t i=0; i < refData.size(); ++i) {
+                                     ^
+../src/ReadClipper.cpp: In function ‘void TeaQ::filter(std::string, char, int64_t)’:
+../src/ReadClipper.cpp:171:6: warning: unused variable ‘tab1’ [-Wunused-variable]
+  int tab1 = 0;
+      ^
+../src/ReadClipper.cpp:172:6: warning: unused variable ‘tab2’ [-Wunused-variable]
+  int tab2 = 0;
+      ^
+../src/ReadClipper.cpp:173:6: warning: unused variable ‘tab3’ [-Wunused-variable]
+  int tab3 = 0;
+      ^
+../src/ReadClipper.cpp: In function ‘void TeaQ::contiggen(std::string, char, std::string, std::string)’:
+../src/ReadClipper.cpp:376:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (s_chr_index == string::npos
+                                ^
+../src/ReadClipper.cpp:377:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       || s_pos_index == string::npos) {
+                                 ^
+../src/ReadClipper.cpp:395:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      if (s_chr_index == string::npos
+                                 ^
+../src/ReadClipper.cpp:396:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        || s_pos_index == string::npos) {
+                                  ^
+../src/ReadClipper.cpp:308:10: warning: unused variable ‘refID’ [-Wunused-variable]
+  int64_t refID;
+          ^
+../src/ReadClipper.cpp: In function ‘void TeaQ::give_refName(std::string&)’:
+../src/ReadClipper.cpp:532:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   if (first_tab == string::npos) {
+                            ^
+Finished building: ../src/ReadClipper.cpp
+ 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+Finished building: ../src/filter-invisible-positives.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/filter-invisible-positives.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+16:34:05 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+Finished building: ../src/filter-invisible-positives.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/filter-invisible-positives.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+16:34:13 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+make: Nothing to be done for `all'.
+16:34:53 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+Finished building: ../src/filter-invisible-positives.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/filter-invisible-positives.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+16:54:59 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+In file included from ../src/filter-invisible-positives.cpp:8:0:
+../src/filter-invisible-positives.hpp: In function ‘int FIP::filter_and_save(std::string&, std::string&)’:
+../src/filter-invisible-positives.hpp:51:23: error: invalid cast from type ‘std::string {aka std::basic_string<char>}’ to type ‘int’
+    midpoint = (int(pbp) + int(nbp))/2;
+                       ^
+../src/filter-invisible-positives.hpp:51:34: error: invalid cast from type ‘std::string {aka std::basic_string<char>}’ to type ‘int’
+    midpoint = (int(pbp) + int(nbp))/2;
+                                  ^
+make: *** [src/filter-invisible-positives.o] Error 1
+16:56:24 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+Finished building: ../src/filter-invisible-positives.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/filter-invisible-positives.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+16:56:37 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+make: Nothing to be done for `all'.
+16:58:43 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+In file included from ../src/filter-invisible-positives.cpp:8:0:
+../src/filter-invisible-positives.hpp: In function ‘int FIP::filter_and_save(std::string&, std::string&)’:
+../src/filter-invisible-positives.hpp:79:27: error: expected ‘;’ before string constant
+    cout << alignmentCount "\t" << chr << "\t"  << pbp << "\t" << nbp << endl;
+                           ^
+make: *** [src/filter-invisible-positives.o] Error 1
+16:59:01 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+Finished building: ../src/filter-invisible-positives.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/filter-invisible-positives.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+16:59:10 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+make: Nothing to be done for `all'.
+17:00:13 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+Finished building: ../src/filter-invisible-positives.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/filter-invisible-positives.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:00:21 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+make: Nothing to be done for `all'.
+17:01:03 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+Finished building: ../src/filter-invisible-positives.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/filter-invisible-positives.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:01:34 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+Finished building: ../src/filter-invisible-positives.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/filter-invisible-positives.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:01:54 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+make: Nothing to be done for `all'.
+17:02:57 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+Finished building: ../src/filter-invisible-positives.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/filter-invisible-positives.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:04:18 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+Finished building: ../src/filter-invisible-positives.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/filter-invisible-positives.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:04:26 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+make: Nothing to be done for `all'.
+17:07:43 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+Finished building: ../src/filter-invisible-positives.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/filter-invisible-positives.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:12:10 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+Finished building: ../src/filter-invisible-positives.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/filter-invisible-positives.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:15:18 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+make: Nothing to be done for `all'.
+17:15:22 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+Finished building: ../src/filter-invisible-positives.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/filter-invisible-positives.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:19:16 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+Finished building: ../src/filter-invisible-positives.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/filter-invisible-positives.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:19:24 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+make: Nothing to be done for `all'.
+17:26:13 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+Finished building: ../src/filter-invisible-positives.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/filter-invisible-positives.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:27:08 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+Finished building: ../src/filter-invisible-positives.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/filter-invisible-positives.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:29:24 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+In file included from ../src/filter-invisible-positives.cpp:8:0:
+../src/filter-invisible-positives.hpp: In function ‘bool FIP::filter_and_save(std::string&, std::string&)’:
+../src/filter-invisible-positives.hpp:56:11: error: ‘class BamTools::BamReader’ has no member named ‘LocateIndexes’
+    reader.LocateIndexes();
+           ^
+make: *** [src/filter-invisible-positives.o] Error 1
+17:30:19 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+Finished building: ../src/filter-invisible-positives.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/filter-invisible-positives.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+17:31:00 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+Finished building: ../src/filter-invisible-positives.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/filter-invisible-positives.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+15:17:51 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/ReadClipper.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
+../src/ReadClipper.cpp: In function ‘void TeaQ::get_refName(std::string&)’:
+../src/ReadClipper.cpp:60:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int64_t i=0; i < refData.size(); ++i) {
+                                     ^
+../src/ReadClipper.cpp: In function ‘void TeaQ::filter(std::string, char, int64_t)’:
+../src/ReadClipper.cpp:171:6: warning: unused variable ‘tab1’ [-Wunused-variable]
+  int tab1 = 0;
+      ^
+../src/ReadClipper.cpp:172:6: warning: unused variable ‘tab2’ [-Wunused-variable]
+  int tab2 = 0;
+      ^
+../src/ReadClipper.cpp:173:6: warning: unused variable ‘tab3’ [-Wunused-variable]
+  int tab3 = 0;
+      ^
+../src/ReadClipper.cpp: In function ‘void TeaQ::contiggen(std::string, char, std::string, std::string)’:
+../src/ReadClipper.cpp:376:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (s_chr_index == string::npos
+                                ^
+../src/ReadClipper.cpp:377:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       || s_pos_index == string::npos) {
+                                 ^
+../src/ReadClipper.cpp:395:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      if (s_chr_index == string::npos
+                                 ^
+../src/ReadClipper.cpp:396:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        || s_pos_index == string::npos) {
+                                  ^
+../src/ReadClipper.cpp:308:10: warning: unused variable ‘refID’ [-Wunused-variable]
+  int64_t refID;
+          ^
+../src/ReadClipper.cpp: In function ‘void TeaQ::give_refName(std::string&)’:
+../src/ReadClipper.cpp:532:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   if (first_tab == string::npos) {
+                            ^
+Finished building: ../src/ReadClipper.cpp
+ 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+Finished building: ../src/filter-invisible-positives.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/filter-invisible-positives.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
+15:20:34 **** Incremental Build of configuration Release for project TeaQ ****
+make all 
+Building file: ../src/filter-invisible-positives.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/filter-invisible-positives.d" -MT"src/filter-invisible-positives.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/filter-invisible-positives.o" "../src/filter-invisible-positives.cpp"
+Finished building: ../src/filter-invisible-positives.cpp
+ 
+Building target: TeaQ
+Invoking: Cross G++ Linker
+g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/filter-invisible-positives.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
+Finished building target: TeaQ
+ 
