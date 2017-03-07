@@ -15,7 +15,7 @@ using namespace TeaQ;
 using namespace std;
 
 int main(int argc, char *argv[]) {
-	if (argc != 2) {
+	if (argc != 3) {
 		cerr << "usage:\t" << argv[0] << " <bam_file_name> <ref_file_name>" << endl;
 		cerr << "\t ref family file (default: /home/el114/kyu/data/bwa_idx/human_youngTE_revisedPolyA.fa)" << endl;
 		return 1;

@@ -32,8 +32,10 @@ void rm_temp(string temp_file_name) {
 }
 
 void mkdir(string bam_file_name) {
-	string cmd_mkdir = "mkdir " + bam_file_name + "-tea-debug";
-	system(cmd_mkdir.c_str());
+	string cmd_rm_debug_dir = "rm -rf " + bam_file_name + "-tea-debug";
+	system(cmd_rm_debug_dir.c_str());
+	string cmd_mk_debug_dir = "mkdir " + bam_file_name + "-tea-debug";
+	system(cmd_mk_debug_dir.c_str());
 }
 
 void do_join(std::thread& t) {
@@ -91,35 +93,34 @@ void clip(string& bam_file_name, int64_t minimum_read_length) {
 		stringstream ss_f;
 		stringstream ss_r;
 
-//		if (refID == "0" && al.IsReverseStrand() == true && pos > 9714486 && pos < 9714686) {
-//			cout << refID << ":" << pos << "\t ";
-//
-//			for(auto& c : al.CigarData) {
-//
-//				cout << c.Type << c.Length ;
-//			}
-//			cout << "\t" << bases << endl;
-//		}
-
 		int64_t cursor = 0;
 		for(std::vector<int64_t>::size_type i = 0; i != al.CigarData.size(); ++i) {
 			auto& a_cigar = al.CigarData[i];
 			char& type = a_cigar.Type;
 			int64_t len = a_cigar.Length;
 
-			if (type == 'D') continue;
+			if (type == 'D') {
+				pos += len;
+				continue;
+			}
 			else if (type == 'S') {
 				if (i == 0) {
 					if (!al.IsReverseStrand() && len >= minimum_read_length) {
-						ss_f << refID << "\t" << pos << "\t" << bases.substr(cursor, len) << endl;
+						ss_f << refID << "\t" << pos+1 << "\t" << bases.substr(cursor, len) << endl;
 					}
-					else continue;
+					else {
+						cursor += len;
+						continue;
+					}
 				}
 				else if (i == al.CigarData.size()-1) {
 					if (al.IsReverseStrand() && len >= minimum_read_length) {
-						ss_r << refID << "\t" << pos << "\t" << bases.substr(cursor, len) << endl;
+						ss_r << refID << "\t" << pos+1 << "\t" << bases.substr(cursor, len) << endl;
 					}
-					else continue;
+					else {
+						cursor += len;
+						continue;
+					}
 				}
 			}
 
@@ -132,6 +133,7 @@ void clip(string& bam_file_name, int64_t minimum_read_length) {
 		r_clipped << ss_r.str();
 
 	}
+
 
 	cout << "Closing " << f_clipped_file_name << endl;
 	f_clipped.close();
@@ -257,7 +259,7 @@ void bwa_aln_samse(string& contigs_file_name, string& ref_fa_file_name) {
 	//bwa aln bwa_idx/human_youngTE_revisedPolyA.fa test.bam.contigs > test.bam.contigs.sai
 	//bwa samse -n 100 bwa_idx/human_youngTE_revisedPolyA.fa test.bam.contigs.sai test.bam.contigs  > test.bam.contigs.bam
 
-	string cmd_load_bwa ="module load seq/bwa/0.6.2 & sleep 1s";
+	string cmd_load_bwa ="module load seq/bwa/0.6.2";
 	system(cmd_load_bwa.c_str());
 
 	string bwa_sai_file_name = contigs_file_name + ".sai";
