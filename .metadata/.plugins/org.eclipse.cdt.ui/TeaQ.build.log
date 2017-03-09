@@ -1,4 +1,4 @@
-13:08:44 **** Incremental Build of configuration Release for project TeaQ ****
+19:59:06 **** Incremental Build of configuration Release for project TeaQ ****
 make all 
 Building file: ../src/ReadClipper.cpp
 Invoking: Cross G++ Compiler
@@ -39,11 +39,16 @@ g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/works
                             ^
 Finished building: ../src/ReadClipper.cpp
  
+Building file: ../src/TeaQ.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/src" -O0 -g3 -Wall -I/opt/boost-1.57.0/include -c -fmessage-length=0 -std=c++11 -static-libstdc++ -MMD -MP -MF"src/TeaQ.d" -MT"src/TeaQ.o" -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bwa-0.6.2" -o "src/TeaQ.o" "../src/TeaQ.cpp"
+Finished building: ../src/TeaQ.cpp
+ 
 Building target: TeaQ
 Invoking: Cross G++ Linker
 g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/bamtools/lib" -o "TeaQ"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
 Finished building target: TeaQ
  
 
-13:08:51 Build Finished (took 7s.372ms)
+19:59:24 Build Finished (took 17s.240ms)
 

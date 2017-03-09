@@ -56,7 +56,7 @@ void get_refName(string& bam_file_name) {
 	}
 
 	auto& refData = reader.GetReferenceData();
-	string refName_file_name = bam_file_name + ".refName";
+	string refName_file_name = bam_file_name + "-tea-debug/00-refName";
 	ofstream refName(refName_file_name);
 
 	for (int64_t i=0; i < refData.size(); ++i) {
@@ -106,7 +106,7 @@ void clip(string& bam_file_name, int64_t minimum_read_length) {
 			else if (type == 'S') {
 				if (i == 0) {
 					if (!al.IsReverseStrand() && len >= minimum_read_length) {
-						ss_f << refID << "\t" << pos+1 << "\t" << bases.substr(cursor, len) << endl;
+						ss_f << refID << "\t" << pos << "\t" << bases.substr(cursor, len) << endl;
 					}
 					else {
 						cursor += len;
@@ -354,7 +354,7 @@ void contiggen(string bam_file_name, char f_or_r, string cap3_options, string re
 			temp_fa.close();
 			cmd_cap3 = "cap3 " + temp_fa_file_name + " " + cap3_options +
 					" > " + log_file_name;
-			cout << cmd_cap3 << endl;
+			// cout << cmd_cap3 << endl;
 			system(cmd_cap3.c_str());
 
 			int64_t s_chr_index = 0;
@@ -497,16 +497,16 @@ void run_bwa(string& contigs_file_name, string& ref_fa_file_name) {
 void filter_family(string& bam_file_name) {
 	string contigs_f_bam_file_name = bam_file_name + "-tea-debug/04-contigs-f.samse-refid";
 	string contigs_r_bam_file_name = bam_file_name + "-tea-debug/04-contigs-r.samse-refid";
-	string samse_file_name = bam_file_name + "-tea-debug/05-combined-samse-refid";
+	string cTea_file_name = bam_file_name + "-tea-debug/05-combined-cTea-refid";
 
 	cout << "Filtering reads without family and combining f and r files" << endl;
-	string awk_script_file_name = "/home/el114/kyu/bin/script/teaify-0.1.awk";
+	string awk_script_file_name = "/home/el114/kyu/bin/script/teaify-0.2.awk";
 	string cmd_awk = awk_script_file_name + " " +
 			contigs_f_bam_file_name + " " +
-			contigs_r_bam_file_name + " > " + samse_file_name;
+			contigs_r_bam_file_name + " > " + cTea_file_name;
 	system(cmd_awk.c_str());
 
-	sort(samse_file_name);
+	sort(cTea_file_name);
 }
 
 void give_refName(string& bam_file_name) {
@@ -518,11 +518,11 @@ void give_refName(string& bam_file_name) {
 
 	auto& refData = reader.GetReferenceData();
 	string line;
-	string samse_refid_file_name = bam_file_name + "-tea-debug/05-combined-samse-refid-sorted";
-	ifstream in_tea(samse_refid_file_name, ifstream::binary);
+	string cTea_refid_file_name = bam_file_name + "-tea-debug/05-combined-cTea-refid-sorted";
+	ifstream in_tea(cTea_refid_file_name, ifstream::binary);
 
-	string samse_file_name = bam_file_name + ".samse";
-	ofstream output(samse_file_name);
+	string cTea_file_name = bam_file_name + ".cTea";
+	ofstream output(cTea_file_name);
 
 	int64_t first_tab;
 	int64_t refID;
@@ -541,7 +541,6 @@ void give_refName(string& bam_file_name) {
 	}
 	output.close();
 
-	rm_temp(samse_refid_file_name);
 }
 
 

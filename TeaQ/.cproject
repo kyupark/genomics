@@ -182,14 +182,6 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
-					<fileInfo id="cdt.managedbuild.config.gnu.cross.exe.release.377987082.1772132124" name="TeaQ.cpp" rcbsApplicability="disable" resourcePath="src/TeaQ.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1327283448.1413598233">
-						<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1327283448.1413598233" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1327283448">
-							<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.807549839" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
-						</tool>
-					</fileInfo>
-					<fileInfo id="cdt.managedbuild.config.gnu.cross.exe.release.377987082.1518880789" name="filter-invisible-positives.cpp" rcbsApplicability="disable" resourcePath="src/filter-invisible-positives.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1327283448.2001090205">
-						<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1327283448.2001090205" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1327283448"/>
-					</fileInfo>
 					<fileInfo id="cdt.managedbuild.config.gnu.cross.exe.release.377987082.1307227879" name="ReadClipper.hpp" rcbsApplicability="disable" resourcePath="src/ReadClipper.hpp" toolsToInvoke=""/>
 					<sourceEntries>
 						<entry excluding="filter-invisible-positives.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
