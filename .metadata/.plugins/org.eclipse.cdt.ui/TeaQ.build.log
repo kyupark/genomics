@@ -1,4 +1,4 @@
-19:59:06 **** Incremental Build of configuration Release for project TeaQ ****
+12:48:35 **** Incremental Build of configuration Release for project TeaQ ****
 make all 
 Building file: ../src/ReadClipper.cpp
 Invoking: Cross G++ Compiler
@@ -34,7 +34,7 @@ g++ -I/opt/boost-1.57.0/include -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/works
   int64_t refID;
           ^
 ../src/ReadClipper.cpp: In function ‘void TeaQ::give_refName(std::string&)’:
-../src/ReadClipper.cpp:534:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/ReadClipper.cpp:535:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
    if (first_tab == string::npos) {
                             ^
 Finished building: ../src/ReadClipper.cpp
@@ -50,5 +50,5 @@ g++ -L/opt/boost-1.57.0/lib -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspace
 Finished building target: TeaQ
  
 
-19:59:24 Build Finished (took 17s.240ms)
+12:48:52 Build Finished (took 17s.590ms)
 

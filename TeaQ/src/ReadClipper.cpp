@@ -103,7 +103,7 @@ void clip(string& bam_file_name, int64_t minimum_read_length) {
 				pos += len;
 				continue;
 			}
-			else if (type == 'S') {
+			else if (type == 'S' | type == 's' | type == 'H' | type = 'h') {
 				if (i == 0) {
 					if (!al.IsReverseStrand() && len >= minimum_read_length) {
 						ss_f << refID << "\t" << pos << "\t" << bases.substr(cursor, len) << endl;
@@ -170,9 +170,6 @@ void filter(string bam_file_name, char f_or_r, int64_t minimum_base_gap) {
 
 	bool is_previous_space = true;
 	int64_t count = 0;
-	int tab1 = 0;
-	int tab2 = 0;
-	int tab3 = 0;
 
 	while(getline(in, line)){
 
@@ -419,14 +416,15 @@ void contiggen(string bam_file_name, char f_or_r, string cap3_options, string re
 					else {
 						cerr << "More than one contig: " << cap_contigs_file_name << endl;
 						break;
-					}
+		Tsl			}
 				}
 			}
 
 			contigs << ">" << chr << ";" << cpos << ";" << f_or_r << ";" << no_of_reads << ";" << pos_combined << ";" << base_combined << endl;
 			contigs << contig << endl;
 
-			threads.push_back(thread(rm_temp_all, temp_fa_file_name));
+//			threads.push_back(thread(rm_temp_all, temp_fa_file_name));
+			rm_temp_all(temp_fa_file_name);
 
 			++count;
 			temp_fa_file_name = temp_fa_file_prefix + "." + to_string(count);
@@ -450,7 +448,7 @@ void contiggen(string bam_file_name, char f_or_r, string cap3_options, string re
 
 	bwa_aln_samse(contigs_file_name, ref_fa_file_name);
 
-	join_all(threads);
+//	join_all(threads);
 }
 
 
