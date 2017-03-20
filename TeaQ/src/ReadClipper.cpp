@@ -99,11 +99,31 @@ void clip(string& bam_file_name, int64_t minimum_read_length) {
 			char& type = a_cigar.Type;
 			int64_t len = a_cigar.Length;
 
-			if (type == 'D') {
+			if (type == 'D' || type == 'd') {
 				pos += len;
-				continue;
 			}
-			else if (type == 'S' | type == 's' | type == 'H' | type = 'h') {
+			else if ( type == 'H' || type == 'h') {
+				if (i == 0) {
+					if (!al.IsReverseStrand() && len >= minimum_read_length) {
+						ss_f << refID << "\t" << pos << "\t" << endl;
+					}
+					else {
+						cursor += len;
+						continue;
+					}
+				}
+				else if (i == al.CigarData.size()-1) {
+					if (al.IsReverseStrand() && len >= minimum_read_length) {
+						ss_r << refID << "\t" << pos+1 << "\t" << endl;
+					}
+					else {
+						cursor += len;
+						continue;
+					}
+				}
+				pos += len;
+			}
+			else if (type == 'S' | type == 's') {
 				if (i == 0) {
 					if (!al.IsReverseStrand() && len >= minimum_read_length) {
 						ss_f << refID << "\t" << pos << "\t" << bases.substr(cursor, len) << endl;
@@ -122,10 +142,13 @@ void clip(string& bam_file_name, int64_t minimum_read_length) {
 						continue;
 					}
 				}
+				cursor += len;
+				pos += len;
 			}
-
-			cursor += len;
-			pos += len;
+			else {
+				cursor += len;
+				pos += len;
+			}
 
 		}
 
@@ -323,6 +346,9 @@ void contiggen(string bam_file_name, char f_or_r, string cap3_options, string re
 			chr = line.substr(0, chr_index);
 			pos = boost::lexical_cast<int64_t>(line.substr(chr_index+1, base_index-chr_index-1));
 			base = line.substr(base_index+1);
+
+			if (base == "") continue;
+
 			temp_fa << ">" << chr << ":" << pos << endl;
 			temp_fa << base << endl;
 
@@ -349,42 +375,27 @@ void contiggen(string bam_file_name, char f_or_r, string cap3_options, string re
 			string cap_singlets_file_name = temp_fa_file_name + ".cap.singlets";
 
 			temp_fa.close();
-			cmd_cap3 = "cap3 " + temp_fa_file_name + " " + cap3_options +
-					" > " + log_file_name;
-			// cout << cmd_cap3 << endl;
-			system(cmd_cap3.c_str());
 
-			int64_t s_chr_index = 0;
-			int64_t s_pos_index = 0;
+			// In case, there were only Hard clips(empty bases)
+			if (base_combined != "") {
 
-			string line_contigs;
-			ifstream in_contigs(cap_contigs_file_name, ifstream::binary);
-			getline(in_contigs, line_contigs);
+				cmd_cap3 = "cap3 " + temp_fa_file_name + " " + cap3_options +
+						" > " + log_file_name;
+				// cout << cmd_cap3 << endl;
+				system(cmd_cap3.c_str());
 
-			// if contigs file is empty, check singlets file and get the longest
-			if (line_contigs.empty()) {
-				string longest_singlet="";
-				string line_singlets="";
-				ifstream in_singlets(cap_singlets_file_name, ifstream::binary);
-				if (!getline(in_singlets, line_singlets)) {
-					break;
-				}
+				int64_t s_chr_index = 0;
+				int64_t s_pos_index = 0;
 
-				s_chr_index = line_singlets.find(">");
-				s_pos_index = line_singlets.find(":");
-				if (s_chr_index == string::npos
-						|| s_pos_index == string::npos) {
-					break;
-				}
+				string line_contigs;
+				ifstream in_contigs(cap_contigs_file_name, ifstream::binary);
+				getline(in_contigs, line_contigs);
 
-				chr = line_singlets.substr(s_chr_index+1, s_pos_index-s_chr_index-1);
-				pos = boost::lexical_cast<int64_t>(line_singlets.substr(s_pos_index+1));
-
-				while (getline(in_singlets, line_singlets)) {
-					if (line_singlets.length() > longest_singlet.length()) {
-						longest_singlet = line_singlets;
-					}
-
+				// if contigs file is empty, check singlets file and get the longest
+				if (line_contigs.empty()) {
+					string longest_singlet="";
+					string line_singlets="";
+					ifstream in_singlets(cap_singlets_file_name, ifstream::binary);
 					if (!getline(in_singlets, line_singlets)) {
 						break;
 					}
@@ -399,32 +410,52 @@ void contiggen(string bam_file_name, char f_or_r, string cap3_options, string re
 					chr = line_singlets.substr(s_chr_index+1, s_pos_index-s_chr_index-1);
 					pos = boost::lexical_cast<int64_t>(line_singlets.substr(s_pos_index+1));
 
-				}
-				contig = longest_singlet;
-			}
-			// if contigs file is not empty,
-			else {
-				getline(in_contigs, line_contigs);
-				contig = line_contigs;
+					while (getline(in_singlets, line_singlets)) {
+						if (line_singlets.length() > longest_singlet.length()) {
+							longest_singlet = line_singlets;
+						}
 
-				// append multiline contig
-				while(getline(in_contigs, line_contigs)) {
-					if (line_contigs.find(">") == string::npos) {
-						contig += line_contigs;
+						if (!getline(in_singlets, line_singlets)) {
+							break;
+						}
+
+						s_chr_index = line_singlets.find(">");
+						s_pos_index = line_singlets.find(":");
+						if (s_chr_index == string::npos
+								|| s_pos_index == string::npos) {
+							break;
+						}
+
+						chr = line_singlets.substr(s_chr_index+1, s_pos_index-s_chr_index-1);
+						pos = boost::lexical_cast<int64_t>(line_singlets.substr(s_pos_index+1));
+
 					}
-					// TODO handle more than one contig
-					else {
-						cerr << "More than one contig: " << cap_contigs_file_name << endl;
-						break;
-		Tsl			}
+					contig = longest_singlet;
 				}
+				// if contigs file is not empty,
+				else {
+					getline(in_contigs, line_contigs);
+					contig = line_contigs;
+
+					// append multiline contig
+					while(getline(in_contigs, line_contigs)) {
+						if (line_contigs.find(">") == string::npos) {
+							contig += line_contigs;
+						}
+						// TODO handle more than one contig
+						else {
+							cerr << "More than one contig: " << cap_contigs_file_name << endl;
+							break;
+						}
+					}
+				}
+
+				contigs << ">" << chr << ";" << cpos << ";" << f_or_r << ";" << no_of_reads << ";" << pos_combined << ";" << base_combined << endl;
+				contigs << contig << endl;
+
+				rm_temp_all(temp_fa_file_name);
+
 			}
-
-			contigs << ">" << chr << ";" << cpos << ";" << f_or_r << ";" << no_of_reads << ";" << pos_combined << ";" << base_combined << endl;
-			contigs << contig << endl;
-
-//			threads.push_back(thread(rm_temp_all, temp_fa_file_name));
-			rm_temp_all(temp_fa_file_name);
 
 			++count;
 			temp_fa_file_name = temp_fa_file_prefix + "." + to_string(count);
@@ -498,7 +529,7 @@ void filter_family(string& bam_file_name) {
 	string cTea_file_name = bam_file_name + "-tea-debug/05-combined-cTea-refid";
 
 	cout << "Filtering reads without family and combining f and r files" << endl;
-	string awk_script_file_name = "/home/el114/kyu/bin/script/teaify-0.2.awk";
+	string awk_script_file_name = "/home/el114/kyu/bin/script/teaify-0.3.awk";
 	string cmd_awk = awk_script_file_name + " " +
 			contigs_f_bam_file_name + " " +
 			contigs_r_bam_file_name + " > " + cTea_file_name;

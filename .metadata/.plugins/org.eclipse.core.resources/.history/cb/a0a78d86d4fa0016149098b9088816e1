@@ -1,0 +1,67 @@
+/*
+ * filter-invisible-positives.hpp
+ *
+ *  Created on: Feb 24, 2017
+ *      Author: el114
+ */
+
+#ifndef FILTER_INVISIBLE_POSITIVES_HPP_
+#define FILTER_INVISIBLE_POSITIVES_HPP_
+
+#include <iostream>
+#include <boost/algorithm/string/find.hpp>
+#include <api/BamReader.h>
+
+
+namespace FIP {
+
+using namespace std;
+using namespace BamTools;
+
+
+
+int filter_and_save(string& tp_file_name, string& wes_file_name) {
+	BamReader reader;
+	if ( !reader.Open(wes_file_name)) {
+		cerr << "Could not open input BAM file" << endl;
+		//return false;
+	}
+
+	ifstream in(tp_file_name, ifstream::binary);
+	string line;
+	int chr_loc=0;
+	int pbp_loc=0;
+	int nbp_loc=0;
+
+	string chr;
+	string pbp;
+	string nbp;
+
+	getline(in, line);
+//	while(getline(in, line)){
+		if (!line.empty()) {
+			chr_loc = boost::find_nth(line, '\t', 0);
+			pbp_loc = boost::find_nth(line, '\t', 5);
+			nbp_loc = boost::find_nth(line, '\t', 6);
+
+			chr = line.substr(chr_loc, line.find_first_of('\t', chr_loc) - chr_loc);
+			pbp = line.substr(pbp_loc, line.find_first_of('\t', pbp_loc) - pbp_loc);
+			nbp = line.substr(nbp_loc, line.find_first_of('\t', nbp_loc) - nbp_loc);
+
+
+		}
+//	}
+
+
+
+
+
+
+
+	return 0;
+}
+
+
+} /* namespace FIP */
+
+#endif /* FILTER_INVISIBLE_POSITIVES_HPP_ */

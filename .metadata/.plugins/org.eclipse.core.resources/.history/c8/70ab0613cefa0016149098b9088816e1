@@ -1,0 +1,34 @@
+/*
+ * filter-invisible-positives.hpp
+ *
+ *  Created on: Feb 24, 2017
+ *      Author: el114
+ */
+
+#ifndef FILTER_INVISIBLE_POSITIVES_HPP_
+#define FILTER_INVISIBLE_POSITIVES_HPP_
+
+#include <api/BamReader.h>
+
+
+namespace FIP {
+
+using namespace std;
+using namespace BamTools;
+
+
+
+int temp() {
+	BamReader reader;
+	if ( !reader.Open(bam_file_name)) {
+		cerr << "Could not open input BAM file" << endl;
+		//return false;
+	}
+
+
+}
+
+
+} /* namespace FIP */
+
+#endif /* FILTER_INVISIBLE_POSITIVES_HPP_ */

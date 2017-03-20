@@ -1,0 +1,29 @@
+/*
+ * filter-invisible-positives.cpp
+ *
+ *  Created on: Feb 24, 2017
+ *      Author: el114
+ */
+
+#include "filter-invisible-positives.hpp"
+
+using namespace FIP;
+using namespace std;
+
+int main(int argc, char *argv[]) {
+//	if (argc != 2) {
+//		cerr << "usage:\t" << argv[0] << " <bam_file_name> <ref_file_name>" << endl;
+//		return 1;
+//	}
+//	string tp_file_name = argv[1];
+//	string wes_file_name = argv[2];
+
+
+	string tp_file_name = "/home/el114/kyu/data/crcA56B_normal-true-postives.contig";
+	string wes_file_name = "/home/el174/vincent_lim/tea_test/exome/crcA56B_normal.bam";
+
+	filter_and_save(tp_file_name, wes_file_name);
+
+
+	return 0;
+}
