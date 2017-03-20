@@ -1,6 +1,0 @@
-16:44:56 **** Build of configuration Build (GNU) for project bamtools ****
-make all 
-make: *** No rule to make target `all'.  Stop.
-
-16:44:56 Build Finished (took 121ms)
-
