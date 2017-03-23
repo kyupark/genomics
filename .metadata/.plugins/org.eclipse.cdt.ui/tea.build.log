@@ -1,0 +1,10 @@
+15:35:51 **** Incremental Build of configuration Release for project tea ****
+make -j8 all 
+Building target: tea
+Invoking: Cross G++ Linker
+g++ -static -std=c++11 -pthread -fopenmp -L/opt/boost-1.57.0/lib/ -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/mybamtools/lib" -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/lib" -o "tea"  ./src/third/faidx.o ./src/third/gzstream.o ./src/third/razf.o ./src/third/xfaidx.o  ./src/tea/ResultCompartor.o ./src/tea/TEA.o ./src/tea/TEAOptionParser.o  ./src/meerkat/preprocess/ReadGroup.o  ./src/meerkat/BWACaller.o  ./src/castle/OptionParser.o  ./src/tea.o   -lbamtools-utils -ltea_lib -lm -lbamtools -lboost_system -lboost_filesystem -lboost_thread -lboost_regex -lrt -lz
+Finished building target: tea
+ 
+
+15:35:55 Build Finished (took 3s.919ms)
+

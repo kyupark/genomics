@@ -1,0 +1,2 @@
+/usr/bin/ar cr ../../../lib/libbamtools.a  CMakeFiles/BamToolsST.dir/BamAlignment.cpp.o CMakeFiles/BamToolsST.dir/BamIndex.cpp.o CMakeFiles/BamToolsST.dir/BamMultiReader.cpp.o CMakeFiles/BamToolsST.dir/BamReader.cpp.o CMakeFiles/BamToolsST.dir/BamWriter.cpp.o CMakeFiles/BamToolsST.dir/BGZF.cpp.o CMakeFiles/BamToolsST.dir/internal/BamReader_p.cpp.o CMakeFiles/BamToolsST.dir/internal/BamStandardIndex_p.cpp.o CMakeFiles/BamToolsST.dir/internal/BamToolsIndex_p.cpp.o CMakeFiles/BamToolsST.dir/internal/BamWriter_p.cpp.o
+/usr/bin/ranlib ../../../lib/libbamtools.a

@@ -1,0 +1,1 @@
+/opt/gcc/4.8.5/bin/c++  -fPIC    -shared -Wl,-soname,libjsoncpp.so.1.0.0 -o ../../../../lib/libjsoncpp.so.1.0.0 CMakeFiles/jsoncpp.dir/json_reader.cpp.o CMakeFiles/jsoncpp.dir/json_value.cpp.o CMakeFiles/jsoncpp.dir/json_writer.cpp.o 

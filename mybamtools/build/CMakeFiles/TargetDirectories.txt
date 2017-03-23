@@ -1,0 +1,7 @@
+/home/el114/kyu/code/mybamtools/build/src/api/CMakeFiles/BamTools.dir
+/home/el114/kyu/code/mybamtools/build/src/utils/CMakeFiles/BamTools-utils.dir
+/home/el114/kyu/code/mybamtools/build/src/utils/CMakeFiles/BamTools-utilsST.dir
+/home/el114/kyu/code/mybamtools/build/src/api/CMakeFiles/BamToolsST.dir
+/home/el114/kyu/code/mybamtools/build/src/toolkit/CMakeFiles/bamtools.dir
+/home/el114/kyu/code/mybamtools/build/src/third_party/jsoncpp/CMakeFiles/jsoncpp.dir
+/home/el114/kyu/code/mybamtools/build/src/third_party/jsoncpp/CMakeFiles/jsoncppST.dir
