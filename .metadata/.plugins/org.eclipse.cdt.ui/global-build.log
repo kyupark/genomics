@@ -1,247 +1,543 @@
-09:51:52 **** Build of configuration Release for project mybamtools ****
-make -C /home/el114/kyu/code/mybamtools/build -j 8 all 
-make: Entering directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[1]: Entering directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Entering directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Entering directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Entering directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Entering directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Entering directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Entering directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Entering directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Entering directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-[  6%] Building CXX object src/api/CMakeFiles/BamTools.dir/BamIndex.cpp.o
-[ 17%] [ 17%] [ 17%] [ 17%] [ 17%] [ 17%] [ 17%] Building CXX object src/api/CMakeFiles/BamTools.dir/BamMultiReader.cpp.o
-Building CXX object src/api/CMakeFiles/BamTools.dir/BamWriter.cpp.o
-Building CXX object src/api/CMakeFiles/BamTools.dir/BamReader.cpp.o
-Building CXX object src/third_party/jsoncpp/CMakeFiles/jsoncppST.dir/json_reader.cpp.o
-Building CXX object src/api/CMakeFiles/BamToolsST.dir/BamAlignment.cpp.o
-Building CXX object src/third_party/jsoncpp/CMakeFiles/jsoncpp.dir/json_reader.cpp.o
-Building CXX object src/api/CMakeFiles/BamTools.dir/BamAlignment.cpp.o
-[ 19%] Building CXX object src/api/CMakeFiles/BamTools.dir/BGZF.cpp.o
-[ 21%] Building CXX object src/third_party/jsoncpp/CMakeFiles/jsoncppST.dir/json_value.cpp.o
-[ 27%] [ 29%] [ 29%] Building CXX object src/third_party/jsoncpp/CMakeFiles/jsoncppST.dir/json_writer.cpp.o
-[ 29%] Building CXX object src/api/CMakeFiles/BamToolsST.dir/BamIndex.cpp.o
-Building CXX object src/api/CMakeFiles/BamToolsST.dir/BamMultiReader.cpp.o
-Building CXX object src/api/CMakeFiles/BamToolsST.dir/BamReader.cpp.o
-[ 31%] Building CXX object src/api/CMakeFiles/BamTools.dir/internal/BamReader_p.cpp.o
-[ 36%] [ 36%] Building CXX object src/third_party/jsoncpp/CMakeFiles/jsoncpp.dir/json_value.cpp.o
-Building CXX object src/api/CMakeFiles/BamToolsST.dir/BamWriter.cpp.o
-[ 40%] [ 40%] Building CXX object src/api/CMakeFiles/BamToolsST.dir/BGZF.cpp.o
-Building CXX object src/api/CMakeFiles/BamToolsST.dir/internal/BamReader_p.cpp.o
-[ 42%] Building CXX object src/api/CMakeFiles/BamTools.dir/internal/BamStandardIndex_p.cpp.o
-Linking CXX static library ../../../../lib/libjsoncpp.a
-[ 44%] Building CXX object src/api/CMakeFiles/BamTools.dir/internal/BamToolsIndex_p.cpp.o
-[ 46%] Building CXX object src/api/CMakeFiles/BamToolsST.dir/internal/BamStandardIndex_p.cpp.o
-[ 51%] Building CXX object src/third_party/jsoncpp/CMakeFiles/jsoncpp.dir/json_writer.cpp.o
-[ 53%] [ 53%] Building CXX object src/api/CMakeFiles/BamTools.dir/internal/BamWriter_p.cpp.o
-Building CXX object src/api/CMakeFiles/BamToolsST.dir/internal/BamToolsIndex_p.cpp.o
-make[2]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-[ 55%] [ 55%] Building CXX object src/api/CMakeFiles/BamToolsST.dir/internal/BamWriter_p.cpp.o
-Built target jsoncppST
-Linking CXX shared library ../../../../lib/libjsoncpp.so
-Linking CXX shared library ../../../lib/libbamtools.so
-make[2]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-Linking CXX static library ../../../lib/libbamtools.a
-[ 55%] Built target jsoncpp
-make[2]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-[ 55%] Built target BamTools
-make[2]: Entering directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Entering directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Entering directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Entering directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-[ 70%] [ 70%] [ 70%] [ 70%] [ 70%] [ 70%] [ 70%] Building CXX object src/utils/CMakeFiles/BamTools-utils.dir/bamtools_fasta.cpp.o
-Building CXX object src/utils/CMakeFiles/BamTools-utilsST.dir/bamtools_fasta.cpp.o
-Building CXX object src/utils/CMakeFiles/BamTools-utilsST.dir/bamtools_pileup_engine.cpp.o
-Building CXX object src/utils/CMakeFiles/BamTools-utils.dir/bamtools_options.cpp.o
-Building CXX object src/utils/CMakeFiles/BamTools-utilsST.dir/bamtools_utilities.cpp.o
-Building CXX object src/utils/CMakeFiles/BamTools-utilsST.dir/bamtools_options.cpp.o
-Building CXX object src/utils/CMakeFiles/BamTools-utils.dir/bamtools_pileup_engine.cpp.o
-[ 70%] Built target BamToolsST
-[ 72%] Building CXX object src/utils/CMakeFiles/BamTools-utils.dir/bamtools_utilities.cpp.o
-Linking CXX static library ../../../lib/libbamtools-utils.a
-Linking CXX shared library ../../../lib/libbamtools-utils.so
-make[2]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-[ 72%] Built target BamTools-utilsST
-[ 72%] Built target BamTools-utils
-make[2]: Entering directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Entering directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-[ 89%] [ 89%] [ 89%] [ 89%] [ 89%] [ 89%] [ 89%] [ 89%] Building CXX object src/toolkit/CMakeFiles/bamtools.dir/bamtools_count.cpp.o
-Building CXX object src/toolkit/CMakeFiles/bamtools.dir/bamtools_convert.cpp.o
-Building CXX object src/toolkit/CMakeFiles/bamtools.dir/bamtools_coverage.cpp.o
-Building CXX object src/toolkit/CMakeFiles/bamtools.dir/bamtools_header.cpp.o
-Building CXX object src/toolkit/CMakeFiles/bamtools.dir/bamtools_index.cpp.o
-Building CXX object src/toolkit/CMakeFiles/bamtools.dir/bamtools_filter.cpp.o
-Building CXX object src/toolkit/CMakeFiles/bamtools.dir/bamtools_merge.cpp.o
-Building CXX object src/toolkit/CMakeFiles/bamtools.dir/bamtools_random.cpp.o
-[ 91%] Building CXX object src/toolkit/CMakeFiles/bamtools.dir/bamtools_revert.cpp.o
-[ 93%] [ 95%] Building CXX object src/toolkit/CMakeFiles/bamtools.dir/bamtools_sort.cpp.o
-Building CXX object src/toolkit/CMakeFiles/bamtools.dir/bamtools_split.cpp.o
-[100%] [100%] Building CXX object src/toolkit/CMakeFiles/bamtools.dir/bamtools_stats.cpp.o
-Building CXX object src/toolkit/CMakeFiles/bamtools.dir/bamtools.cpp.o
-Linking CXX executable ../../../bin/bamtools
-make[2]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-[100%] Built target bamtools
-make[1]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-09:52:37 **** Build of configuration Debug for project meerkat ****
+18:00:24 **** Incremental Build of configuration Release for project bam2fq ****
+make all 
+Building file: ../src/meerkat/preprocess/ReadGroup.cpp
+Invoking: Cross G++ Compiler
+g++ -static -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/preprocess/ReadGroup.d" -MT"src/meerkat/preprocess/ReadGroup.o" -o "src/meerkat/preprocess/ReadGroup.o" "../src/meerkat/preprocess/ReadGroup.cpp"
+Finished building: ../src/meerkat/preprocess/ReadGroup.cpp
+ 
+Building file: ../src/meerkat/BWACaller.cpp
+Invoking: Cross G++ Compiler
+g++ -static -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/BWACaller.d" -MT"src/meerkat/BWACaller.o" -o "src/meerkat/BWACaller.o" "../src/meerkat/BWACaller.cpp"
+Finished building: ../src/meerkat/BWACaller.cpp
+ 
+Building file: ../src/cat/Bam2Fastq.cpp
+Invoking: Cross G++ Compiler
+g++ -static -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cat/Bam2Fastq.d" -MT"src/cat/Bam2Fastq.o" -o "src/cat/Bam2Fastq.o" "../src/cat/Bam2Fastq.cpp"
+../src/cat/Bam2Fastq.cpp: In lambda function:
+../src/cat/Bam2Fastq.cpp:198:104: error: ‘BamTools::BamWriter’ has not been declared
+         cout << "[TEA.write_read_group] 1-1 " << (an_aln.IsReverseStrand() ? "R:" : "F:") << BamTools::BamWriter::GetSAMAlignment(an_aln, m_ref) << "\n";
+                                                                                                        ^
+../src/cat/Bam2Fastq.cpp:198:139: error: ‘m_ref’ was not declared in this scope
+         cout << "[TEA.write_read_group] 1-1 " << (an_aln.IsReverseStrand() ? "R:" : "F:") << BamTools::BamWriter::GetSAMAlignment(an_aln, m_ref) << "\n";
+                                                                                                                                           ^
+../src/cat/Bam2Fastq.cpp:201:104: error: ‘BamTools::BamWriter’ has not been declared
+         cout << "[TEA.write_read_group] 1-2 " << (an_aln.IsReverseStrand() ? "R:" : "F:") << BamTools::BamWriter::GetSAMAlignment(an_aln, m_ref) << "\n";
+                                                                                                        ^
+../src/cat/Bam2Fastq.cpp:201:139: error: ‘m_ref’ was not declared in this scope
+         cout << "[TEA.write_read_group] 1-2 " << (an_aln.IsReverseStrand() ? "R:" : "F:") << BamTools::BamWriter::GetSAMAlignment(an_aln, m_ref) << "\n";
+                                                                                                                                           ^
+../src/cat/Bam2Fastq.cpp: In member function ‘void cat::Bam2Fastq::write_read_group(std::string&, std::vector<long int>&)’:
+../src/cat/Bam2Fastq.cpp:268:11: error: ‘castle::IOUtils’ has not been declared
+   castle::IOUtils::plain_file_merge(output_filename1, output_files_1, n_cores, false);
+           ^
+../src/cat/Bam2Fastq.cpp:269:11: error: ‘castle::IOUtils’ has not been declared
+   castle::IOUtils::plain_file_merge(output_filename2, output_files_2, n_cores, false);
+           ^
+In file included from /opt/boost-1.57.0/include/boost/filesystem/path_traits.hpp:23:0,
+                 from /opt/boost-1.57.0/include/boost/filesystem/path.hpp:25,
+                 from /opt/boost-1.57.0/include/boost/filesystem.hpp:16,
+                 from ../src/cat/../castle/OptionParser.hpp:19,
+                 from ../src/cat/Bam2Fastq.hpp:11,
+                 from ../src/cat/Bam2Fastq.cpp:8:
+/opt/boost-1.57.0/include/boost/system/error_code.hpp: At global scope:
+/opt/boost-1.57.0/include/boost/system/error_code.hpp:221:36: warning: ‘boost::system::posix_category’ defined but not used [-Wunused-variable]
+     static const error_category &  posix_category = generic_category();
+                                    ^
+/opt/boost-1.57.0/include/boost/system/error_code.hpp:222:36: warning: ‘boost::system::errno_ecat’ defined but not used [-Wunused-variable]
+     static const error_category &  errno_ecat     = generic_category();
+                                    ^
+/opt/boost-1.57.0/include/boost/system/error_code.hpp:223:36: warning: ‘boost::system::native_ecat’ defined but not used [-Wunused-variable]
+     static const error_category &  native_ecat    = system_category();
+                                    ^
+make: *** [src/cat/Bam2Fastq.o] Error 1
+18:01:26 **** Incremental Build of configuration Release for project bam2fq ****
+make all 
+Building file: ../src/cat/Bam2Fastq.cpp
+Invoking: Cross G++ Compiler
+g++ -static -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cat/Bam2Fastq.d" -MT"src/cat/Bam2Fastq.o" -o "src/cat/Bam2Fastq.o" "../src/cat/Bam2Fastq.cpp"
+../src/cat/Bam2Fastq.cpp: In lambda function:
+../src/cat/Bam2Fastq.cpp:198:104: error: ‘BamTools::BamWriter’ has not been declared
+         cout << "[TEA.write_read_group] 1-1 " << (an_aln.IsReverseStrand() ? "R:" : "F:") << BamTools::BamWriter::GetSAMAlignment(an_aln, m_ref) << "\n";
+                                                                                                        ^
+../src/cat/Bam2Fastq.cpp:198:139: error: ‘m_ref’ was not declared in this scope
+         cout << "[TEA.write_read_group] 1-1 " << (an_aln.IsReverseStrand() ? "R:" : "F:") << BamTools::BamWriter::GetSAMAlignment(an_aln, m_ref) << "\n";
+                                                                                                                                           ^
+../src/cat/Bam2Fastq.cpp:201:104: error: ‘BamTools::BamWriter’ has not been declared
+         cout << "[TEA.write_read_group] 1-2 " << (an_aln.IsReverseStrand() ? "R:" : "F:") << BamTools::BamWriter::GetSAMAlignment(an_aln, m_ref) << "\n";
+                                                                                                        ^
+../src/cat/Bam2Fastq.cpp:201:139: error: ‘m_ref’ was not declared in this scope
+         cout << "[TEA.write_read_group] 1-2 " << (an_aln.IsReverseStrand() ? "R:" : "F:") << BamTools::BamWriter::GetSAMAlignment(an_aln, m_ref) << "\n";
+                                                                                                                                           ^
+In file included from /opt/boost-1.57.0/include/boost/filesystem/path_traits.hpp:23:0,
+                 from /opt/boost-1.57.0/include/boost/filesystem/path.hpp:25,
+                 from /opt/boost-1.57.0/include/boost/filesystem.hpp:16,
+                 from ../src/cat/../castle/OptionParser.hpp:19,
+                 from ../src/cat/Bam2Fastq.hpp:11,
+                 from ../src/cat/Bam2Fastq.cpp:8:
+/opt/boost-1.57.0/include/boost/system/error_code.hpp: At global scope:
+/opt/boost-1.57.0/include/boost/system/error_code.hpp:221:36: warning: ‘boost::system::posix_category’ defined but not used [-Wunused-variable]
+     static const error_category &  posix_category = generic_category();
+                                    ^
+/opt/boost-1.57.0/include/boost/system/error_code.hpp:222:36: warning: ‘boost::system::errno_ecat’ defined but not used [-Wunused-variable]
+     static const error_category &  errno_ecat     = generic_category();
+                                    ^
+/opt/boost-1.57.0/include/boost/system/error_code.hpp:223:36: warning: ‘boost::system::native_ecat’ defined but not used [-Wunused-variable]
+     static const error_category &  native_ecat    = system_category();
+                                    ^
+make: *** [src/cat/Bam2Fastq.o] Error 1
+18:01:50 **** Incremental Build of configuration Release for project bam2fq ****
+make all 
+Building file: ../src/cat/Bam2Fastq.cpp
+Invoking: Cross G++ Compiler
+g++ -static -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cat/Bam2Fastq.d" -MT"src/cat/Bam2Fastq.o" -o "src/cat/Bam2Fastq.o" "../src/cat/Bam2Fastq.cpp"
+../src/cat/Bam2Fastq.cpp: In lambda function:
+../src/cat/Bam2Fastq.cpp:198:139: error: ‘m_ref’ was not declared in this scope
+         cout << "[TEA.write_read_group] 1-1 " << (an_aln.IsReverseStrand() ? "R:" : "F:") << BamTools::BamWriter::GetSAMAlignment(an_aln, m_ref) << "\n";
+                                                                                                                                           ^
+../src/cat/Bam2Fastq.cpp:201:139: error: ‘m_ref’ was not declared in this scope
+         cout << "[TEA.write_read_group] 1-2 " << (an_aln.IsReverseStrand() ? "R:" : "F:") << BamTools::BamWriter::GetSAMAlignment(an_aln, m_ref) << "\n";
+                                                                                                                                           ^
+In file included from /opt/boost-1.57.0/include/boost/filesystem/path_traits.hpp:23:0,
+                 from /opt/boost-1.57.0/include/boost/filesystem/path.hpp:25,
+                 from /opt/boost-1.57.0/include/boost/filesystem.hpp:16,
+                 from ../src/cat/../castle/OptionParser.hpp:19,
+                 from ../src/cat/Bam2Fastq.hpp:11,
+                 from ../src/cat/Bam2Fastq.cpp:8:
+/opt/boost-1.57.0/include/boost/system/error_code.hpp: At global scope:
+/opt/boost-1.57.0/include/boost/system/error_code.hpp:221:36: warning: ‘boost::system::posix_category’ defined but not used [-Wunused-variable]
+     static const error_category &  posix_category = generic_category();
+                                    ^
+/opt/boost-1.57.0/include/boost/system/error_code.hpp:222:36: warning: ‘boost::system::errno_ecat’ defined but not used [-Wunused-variable]
+     static const error_category &  errno_ecat     = generic_category();
+                                    ^
+/opt/boost-1.57.0/include/boost/system/error_code.hpp:223:36: warning: ‘boost::system::native_ecat’ defined but not used [-Wunused-variable]
+     static const error_category &  native_ecat    = system_category();
+                                    ^
+make: *** [src/cat/Bam2Fastq.o] Error 1
+18:02:12 **** Incremental Build of configuration Release for project bam2fq ****
+make all 
+Building file: ../src/cat/Bam2Fastq.cpp
+Invoking: Cross G++ Compiler
+g++ -static -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cat/Bam2Fastq.d" -MT"src/cat/Bam2Fastq.o" -o "src/cat/Bam2Fastq.o" "../src/cat/Bam2Fastq.cpp"
+../src/cat/Bam2Fastq.cpp: In lambda function:
+../src/cat/Bam2Fastq.cpp:176:16: warning: unused variable ‘debug’ [-Wunused-variable]
+     const bool debug = false;
+                ^
+Finished building: ../src/cat/Bam2Fastq.cpp
+ 
+Building file: ../src/bam2fq.cpp
+Invoking: Cross G++ Compiler
+g++ -static -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/bam2fq.d" -MT"src/bam2fq.o" -o "src/bam2fq.o" "../src/bam2fq.cpp"
+Finished building: ../src/bam2fq.cpp
+ 
+Building target: bam2fq
+Invoking: Cross G++ Linker
+g++ -static -L/opt/boost-1.57.0/lib/ -L"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/lib" -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/lib" -o "bam2fq"  ./src/third/faidx.o ./src/third/gzstream.o ./src/third/razf.o ./src/third/xfaidx.o  ./src/meerkat/preprocess/ReadGroup.o  ./src/meerkat/BWACaller.o  ./src/cat/Bam2Fastq.o  ./src/castle/OptionParser.o  ./src/bam2fq.o   -lbamtools-utils -ltea_lib -lm -lbamtools -lboost_system -lboost_filesystem -lboost_thread -lboost_regex -lrt -lz
+/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/lib/libtea_lib.a(ParallelRunner.o): In function `castle::ParallelRunner::run_step_wise(unsigned long, std::vector<std::function<void ()()>, std::allocator<std::function<void ()()> > >&, std::function<void ()(unsigned long, unsigned long)>&)':
+ParallelRunner.cpp:(.text+0x910): undefined reference to `pthread_mutex_init'
+/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/lib/libtea_lib.a(ParallelRunner.o): In function `castle::ParallelRunner::run_unbalanced_load(unsigned int, std::vector<std::function<void ()()>, std::allocator<std::function<void ()()> > >&)':
+ParallelRunner.cpp:(.text+0x1537): undefined reference to `pthread_self'
+ParallelRunner.cpp:(.text+0x160e): undefined reference to `pthread_self'
+/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/lib/libtea_lib.a(ParallelRunner.o): In function `boost::mutex::~mutex()':
+ParallelRunner.cpp:(.text._ZN5boost5mutexD2Ev[_ZN5boost5mutexD5Ev]+0xc): undefined reference to `pthread_mutex_destroy'
+/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/lib/libtea_lib.a(ParallelRunner.o): In function `boost::condition_variable::~condition_variable()':
+ParallelRunner.cpp:(.text._ZN5boost18condition_variableD2Ev[_ZN5boost18condition_variableD5Ev]+0xc): undefined reference to `pthread_mutex_destroy'
+ParallelRunner.cpp:(.text._ZN5boost18condition_variableD2Ev[_ZN5boost18condition_variableD5Ev]+0x24): undefined reference to `pthread_cond_destroy'
+/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/lib/libtea_lib.a(ParallelRunner.o): In function `boost::thread_group::~thread_group()':
+ParallelRunner.cpp:(.text._ZN5boost12thread_groupD2Ev[_ZN5boost12thread_groupD5Ev]+0x74): undefined reference to `pthread_mutex_destroy'
+/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/lib/libtea_lib.a(ParallelRunner.o): In function `boost::condition_variable::condition_variable()':
+ParallelRunner.cpp:(.text._ZN5boost18condition_variableC2Ev[_ZN5boost18condition_variableC5Ev]+0xc): undefined reference to `pthread_mutex_init'
+ParallelRunner.cpp:(.text._ZN5boost18condition_variableC2Ev[_ZN5boost18condition_variableC5Ev]+0x1f): undefined reference to `pthread_cond_init'
+ParallelRunner.cpp:(.text._ZN5boost18condition_variableC2Ev[_ZN5boost18condition_variableC5Ev]+0x34): undefined reference to `pthread_mutex_destroy'
+/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/lib/libtea_lib.a(ParallelRunner.o): In function `boost::thread_group::thread_group()':
+ParallelRunner.cpp:(.text._ZN5boost12thread_groupC2Ev[_ZN5boost12thread_groupC5Ev]+0x33): undefined reference to `pthread_mutex_init'
+/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/lib/libtea_lib.a(ParallelRunner.o): In function `boost::detail::thread_data_base::thread_data_base()':
+ParallelRunner.cpp:(.text._ZN5boost6detail16thread_data_baseC2Ev[_ZN5boost6detail16thread_data_baseC5Ev]+0x48): undefined reference to `pthread_mutex_init'
+ParallelRunner.cpp:(.text._ZN5boost6detail16thread_data_baseC2Ev[_ZN5boost6detail16thread_data_baseC5Ev]+0x6d): undefined reference to `pthread_mutex_init'
+/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/lib/libtea_lib.a(ParallelRunner.o): In function `boost::mutex::unlock()':
+ParallelRunner.cpp:(.text._ZN5boost5mutex6unlockEv[_ZN5boost5mutex6unlockEv]+0x14): undefined reference to `pthread_mutex_unlock'
+/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/lib/libtea_lib.a(ParallelRunner.o): In function `boost::unique_lock<boost::mutex>::lock()':
+ParallelRunner.cpp:(.text._ZN5boost11unique_lockINS_5mutexEE4lockEv[_ZN5boost11unique_lockINS_5mutexEE4lockEv]+0x24): undefined reference to `pthread_mutex_lock'
+/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/lib/libtea_lib.a(ParallelRunner.o): In function `boost::shared_mutex::unlock()':
+ParallelRunner.cpp:(.text._ZN5boost12shared_mutex6unlockEv[_ZN5boost12shared_mutex6unlockEv]+0x4f): undefined reference to `pthread_mutex_lock'
+ParallelRunner.cpp:(.text._ZN5boost12shared_mutex6unlockEv[_ZN5boost12shared_mutex6unlockEv]+0x5f): undefined reference to `pthread_cond_signal'
+ParallelRunner.cpp:(.text._ZN5boost12shared_mutex6unlockEv[_ZN5boost12shared_mutex6unlockEv]+0x6f): undefined reference to `pthread_mutex_unlock'
+ParallelRunner.cpp:(.text._ZN5boost12shared_mutex6unlockEv[_ZN5boost12shared_mutex6unlockEv]+0x7f): undefined reference to `pthread_mutex_lock'
+ParallelRunner.cpp:(.text._ZN5boost12shared_mutex6unlockEv[_ZN5boost12shared_mutex6unlockEv]+0x8c): undefined reference to `pthread_cond_broadcast'
+ParallelRunner.cpp:(.text._ZN5boost12shared_mutex6unlockEv[_ZN5boost12shared_mutex6unlockEv]+0x98): undefined reference to `pthread_mutex_unlock'
+/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/lib/libtea_lib.a(ParallelRunner.o): In function `boost::shared_mutex::unlock_shared()':
+ParallelRunner.cpp:(.text._ZN5boost12shared_mutex13unlock_sharedEv[_ZN5boost12shared_mutex13unlock_sharedEv]+0x64): undefined reference to `pthread_mutex_lock'
+ParallelRunner.cpp:(.text._ZN5boost12shared_mutex13unlock_sharedEv[_ZN5boost12shared_mutex13unlock_sharedEv]+0x78): undefined reference to `pthread_cond_signal'
+ParallelRunner.cpp:(.text._ZN5boost12shared_mutex13unlock_sharedEv[_ZN5boost12shared_mutex13unlock_sharedEv]+0x88): undefined reference to `pthread_mutex_unlock'
+ParallelRunner.cpp:(.text._ZN5boost12shared_mutex13unlock_sharedEv[_ZN5boost12shared_mutex13unlock_sharedEv]+0x9f): undefined reference to `pthread_mutex_lock'
+ParallelRunner.cpp:(.text._ZN5boost12shared_mutex13unlock_sharedEv[_ZN5boost12shared_mutex13unlock_sharedEv]+0xb3): undefined reference to `pthread_cond_signal'
+ParallelRunner.cpp:(.text._ZN5boost12shared_mutex13unlock_sharedEv[_ZN5boost12shared_mutex13unlock_sharedEv]+0xc3): undefined reference to `pthread_mutex_unlock'
+ParallelRunner.cpp:(.text._ZN5boost12shared_mutex13unlock_sharedEv[_ZN5boost12shared_mutex13unlock_sharedEv]+0xd3): undefined reference to `pthread_mutex_lock'
+ParallelRunner.cpp:(.text._ZN5boost12shared_mutex13unlock_sharedEv[_ZN5boost12shared_mutex13unlock_sharedEv]+0xe0): undefined reference to `pthread_cond_broadcast'
+ParallelRunner.cpp:(.text._ZN5boost12shared_mutex13unlock_sharedEv[_ZN5boost12shared_mutex13unlock_sharedEv]+0xf0): undefined reference to `pthread_mutex_unlock'
+/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/lib/libtea_lib.a(ParallelRunner.o): In function `boost::detail::interruption_checker::~interruption_checker()':
+ParallelRunner.cpp:(.text._ZN5boost6detail20interruption_checkerD2Ev[_ZN5boost6detail20interruption_checkerD5Ev]+0x14): undefined reference to `pthread_mutex_unlock'
+ParallelRunner.cpp:(.text._ZN5boost6detail20interruption_checkerD2Ev[_ZN5boost6detail20interruption_checkerD5Ev]+0x2c): undefined reference to `pthread_mutex_lock'
+ParallelRunner.cpp:(.text._ZN5boost6detail20interruption_checkerD2Ev[_ZN5boost6detail20interruption_checkerD5Ev]+0x69): undefined reference to `pthread_mutex_unlock'
+/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/lib/libtea_lib.a(ParallelRunner.o): In function `boost::condition_variable::wait(boost::unique_lock<boost::mutex>&)':
+ParallelRunner.cpp:(.text._ZN5boost18condition_variable4waitERNS_11unique_lockINS_5mutexEEE[_ZN5boost18condition_variable4waitERNS_11unique_lockINS_5mutexEEE]+0x3a): undefined reference to `pthread_mutex_lock'
+ParallelRunner.cpp:(.text._ZN5boost18condition_variable4waitERNS_11unique_lockINS_5mutexEEE[_ZN5boost18condition_variable4waitERNS_11unique_lockINS_5mutexEEE]+0x57): undefined reference to `pthread_cond_wait'
+ParallelRunner.cpp:(.text._ZN5boost18condition_variable4waitERNS_11unique_lockINS_5mutexEEE[_ZN5boost18condition_variable4waitERNS_11unique_lockINS_5mutexEEE]+0xbc): undefined reference to `pthread_mutex_lock'
+ParallelRunner.cpp:(.text._ZN5boost18condition_variable4waitERNS_11unique_lockINS_5mutexEEE[_ZN5boost18condition_variable4waitERNS_11unique_lockINS_5mutexEEE]+0xeb): undefined reference to `pthread_mutex_lock'
+/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/lib/libtea_lib.a(ParallelRunner.o): In function `boost::thread_group::join_all()':
+ParallelRunner.cpp:(.text._ZN5boost12thread_group8join_allEv[_ZN5boost12thread_group8join_allEv]+0xb5): undefined reference to `pthread_self'
+/opt/boost-1.57.0/lib//libboost_thread.a(thread.o): In function `boost::detail::get_current_thread_data()':
+thread.cpp:(.text+0x17d): undefined reference to `pthread_key_create'
+/opt/boost-1.57.0/lib//libboost_thread.a(thread.o): In function `boost::detail::set_current_thread_data(boost::detail::thread_data_base*)':
+thread.cpp:(.text+0x1bd): undefined reference to `pthread_key_create'
+/opt/boost-1.57.0/lib//libboost_thread.a(thread.o): In function `boost::thread::start_thread_noexcept()':
+thread.cpp:(.text+0x233): undefined reference to `pthread_create'
+/opt/boost-1.57.0/lib//libboost_thread.a(thread.o): In function `boost::thread::start_thread_noexcept(boost::thread_attributes const&)':
+thread.cpp:(.text+0x2b2): undefined reference to `pthread_create'
+thread.cpp:(.text+0x2ef): undefined reference to `pthread_attr_getdetachstate'
+/opt/boost-1.57.0/lib//libboost_thread.a(thread.o): In function `boost::thread::detach()':
+thread.cpp:(.text+0x70d): undefined reference to `pthread_detach'
+/opt/boost-1.57.0/lib//libboost_thread.a(thread.o): In function `boost::thread::interrupt()':
+thread.cpp:(.text+0x787): undefined reference to `pthread_mutex_lock'
+thread.cpp:(.text+0x793): undefined reference to `pthread_cond_broadcast'
+thread.cpp:(.text+0x79b): undefined reference to `pthread_mutex_unlock'
+/opt/boost-1.57.0/lib//libboost_thread.a(thread.o): In function `thread_proxy':
+thread.cpp:(.text+0x9e4): undefined reference to `pthread_mutex_lock'
+thread.cpp:(.text+0x9f0): undefined reference to `pthread_cond_broadcast'
+thread.cpp:(.text+0x9f8): undefined reference to `pthread_mutex_unlock'
+/opt/boost-1.57.0/lib//libboost_thread.a(thread.o): In function `boost::detail::make_external_thread_data()':
+thread.cpp:(.text+0xaa7): undefined reference to `pthread_mutex_init'
+thread.cpp:(.text+0xabd): undefined reference to `pthread_mutex_init'
+thread.cpp:(.text+0xad3): undefined reference to `pthread_cond_init'
+thread.cpp:(.text+0xaef): undefined reference to `pthread_mutex_init'
+thread.cpp:(.text+0xb08): undefined reference to `pthread_mutex_init'
+thread.cpp:(.text+0xb1e): undefined reference to `pthread_cond_init'
+thread.cpp:(.text+0xc9c): undefined reference to `pthread_mutex_destroy'
+thread.cpp:(.text+0xcee): undefined reference to `pthread_mutex_destroy'
+thread.cpp:(.text+0xd51): undefined reference to `pthread_mutex_destroy'
+thread.cpp:(.text+0xdf0): undefined reference to `pthread_mutex_destroy'
+/opt/boost-1.57.0/lib//libboost_thread.a(thread.o): In function `boost::thread::join_noexcept()':
+thread.cpp:(.text+0x1252): undefined reference to `pthread_join'
+thread.cpp:(.text+0x126d): undefined reference to `pthread_mutex_lock'
+thread.cpp:(.text+0x1279): undefined reference to `pthread_cond_broadcast'
+thread.cpp:(.text+0x1281): undefined reference to `pthread_mutex_unlock'
+/opt/boost-1.57.0/lib//libboost_thread.a(thread.o): In function `boost::thread::do_try_join_until_noexcept(timespec const&, bool&)':
+thread.cpp:(.text+0x1420): undefined reference to `pthread_join'
+thread.cpp:(.text+0x1440): undefined reference to `pthread_mutex_lock'
+thread.cpp:(.text+0x144c): undefined reference to `pthread_cond_broadcast'
+thread.cpp:(.text+0x1454): undefined reference to `pthread_mutex_unlock'
+/opt/boost-1.57.0/lib//libboost_thread.a(thread.o): In function `boost::detail::thread_data_base::~thread_data_base()':
+thread.cpp:(.text+0x16a4): undefined reference to `pthread_mutex_lock'
+thread.cpp:(.text+0x16ad): undefined reference to `pthread_cond_broadcast'
+thread.cpp:(.text+0x16b5): undefined reference to `pthread_mutex_unlock'
+thread.cpp:(.text+0x1701): undefined reference to `pthread_mutex_lock'
+thread.cpp:(.text+0x1715): undefined reference to `pthread_cond_broadcast'
+thread.cpp:(.text+0x171d): undefined reference to `pthread_mutex_unlock'
+thread.cpp:(.text+0x1738): undefined reference to `pthread_mutex_lock'
+thread.cpp:(.text+0x1741): undefined reference to `pthread_cond_broadcast'
+thread.cpp:(.text+0x1749): undefined reference to `pthread_mutex_unlock'
+thread.cpp:(.text+0x17b4): undefined reference to `pthread_mutex_destroy'
+thread.cpp:(.text+0x17d4): undefined reference to `pthread_mutex_destroy'
+thread.cpp:(.text+0x1860): undefined reference to `pthread_mutex_destroy'
+thread.cpp:(.text+0x187a): undefined reference to `pthread_mutex_destroy'
+/opt/boost-1.57.0/lib//libboost_thread.a(thread.o): In function `boost::detail::(anonymous namespace)::create_current_thread_tls_key()':
+thread.cpp:(.text+0xb): undefined reference to `pthread_key_create'
+/opt/boost-1.57.0/lib//libboost_thread.a(thread.o): In function `boost::detail::get_current_thread_data()':
+thread.cpp:(.text+0x196): undefined reference to `pthread_getspecific'
+/opt/boost-1.57.0/lib//libboost_thread.a(thread.o): In function `boost::detail::set_current_thread_data(boost::detail::thread_data_base*)':
+thread.cpp:(.text+0x1d6): undefined reference to `pthread_setspecific'
+/opt/boost-1.57.0/lib//libboost_thread.a(thread.o): In function `boost::mutex::lock()':
+thread.cpp:(.text._ZN5boost5mutex4lockEv[_ZN5boost5mutex4lockEv]+0x14): undefined reference to `pthread_mutex_lock'
+/opt/boost-1.57.0/lib//libboost_thread.a(thread.o): In function `boost::condition_variable::do_wait_until(boost::unique_lock<boost::mutex>&, timespec const&)':
+thread.cpp:(.text._ZN5boost18condition_variable13do_wait_untilERNS_11unique_lockINS_5mutexEEERK8timespec[_ZN5boost18condition_variable13do_wait_untilERNS_11unique_lockINS_5mutexEEERK8timespec]+0x46): undefined reference to `pthread_mutex_lock'
+thread.cpp:(.text._ZN5boost18condition_variable13do_wait_untilERNS_11unique_lockINS_5mutexEEERK8timespec[_ZN5boost18condition_variable13do_wait_untilERNS_11unique_lockINS_5mutexEEERK8timespec]+0x78): undefined reference to `pthread_cond_timedwait'
+thread.cpp:(.text._ZN5boost18condition_variable13do_wait_untilERNS_11unique_lockINS_5mutexEEERK8timespec[_ZN5boost18condition_variable13do_wait_untilERNS_11unique_lockINS_5mutexEEERK8timespec]+0x8f): undefined reference to `pthread_mutex_unlock'
+thread.cpp:(.text._ZN5boost18condition_variable13do_wait_untilERNS_11unique_lockINS_5mutexEEERK8timespec[_ZN5boost18condition_variable13do_wait_untilERNS_11unique_lockINS_5mutexEEERK8timespec]+0xff): undefined reference to `pthread_mutex_lock'
+thread.cpp:(.text._ZN5boost18condition_variable13do_wait_untilERNS_11unique_lockINS_5mutexEEERK8timespec[_ZN5boost18condition_variable13do_wait_untilERNS_11unique_lockINS_5mutexEEERK8timespec]+0x116): undefined reference to `pthread_mutex_unlock'
+/opt/boost-1.57.0/lib//libboost_thread.a(once.o): In function `boost::thread_detail::enter_once_region(boost::once_flag&)':
+once.cpp:(.text+0x18): undefined reference to `pthread_mutex_lock'
+once.cpp:(.text+0x4b): undefined reference to `pthread_mutex_unlock'
+once.cpp:(.text+0x80): undefined reference to `pthread_mutex_unlock'
+once.cpp:(.text+0x96): undefined reference to `pthread_cond_wait'
+once.cpp:(.text+0xa5): undefined reference to `pthread_mutex_unlock'
+/opt/boost-1.57.0/lib//libboost_thread.a(once.o): In function `boost::thread_detail::commit_once_region(boost::once_flag&)':
+once.cpp:(.text+0xca): undefined reference to `pthread_mutex_lock'
+once.cpp:(.text+0xda): undefined reference to `pthread_mutex_unlock'
+/opt/boost-1.57.0/lib//libboost_thread.a(once.o): In function `boost::thread_detail::rollback_once_region(boost::once_flag&)':
+once.cpp:(.text+0xfa): undefined reference to `pthread_mutex_lock'
+once.cpp:(.text+0x10a): undefined reference to `pthread_mutex_unlock'
+/opt/boost-1.57.0/lib//libboost_thread.a(once.o): In function `boost::thread_detail::commit_once_region(boost::once_flag&)':
+once.cpp:(.text+0xe5): undefined reference to `pthread_cond_broadcast'
+/opt/boost-1.57.0/lib//libboost_thread.a(once.o): In function `boost::thread_detail::rollback_once_region(boost::once_flag&)':
+once.cpp:(.text+0x115): undefined reference to `pthread_cond_broadcast'
+/opt/boost-1.57.0/lib//libboost_regex.a(static_mutex.o): In function `boost::scoped_static_mutex_lock::scoped_static_mutex_lock(boost::static_mutex&, bool)':
+static_mutex.cpp:(.text+0x1c): undefined reference to `pthread_mutex_lock'
+/opt/boost-1.57.0/lib//libboost_regex.a(static_mutex.o): In function `boost::scoped_static_mutex_lock::~scoped_static_mutex_lock()':
+static_mutex.cpp:(.text+0x3e): undefined reference to `pthread_mutex_unlock'
+/opt/boost-1.57.0/lib//libboost_regex.a(static_mutex.o): In function `boost::scoped_static_mutex_lock::lock()':
+static_mutex.cpp:(.text+0x64): undefined reference to `pthread_mutex_lock'
+/opt/boost-1.57.0/lib//libboost_regex.a(static_mutex.o): In function `boost::scoped_static_mutex_lock::unlock()':
+static_mutex.cpp:(.text+0x84): undefined reference to `pthread_mutex_unlock'
+/opt/gcc/4.8.5/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib64/libstdc++.a(eh_alloc.o): In function `lock':
+/opt/apps/src/gcc-4.8.5/BUILD/x86_64-unknown-linux-gnu/libstdc++-v3/include/x86_64-unknown-linux-gnu/bits/gthr-default.h:748: undefined reference to `pthread_mutex_lock'
+/opt/gcc/4.8.5/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib64/libstdc++.a(eh_alloc.o): In function `__gthread_mutex_unlock':
+/opt/apps/src/gcc-4.8.5/BUILD/x86_64-unknown-linux-gnu/libstdc++-v3/include/x86_64-unknown-linux-gnu/bits/gthr-default.h:778: undefined reference to `pthread_mutex_unlock'
+/opt/gcc/4.8.5/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib64/libstdc++.a(eh_alloc.o): In function `lock':
+/opt/apps/src/gcc-4.8.5/BUILD/x86_64-unknown-linux-gnu/libstdc++-v3/include/x86_64-unknown-linux-gnu/bits/gthr-default.h:748: undefined reference to `pthread_mutex_lock'
+/opt/gcc/4.8.5/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib64/libstdc++.a(eh_alloc.o): In function `__gthread_mutex_unlock':
+/opt/apps/src/gcc-4.8.5/BUILD/x86_64-unknown-linux-gnu/libstdc++-v3/include/x86_64-unknown-linux-gnu/bits/gthr-default.h:778: undefined reference to `pthread_mutex_unlock'
+/opt/gcc/4.8.5/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib64/libstdc++.a(eh_alloc.o): In function `lock':
+/opt/apps/src/gcc-4.8.5/BUILD/x86_64-unknown-linux-gnu/libstdc++-v3/include/x86_64-unknown-linux-gnu/bits/gthr-default.h:748: undefined reference to `pthread_mutex_lock'
+/opt/gcc/4.8.5/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib64/libstdc++.a(eh_alloc.o): In function `__cxa_allocate_dependent_exception':
+/opt/apps/src/gcc-4.8.5/BUILD/x86_64-unknown-linux-gnu/libstdc++-v3/include/x86_64-unknown-linux-gnu/bits/gthr-default.h:778: undefined reference to `pthread_mutex_unlock'
+/opt/gcc/4.8.5/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib64/libstdc++.a(eh_alloc.o): In function `__gthread_mutex_lock':
+/opt/apps/src/gcc-4.8.5/BUILD/x86_64-unknown-linux-gnu/libstdc++-v3/include/x86_64-unknown-linux-gnu/bits/gthr-default.h:748: undefined reference to `pthread_mutex_lock'
+/opt/gcc/4.8.5/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib64/libstdc++.a(eh_alloc.o): In function `__gthread_mutex_unlock':
+/opt/apps/src/gcc-4.8.5/BUILD/x86_64-unknown-linux-gnu/libstdc++-v3/include/x86_64-unknown-linux-gnu/bits/gthr-default.h:778: undefined reference to `pthread_mutex_unlock'
+/opt/gcc/4.8.5/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib64/libstdc++.a(locale.o): In function `lock':
+/opt/apps/src/gcc-4.8.5/BUILD/x86_64-unknown-linux-gnu/libstdc++-v3/include/x86_64-unknown-linux-gnu/bits/gthr-default.h:748: undefined reference to `pthread_mutex_lock'
+/opt/gcc/4.8.5/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib64/libstdc++.a(locale.o): In function `unlock':
+/opt/apps/src/gcc-4.8.5/BUILD/x86_64-unknown-linux-gnu/libstdc++-v3/include/x86_64-unknown-linux-gnu/bits/gthr-default.h:778: undefined reference to `pthread_mutex_unlock'
+/opt/apps/src/gcc-4.8.5/BUILD/x86_64-unknown-linux-gnu/libstdc++-v3/include/x86_64-unknown-linux-gnu/bits/gthr-default.h:778: undefined reference to `pthread_mutex_unlock'
+/opt/gcc/4.8.5/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib64/libstdc++.a(locale_init.o): In function `__gthread_mutex_lock':
+/opt/apps/src/gcc-4.8.5/BUILD/x86_64-unknown-linux-gnu/libstdc++-v3/include/x86_64-unknown-linux-gnu/bits/gthr-default.h:748: undefined reference to `pthread_mutex_lock'
+/opt/gcc/4.8.5/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib64/libstdc++.a(locale_init.o): In function `__gthread_mutex_unlock':
+/opt/apps/src/gcc-4.8.5/BUILD/x86_64-unknown-linux-gnu/libstdc++-v3/include/x86_64-unknown-linux-gnu/bits/gthr-default.h:778: undefined reference to `pthread_mutex_unlock'
+/opt/gcc/4.8.5/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib64/libstdc++.a(locale_init.o): In function `__gthread_mutex_lock':
+/opt/apps/src/gcc-4.8.5/BUILD/x86_64-unknown-linux-gnu/libstdc++-v3/include/x86_64-unknown-linux-gnu/bits/gthr-default.h:748: undefined reference to `pthread_mutex_lock'
+/opt/gcc/4.8.5/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib64/libstdc++.a(locale_init.o): In function `unlock':
+/opt/apps/src/gcc-4.8.5/BUILD/x86_64-unknown-linux-gnu/libstdc++-v3/include/x86_64-unknown-linux-gnu/bits/gthr-default.h:778: undefined reference to `pthread_mutex_unlock'
+/opt/gcc/4.8.5/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib64/libstdc++.a(locale_init.o): In function `~__scoped_lock':
+/opt/apps/src/gcc-4.8.5/BUILD/x86_64-unknown-linux-gnu/libstdc++-v3/include/x86_64-unknown-linux-gnu/bits/gthr-default.h:778: undefined reference to `pthread_mutex_unlock'
+/opt/gcc/4.8.5/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib64/libstdc++.a(condition_variable.o): In function `std::condition_variable::~condition_variable()':
+/opt/apps/src/gcc-4.8.5/BUILD/x86_64-unknown-linux-gnu/libstdc++-v3/include/x86_64-unknown-linux-gnu/bits/gthr-default.h:884: undefined reference to `pthread_cond_destroy'
+/opt/gcc/4.8.5/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib64/libstdc++.a(condition_variable.o): In function `std::condition_variable::wait(std::unique_lock<std::mutex>&)':
+/opt/apps/src/gcc-4.8.5/BUILD/x86_64-unknown-linux-gnu/libstdc++-v3/include/x86_64-unknown-linux-gnu/bits/gthr-default.h:864: undefined reference to `pthread_cond_wait'
+/opt/gcc/4.8.5/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib64/libstdc++.a(condition_variable.o): In function `std::condition_variable::notify_one()':
+/opt/apps/src/gcc-4.8.5/BUILD/x86_64-unknown-linux-gnu/libstdc++-v3/include/x86_64-unknown-linux-gnu/bits/gthr-default.h:858: undefined reference to `pthread_cond_signal'
+/opt/gcc/4.8.5/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib64/libstdc++.a(condition_variable.o): In function `std::condition_variable::notify_all()':
+/opt/apps/src/gcc-4.8.5/BUILD/x86_64-unknown-linux-gnu/libstdc++-v3/include/x86_64-unknown-linux-gnu/bits/gthr-default.h:852: undefined reference to `pthread_cond_broadcast'
+/opt/gcc/4.8.5/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/libgcc_eh.a(unwind-dw2-fde-dip.o): In function `__register_frame_info_bases':
+unwind-dw2-fde-dip.c:(.text+0x1787): undefined reference to `pthread_mutex_lock'
+/opt/gcc/4.8.5/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/libgcc_eh.a(unwind-dw2-fde-dip.o): In function `__register_frame_info_table_bases':
+unwind-dw2-fde-dip.c:(.text+0x183b): undefined reference to `pthread_mutex_lock'
+/opt/gcc/4.8.5/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/libgcc_eh.a(unwind-dw2-fde-dip.o): In function `__deregister_frame_info_bases':
+unwind-dw2-fde-dip.c:(.text+0x18de): undefined reference to `pthread_mutex_lock'
+unwind-dw2-fde-dip.c:(.text+0x1966): undefined reference to `pthread_mutex_unlock'
+/opt/gcc/4.8.5/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/libgcc_eh.a(unwind-dw2-fde-dip.o): In function `_Unwind_Find_FDE':
+unwind-dw2-fde-dip.c:(.text+0x1a36): undefined reference to `pthread_mutex_lock'
+unwind-dw2-fde-dip.c:(.text+0x1a86): undefined reference to `pthread_mutex_unlock'
+/opt/gcc/4.8.5/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/libgcc_eh.a(unwind-dw2-fde-dip.o): In function `__register_frame_info_bases':
+unwind-dw2-fde-dip.c:(.text+0x17a6): undefined reference to `pthread_mutex_unlock'
+/opt/gcc/4.8.5/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/libgcc_eh.a(unwind-dw2-fde-dip.o): In function `__register_frame_info_table_bases':
+unwind-dw2-fde-dip.c:(.text+0x185a): undefined reference to `pthread_mutex_unlock'
+collect2: error: ld returned 1 exit status
+make: *** [bam2fq] Error 1
+18:04:19 **** Incremental Build of configuration Release for project bam2fq ****
 make all 
 Building file: ../src/third/faidx.c
 Invoking: Cross GCC Compiler
-gcc -static -pthread -fopenmp -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/third/faidx.d" -MT"src/third/faidx.o" -o "src/third/faidx.o" "../src/third/faidx.c"
+gcc -static -pthread -fopenmp -std=c11 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/third/faidx.d" -MT"src/third/faidx.o" -o "src/third/faidx.o" "../src/third/faidx.c"
+../src/third/faidx.c: In function ‘fai_insert_index’:
+../src/third/faidx.c:57:2: warning: implicit declaration of function ‘strdup’ [-Wimplicit-function-declaration]
+  idx->name[idx->n] = strdup(name);
+  ^
+../src/third/faidx.c:57:20: warning: assignment makes pointer from integer without a cast [enabled by default]
+  idx->name[idx->n] = strdup(name);
+                    ^
 Finished building: ../src/third/faidx.c
  
 Building file: ../src/third/gzstream.cpp
 Invoking: Cross G++ Compiler
-g++ -static -pthread -std=c++11 -fopenmp -D__cplusplus=201103L -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/third/gzstream.d" -MT"src/third/gzstream.o" -o "src/third/gzstream.o" "../src/third/gzstream.cpp"
+g++ -static -pthread -fopenmp -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/third/gzstream.d" -MT"src/third/gzstream.o" -o "src/third/gzstream.o" "../src/third/gzstream.cpp"
 Finished building: ../src/third/gzstream.cpp
  
 Building file: ../src/third/razf.c
 Invoking: Cross GCC Compiler
-gcc -static -pthread -fopenmp -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/third/razf.d" -MT"src/third/razf.o" -o "src/third/razf.o" "../src/third/razf.c"
+gcc -static -pthread -fopenmp -std=c11 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/third/razf.d" -MT"src/third/razf.o" -o "src/third/razf.o" "../src/third/razf.c"
 Finished building: ../src/third/razf.c
  
 Building file: ../src/third/xfaidx.cpp
 Invoking: Cross G++ Compiler
-g++ -static -pthread -std=c++11 -fopenmp -D__cplusplus=201103L -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/third/xfaidx.d" -MT"src/third/xfaidx.o" -o "src/third/xfaidx.o" "../src/third/xfaidx.cpp"
+g++ -static -pthread -fopenmp -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/third/xfaidx.d" -MT"src/third/xfaidx.o" -o "src/third/xfaidx.o" "../src/third/xfaidx.cpp"
 Finished building: ../src/third/xfaidx.cpp
- 
-Building file: ../src/meerkat/srd/SplitReadReAlign.cpp
-Invoking: Cross G++ Compiler
-g++ -static -pthread -std=c++11 -fopenmp -D__cplusplus=201103L -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/srd/SplitReadReAlign.d" -MT"src/meerkat/srd/SplitReadReAlign.o" -o "src/meerkat/srd/SplitReadReAlign.o" "../src/meerkat/srd/SplitReadReAlign.cpp"
-Finished building: ../src/meerkat/srd/SplitReadReAlign.cpp
- 
-Building file: ../src/meerkat/preprocess/Histogram.cpp
-Invoking: Cross G++ Compiler
-g++ -static -pthread -std=c++11 -fopenmp -D__cplusplus=201103L -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/preprocess/Histogram.d" -MT"src/meerkat/preprocess/Histogram.o" -o "src/meerkat/preprocess/Histogram.o" "../src/meerkat/preprocess/Histogram.cpp"
-Finished building: ../src/meerkat/preprocess/Histogram.cpp
- 
-Building file: ../src/meerkat/preprocess/ParallelBamReader.cpp
-Invoking: Cross G++ Compiler
-g++ -static -pthread -std=c++11 -fopenmp -D__cplusplus=201103L -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/preprocess/ParallelBamReader.d" -MT"src/meerkat/preprocess/ParallelBamReader.o" -o "src/meerkat/preprocess/ParallelBamReader.o" "../src/meerkat/preprocess/ParallelBamReader.cpp"
-Finished building: ../src/meerkat/preprocess/ParallelBamReader.cpp
  
 Building file: ../src/meerkat/preprocess/ReadGroup.cpp
 Invoking: Cross G++ Compiler
-g++ -static -pthread -std=c++11 -fopenmp -D__cplusplus=201103L -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/preprocess/ReadGroup.d" -MT"src/meerkat/preprocess/ReadGroup.o" -o "src/meerkat/preprocess/ReadGroup.o" "../src/meerkat/preprocess/ReadGroup.cpp"
+g++ -static -pthread -fopenmp -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/preprocess/ReadGroup.d" -MT"src/meerkat/preprocess/ReadGroup.o" -o "src/meerkat/preprocess/ReadGroup.o" "../src/meerkat/preprocess/ReadGroup.cpp"
 Finished building: ../src/meerkat/preprocess/ReadGroup.cpp
- 
-Building file: ../src/meerkat/preprocess/ReadGroupAlt.cpp
-Invoking: Cross G++ Compiler
-g++ -static -pthread -std=c++11 -fopenmp -D__cplusplus=201103L -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/preprocess/ReadGroupAlt.d" -MT"src/meerkat/preprocess/ReadGroupAlt.o" -o "src/meerkat/preprocess/ReadGroupAlt.o" "../src/meerkat/preprocess/ReadGroupAlt.cpp"
-Finished building: ../src/meerkat/preprocess/ReadGroupAlt.cpp
- 
-Building file: ../src/meerkat/mpd/MatePairDiscordantCaller.cpp
-Invoking: Cross G++ Compiler
-g++ -static -pthread -std=c++11 -fopenmp -D__cplusplus=201103L -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/mpd/MatePairDiscordantCaller.d" -MT"src/meerkat/mpd/MatePairDiscordantCaller.o" -o "src/meerkat/mpd/MatePairDiscordantCaller.o" "../src/meerkat/mpd/MatePairDiscordantCaller.cpp"
-Finished building: ../src/meerkat/mpd/MatePairDiscordantCaller.cpp
- 
-Building file: ../src/meerkat/mechanism/Mechanism.cpp
-Invoking: Cross G++ Compiler
-g++ -static -pthread -std=c++11 -fopenmp -D__cplusplus=201103L -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/mechanism/Mechanism.d" -MT"src/meerkat/mechanism/Mechanism.o" -o "src/meerkat/mechanism/Mechanism.o" "../src/meerkat/mechanism/Mechanism.cpp"
-Finished building: ../src/meerkat/mechanism/Mechanism.cpp
- 
-Building file: ../src/meerkat/filter/OutputFilter.cpp
-Invoking: Cross G++ Compiler
-g++ -static -pthread -std=c++11 -fopenmp -D__cplusplus=201103L -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/filter/OutputFilter.d" -MT"src/meerkat/filter/OutputFilter.o" -o "src/meerkat/filter/OutputFilter.o" "../src/meerkat/filter/OutputFilter.cpp"
-Finished building: ../src/meerkat/filter/OutputFilter.cpp
- 
-Building file: ../src/meerkat/filter/SelectionFilter.cpp
-Invoking: Cross G++ Compiler
-g++ -static -pthread -std=c++11 -fopenmp -D__cplusplus=201103L -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/filter/SelectionFilter.d" -MT"src/meerkat/filter/SelectionFilter.o" -o "src/meerkat/filter/SelectionFilter.o" "../src/meerkat/filter/SelectionFilter.cpp"
-Finished building: ../src/meerkat/filter/SelectionFilter.cpp
- 
-Building file: ../src/meerkat/dre/Group.cpp
-Invoking: Cross G++ Compiler
-g++ -static -pthread -std=c++11 -fopenmp -D__cplusplus=201103L -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/dre/Group.d" -MT"src/meerkat/dre/Group.o" -o "src/meerkat/dre/Group.o" "../src/meerkat/dre/Group.cpp"
-Finished building: ../src/meerkat/dre/Group.cpp
- 
-Building file: ../src/meerkat/dre/ParallelDiscordExtractor.cpp
-Invoking: Cross G++ Compiler
-g++ -static -pthread -std=c++11 -fopenmp -D__cplusplus=201103L -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/dre/ParallelDiscordExtractor.d" -MT"src/meerkat/dre/ParallelDiscordExtractor.o" -o "src/meerkat/dre/ParallelDiscordExtractor.o" "../src/meerkat/dre/ParallelDiscordExtractor.cpp"
-Finished building: ../src/meerkat/dre/ParallelDiscordExtractor.cpp
- 
-Building file: ../src/meerkat/cns/CNVOverlapper.cpp
-Invoking: Cross G++ Compiler
-g++ -static -pthread -std=c++11 -fopenmp -D__cplusplus=201103L -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/cns/CNVOverlapper.d" -MT"src/meerkat/cns/CNVOverlapper.o" -o "src/meerkat/cns/CNVOverlapper.o" "../src/meerkat/cns/CNVOverlapper.cpp"
-Finished building: ../src/meerkat/cns/CNVOverlapper.cpp
- 
-Building file: ../src/meerkat/cluster/AlternativeMapper.cpp
-Invoking: Cross G++ Compiler
-g++ -static -pthread -std=c++11 -fopenmp -D__cplusplus=201103L -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/cluster/AlternativeMapper.d" -MT"src/meerkat/cluster/AlternativeMapper.o" -o "src/meerkat/cluster/AlternativeMapper.o" "../src/meerkat/cluster/AlternativeMapper.cpp"
-Finished building: ../src/meerkat/cluster/AlternativeMapper.cpp
- 
-Building file: ../src/meerkat/cluster/Cluster.cpp
-Invoking: Cross G++ Compiler
-g++ -static -pthread -std=c++11 -fopenmp -D__cplusplus=201103L -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/cluster/Cluster.d" -MT"src/meerkat/cluster/Cluster.o" -o "src/meerkat/cluster/Cluster.o" "../src/meerkat/cluster/Cluster.cpp"
-Finished building: ../src/meerkat/cluster/Cluster.cpp
- 
-Building file: ../src/meerkat/cluster/ClusterContainer.cpp
-Invoking: Cross G++ Compiler
-g++ -static -pthread -std=c++11 -fopenmp -D__cplusplus=201103L -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/cluster/ClusterContainer.d" -MT"src/meerkat/cluster/ClusterContainer.o" -o "src/meerkat/cluster/ClusterContainer.o" "../src/meerkat/cluster/ClusterContainer.cpp"
-Finished building: ../src/meerkat/cluster/ClusterContainer.cpp
- 
-Building file: ../src/meerkat/cluster/ClusterSelector.cpp
-Invoking: Cross G++ Compiler
-g++ -static -pthread -std=c++11 -fopenmp -D__cplusplus=201103L -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/cluster/ClusterSelector.d" -MT"src/meerkat/cluster/ClusterSelector.o" -o "src/meerkat/cluster/ClusterSelector.o" "../src/meerkat/cluster/ClusterSelector.cpp"
-Finished building: ../src/meerkat/cluster/ClusterSelector.cpp
- 
-Building file: ../src/meerkat/cluster/Read.cpp
-Invoking: Cross G++ Compiler
-g++ -static -pthread -std=c++11 -fopenmp -D__cplusplus=201103L -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/cluster/Read.d" -MT"src/meerkat/cluster/Read.o" -o "src/meerkat/cluster/Read.o" "../src/meerkat/cluster/Read.cpp"
-Finished building: ../src/meerkat/cluster/Read.cpp
- 
-Building file: ../src/meerkat/cluster/ReadInfo.cpp
-Invoking: Cross G++ Compiler
-g++ -static -pthread -std=c++11 -fopenmp -D__cplusplus=201103L -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/cluster/ReadInfo.d" -MT"src/meerkat/cluster/ReadInfo.o" -o "src/meerkat/cluster/ReadInfo.o" "../src/meerkat/cluster/ReadInfo.cpp"
-Finished building: ../src/meerkat/cluster/ReadInfo.cpp
- 
-Building file: ../src/meerkat/cluster/Readpair.cpp
-Invoking: Cross G++ Compiler
-g++ -static -pthread -std=c++11 -fopenmp -D__cplusplus=201103L -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/cluster/Readpair.d" -MT"src/meerkat/cluster/Readpair.o" -o "src/meerkat/cluster/Readpair.o" "../src/meerkat/cluster/Readpair.cpp"
-Finished building: ../src/meerkat/cluster/Readpair.cpp
- 
-Building file: ../src/meerkat/blast_bp/BLASTBreakPoints.cpp
-Invoking: Cross G++ Compiler
-g++ -static -pthread -std=c++11 -fopenmp -D__cplusplus=201103L -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/blast_bp/BLASTBreakPoints.d" -MT"src/meerkat/blast_bp/BLASTBreakPoints.o" -o "src/meerkat/blast_bp/BLASTBreakPoints.o" "../src/meerkat/blast_bp/BLASTBreakPoints.cpp"
-Finished building: ../src/meerkat/blast_bp/BLASTBreakPoints.cpp
- 
-Building file: ../src/meerkat/alg/SplitReadSVCaller.cpp
-Invoking: Cross G++ Compiler
-g++ -static -pthread -std=c++11 -fopenmp -D__cplusplus=201103L -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/alg/SplitReadSVCaller.d" -MT"src/meerkat/alg/SplitReadSVCaller.o" -o "src/meerkat/alg/SplitReadSVCaller.o" "../src/meerkat/alg/SplitReadSVCaller.cpp"
-Finished building: ../src/meerkat/alg/SplitReadSVCaller.cpp
  
 Building file: ../src/meerkat/BWACaller.cpp
 Invoking: Cross G++ Compiler
-g++ -static -pthread -std=c++11 -fopenmp -D__cplusplus=201103L -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/BWACaller.d" -MT"src/meerkat/BWACaller.o" -o "src/meerkat/BWACaller.o" "../src/meerkat/BWACaller.cpp"
+g++ -static -pthread -fopenmp -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/BWACaller.d" -MT"src/meerkat/BWACaller.o" -o "src/meerkat/BWACaller.o" "../src/meerkat/BWACaller.cpp"
 Finished building: ../src/meerkat/BWACaller.cpp
  
-Building file: ../src/castle/MathUtils.cpp
+Building file: ../src/cat/Bam2Fastq.cpp
 Invoking: Cross G++ Compiler
-g++ -static -pthread -std=c++11 -fopenmp -D__cplusplus=201103L -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/castle/MathUtils.d" -MT"src/castle/MathUtils.o" -o "src/castle/MathUtils.o" "../src/castle/MathUtils.cpp"
-Finished building: ../src/castle/MathUtils.cpp
+g++ -static -pthread -fopenmp -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cat/Bam2Fastq.d" -MT"src/cat/Bam2Fastq.o" -o "src/cat/Bam2Fastq.o" "../src/cat/Bam2Fastq.cpp"
+../src/cat/Bam2Fastq.cpp: In lambda function:
+../src/cat/Bam2Fastq.cpp:176:16: warning: unused variable ‘debug’ [-Wunused-variable]
+     const bool debug = false;
+                ^
+Finished building: ../src/cat/Bam2Fastq.cpp
  
 Building file: ../src/castle/OptionParser.cpp
 Invoking: Cross G++ Compiler
-g++ -static -pthread -std=c++11 -fopenmp -D__cplusplus=201103L -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/castle/OptionParser.d" -MT"src/castle/OptionParser.o" -o "src/castle/OptionParser.o" "../src/castle/OptionParser.cpp"
+g++ -static -pthread -fopenmp -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/castle/OptionParser.d" -MT"src/castle/OptionParser.o" -o "src/castle/OptionParser.o" "../src/castle/OptionParser.cpp"
 Finished building: ../src/castle/OptionParser.cpp
  
-Building file: ../src/bam_reader_test.cpp
+Building file: ../src/bam2fq.cpp
 Invoking: Cross G++ Compiler
-g++ -static -pthread -std=c++11 -fopenmp -D__cplusplus=201103L -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/bam_reader_test.d" -MT"src/bam_reader_test.o" -o "src/bam_reader_test.o" "../src/bam_reader_test.cpp"
-Finished building: ../src/bam_reader_test.cpp
+g++ -static -pthread -fopenmp -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/bam2fq.d" -MT"src/bam2fq.o" -o "src/bam2fq.o" "../src/bam2fq.cpp"
+Finished building: ../src/bam2fq.cpp
  
-Building target: meerkat
+Building target: bam2fq
 Invoking: Cross G++ Linker
-g++ -static -pthread -std=c++11 -fopenmp -L"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/lib" -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/lib" -L/opt/boost-1.57.0/lib/ -o "meerkat"  ./src/third/faidx.o ./src/third/gzstream.o ./src/third/razf.o ./src/third/xfaidx.o  ./src/meerkat/srd/SplitReadReAlign.o  ./src/meerkat/preprocess/Histogram.o ./src/meerkat/preprocess/ParallelBamReader.o ./src/meerkat/preprocess/ReadGroup.o ./src/meerkat/preprocess/ReadGroupAlt.o  ./src/meerkat/mpd/MatePairDiscordantCaller.o  ./src/meerkat/mechanism/Mechanism.o  ./src/meerkat/filter/OutputFilter.o ./src/meerkat/filter/SelectionFilter.o  ./src/meerkat/dre/Group.o ./src/meerkat/dre/ParallelDiscordExtractor.o  ./src/meerkat/cns/CNVOverlapper.o  ./src/meerkat/cluster/AlternativeMapper.o ./src/meerkat/cluster/Cluster.o ./src/meerkat/cluster/ClusterContainer.o ./src/meerkat/cluster/ClusterSelector.o ./src/meerkat/cluster/Read.o ./src/meerkat/cluster/ReadInfo.o ./src/meerkat/cluster/Readpair.o  ./src/meerkat/blast_bp/BLASTBreakPoints.o  ./src/meerkat/alg/SplitReadSVCaller.o  ./src/meerkat/BWACaller.o  ./src/castle/MathUtils.o ./src/castle/OptionParser.o  ./src/bam_reader_test.o   -lbamtools-utils -lmeerkat_lib -lm -lbamtools -lboost_system -lboost_filesystem -lboost_thread -lboost_regex -lrt -lz
-Finished building target: meerkat
+g++ -static -pthread -fopenmp -L/opt/boost-1.57.0/lib/ -L"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/lib" -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/lib" -o "bam2fq"  ./src/third/faidx.o ./src/third/gzstream.o ./src/third/razf.o ./src/third/xfaidx.o  ./src/meerkat/preprocess/ReadGroup.o  ./src/meerkat/BWACaller.o  ./src/cat/Bam2Fastq.o  ./src/castle/OptionParser.o  ./src/bam2fq.o   -lbamtools-utils -ltea_lib -lm -lbamtools -lboost_system -lboost_filesystem -lboost_thread -lboost_regex -lrt -lz
+Finished building target: bam2fq
+ 
+07:59:56 **** Incremental Build of configuration Release for project bam2fq ****
+make all 
+make: Nothing to be done for `all'.
+08:44:25 **** Incremental Build of configuration Release for project bam2fq ****
+make all 
+Building file: ../src/cat/Bam2Fastq.cpp
+Invoking: Cross G++ Compiler
+g++ -static -pthread -fopenmp -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cat/Bam2Fastq.d" -MT"src/cat/Bam2Fastq.o" -o "src/cat/Bam2Fastq.o" "../src/cat/Bam2Fastq.cpp"
+../src/cat/Bam2Fastq.cpp: In member function ‘void cat::Bam2Fastq::process()’:
+../src/cat/Bam2Fastq.cpp:26:14: error: ‘block_boundaries’ was not declared in this scope
+  write_fastq(block_boundaries);
+              ^
+../src/cat/Bam2Fastq.cpp: In lambda function:
+../src/cat/Bam2Fastq.cpp:198:139: error: ‘m_ref’ was not declared in this scope
+         cout << "[TEA.write_read_group] 1-1 " << (an_aln.IsReverseStrand() ? "R:" : "F:") << BamTools::BamWriter::GetSAMAlignment(an_aln, m_ref) << "\n";
+                                                                                                                                           ^
+../src/cat/Bam2Fastq.cpp:201:139: error: ‘m_ref’ was not declared in this scope
+         cout << "[TEA.write_read_group] 1-2 " << (an_aln.IsReverseStrand() ? "R:" : "F:") << BamTools::BamWriter::GetSAMAlignment(an_aln, m_ref) << "\n";
+                                                                                                                                           ^
+../src/cat/Bam2Fastq.cpp:265:5: error: expected primary-expression before ‘)’ token
+    });
+     ^
+../src/cat/Bam2Fastq.cpp:265:5: error: expected ‘;’ before ‘)’ token
+../src/cat/Bam2Fastq.cpp:176:16: warning: unused variable ‘debug’ [-Wunused-variable]
+     const bool debug = false;
+                ^
+../src/cat/Bam2Fastq.cpp: In member function ‘void cat::Bam2Fastq::write_read_group(std::string&, std::vector<long int>&)’:
+../src/cat/Bam2Fastq.cpp:267:3: error: expected ‘)’ before ‘castle’
+   castle::ParallelRunner::run_unbalanced_load(n_cores, tasks);
+   ^
+../src/cat/Bam2Fastq.cpp: At global scope:
+../src/cat/Bam2Fastq.cpp:279:1: error: expected ‘}’ at end of input
+ } /* namespace cat */
+ ^
+In file included from /opt/boost-1.57.0/include/boost/filesystem/path_traits.hpp:23:0,
+                 from /opt/boost-1.57.0/include/boost/filesystem/path.hpp:25,
+                 from /opt/boost-1.57.0/include/boost/filesystem.hpp:16,
+                 from ../src/cat/../castle/OptionParser.hpp:19,
+                 from ../src/cat/Bam2Fastq.hpp:11,
+                 from ../src/cat/Bam2Fastq.cpp:8:
+/opt/boost-1.57.0/include/boost/system/error_code.hpp:221:36: warning: ‘boost::system::posix_category’ defined but not used [-Wunused-variable]
+     static const error_category &  posix_category = generic_category();
+                                    ^
+/opt/boost-1.57.0/include/boost/system/error_code.hpp:222:36: warning: ‘boost::system::errno_ecat’ defined but not used [-Wunused-variable]
+     static const error_category &  errno_ecat     = generic_category();
+                                    ^
+/opt/boost-1.57.0/include/boost/system/error_code.hpp:223:36: warning: ‘boost::system::native_ecat’ defined but not used [-Wunused-variable]
+     static const error_category &  native_ecat    = system_category();
+                                    ^
+make: *** [src/cat/Bam2Fastq.o] Error 1
+08:50:52 **** Incremental Build of configuration Release for project bam2fq ****
+make all 
+Building file: ../src/cat/Bam2Fastq.cpp
+Invoking: Cross G++ Compiler
+g++ -static -pthread -fopenmp -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cat/Bam2Fastq.d" -MT"src/cat/Bam2Fastq.o" -o "src/cat/Bam2Fastq.o" "../src/cat/Bam2Fastq.cpp"
+../src/cat/Bam2Fastq.cpp: In lambda function:
+../src/cat/Bam2Fastq.cpp:176:16: warning: unused variable ‘debug’ [-Wunused-variable]
+     const bool debug = false;
+                ^
+Finished building: ../src/cat/Bam2Fastq.cpp
+ 
+Building target: bam2fq
+Invoking: Cross G++ Linker
+g++ -static -pthread -fopenmp -L/opt/boost-1.57.0/lib/ -L"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/lib" -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/lib" -o "bam2fq"  ./src/third/faidx.o ./src/third/gzstream.o ./src/third/razf.o ./src/third/xfaidx.o  ./src/meerkat/preprocess/ReadGroup.o  ./src/meerkat/BWACaller.o  ./src/cat/Bam2Fastq.o  ./src/castle/OptionParser.o  ./src/bam2fq.o   -lbamtools-utils -ltea_lib -lm -lbamtools -lboost_system -lboost_filesystem -lboost_thread -lboost_regex -lrt -lz
+Finished building target: bam2fq
+ 
+10:37:37 **** Incremental Build of configuration Release for project bam2fq ****
+make all 
+Building file: ../src/cat/Bam2Fastq.cpp
+Invoking: Cross G++ Compiler
+g++ -static -pthread -fopenmp -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cat/Bam2Fastq.d" -MT"src/cat/Bam2Fastq.o" -o "src/cat/Bam2Fastq.o" "../src/cat/Bam2Fastq.cpp"
+Finished building: ../src/cat/Bam2Fastq.cpp
+ 
+Building target: bam2fq
+Invoking: Cross G++ Linker
+g++ -static -pthread -fopenmp -L/opt/boost-1.57.0/lib/ -L"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/lib" -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/lib" -o "bam2fq"  ./src/third/faidx.o ./src/third/gzstream.o ./src/third/razf.o ./src/third/xfaidx.o  ./src/meerkat/preprocess/ReadGroup.o  ./src/meerkat/BWACaller.o  ./src/cat/Bam2Fastq.o  ./src/castle/OptionParser.o  ./src/bam2fq.o   -lbamtools-utils -ltea_lib -lm -lbamtools -lboost_system -lboost_filesystem -lboost_thread -lboost_regex -lrt -lz
+Finished building target: bam2fq
+ 
+10:39:17 **** Incremental Build of configuration Release for project bam2fq ****
+make all 
+Building file: ../src/cat/Bam2Fastq.cpp
+Invoking: Cross G++ Compiler
+g++ -static -pthread -fopenmp -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cat/Bam2Fastq.d" -MT"src/cat/Bam2Fastq.o" -o "src/cat/Bam2Fastq.o" "../src/cat/Bam2Fastq.cpp"
+Finished building: ../src/cat/Bam2Fastq.cpp
+ 
+Building target: bam2fq
+Invoking: Cross G++ Linker
+g++ -static -pthread -fopenmp -L/opt/boost-1.57.0/lib/ -L"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/lib" -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/lib" -o "bam2fq"  ./src/third/faidx.o ./src/third/gzstream.o ./src/third/razf.o ./src/third/xfaidx.o  ./src/meerkat/preprocess/ReadGroup.o  ./src/meerkat/BWACaller.o  ./src/cat/Bam2Fastq.o  ./src/castle/OptionParser.o  ./src/bam2fq.o   -lbamtools-utils -ltea_lib -lm -lbamtools -lboost_system -lboost_filesystem -lboost_thread -lboost_regex -lrt -lz
+Finished building target: bam2fq
+ 
+10:40:09 **** Incremental Build of configuration Release for project bam2fq ****
+make all 
+make: Nothing to be done for `all'.
+10:46:39 **** Incremental Build of configuration Release for project bam2fq ****
+make all 
+Building file: ../src/cat/Bam2Fastq.cpp
+Invoking: Cross G++ Compiler
+g++ -static -pthread -fopenmp -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cat/Bam2Fastq.d" -MT"src/cat/Bam2Fastq.o" -o "src/cat/Bam2Fastq.o" "../src/cat/Bam2Fastq.cpp"
+../src/cat/Bam2Fastq.cpp: In lambda function:
+../src/cat/Bam2Fastq.cpp:195:16: warning: unused variable ‘entry_id’ [-Wunused-variable]
+        int64_t entry_id = 1;
+                ^
+Finished building: ../src/cat/Bam2Fastq.cpp
+ 
+Building target: bam2fq
+Invoking: Cross G++ Linker
+g++ -static -pthread -fopenmp -L/opt/boost-1.57.0/lib/ -L"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/lib" -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/lib" -o "bam2fq"  ./src/third/faidx.o ./src/third/gzstream.o ./src/third/razf.o ./src/third/xfaidx.o  ./src/meerkat/preprocess/ReadGroup.o  ./src/meerkat/BWACaller.o  ./src/cat/Bam2Fastq.o  ./src/castle/OptionParser.o  ./src/bam2fq.o   -lbamtools-utils -ltea_lib -lm -lbamtools -lboost_system -lboost_filesystem -lboost_thread -lboost_regex -lrt -lz
+Finished building target: bam2fq
+ 
+10:48:20 **** Incremental Build of configuration Release for project bam2fq ****
+make all 
+Building file: ../src/cat/Bam2Fastq.cpp
+Invoking: Cross G++ Compiler
+g++ -static -pthread -fopenmp -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cat/Bam2Fastq.d" -MT"src/cat/Bam2Fastq.o" -o "src/cat/Bam2Fastq.o" "../src/cat/Bam2Fastq.cpp"
+Finished building: ../src/cat/Bam2Fastq.cpp
+ 
+Building target: bam2fq
+Invoking: Cross G++ Linker
+g++ -static -pthread -fopenmp -L/opt/boost-1.57.0/lib/ -L"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/lib" -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/lib" -o "bam2fq"  ./src/third/faidx.o ./src/third/gzstream.o ./src/third/razf.o ./src/third/xfaidx.o  ./src/meerkat/preprocess/ReadGroup.o  ./src/meerkat/BWACaller.o  ./src/cat/Bam2Fastq.o  ./src/castle/OptionParser.o  ./src/bam2fq.o   -lbamtools-utils -ltea_lib -lm -lbamtools -lboost_system -lboost_filesystem -lboost_thread -lboost_regex -lrt -lz
+Finished building target: bam2fq
+ 
+10:53:52 **** Incremental Build of configuration Release for project bam2fq ****
+make all 
+Building file: ../src/cat/Bam2Fastq.cpp
+Invoking: Cross G++ Compiler
+g++ -static -pthread -fopenmp -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cat/Bam2Fastq.d" -MT"src/cat/Bam2Fastq.o" -o "src/cat/Bam2Fastq.o" "../src/cat/Bam2Fastq.cpp"
+Finished building: ../src/cat/Bam2Fastq.cpp
+ 
+Building target: bam2fq
+Invoking: Cross G++ Linker
+g++ -static -pthread -fopenmp -L/opt/boost-1.57.0/lib/ -L"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/lib" -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/lib" -o "bam2fq"  ./src/third/faidx.o ./src/third/gzstream.o ./src/third/razf.o ./src/third/xfaidx.o  ./src/meerkat/preprocess/ReadGroup.o  ./src/meerkat/BWACaller.o  ./src/cat/Bam2Fastq.o  ./src/castle/OptionParser.o  ./src/bam2fq.o   -lbamtools-utils -ltea_lib -lm -lbamtools -lboost_system -lboost_filesystem -lboost_thread -lboost_regex -lrt -lz
+Finished building target: bam2fq
+ 
+10:54:45 **** Incremental Build of configuration Release for project bam2fq ****
+make -j80 all 
+Building file: ../src/cat/Bam2Fastq.cpp
+Invoking: Cross G++ Compiler
+g++ -static -pthread -fopenmp -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cat/Bam2Fastq.d" -MT"src/cat/Bam2Fastq.o" -o "src/cat/Bam2Fastq.o" "../src/cat/Bam2Fastq.cpp"
+Finished building: ../src/cat/Bam2Fastq.cpp
+ 
+Building target: bam2fq
+Invoking: Cross G++ Linker
+g++ -static -pthread -fopenmp -L/opt/boost-1.57.0/lib/ -L"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/lib" -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/lib" -o "bam2fq"  ./src/third/faidx.o ./src/third/gzstream.o ./src/third/razf.o ./src/third/xfaidx.o  ./src/meerkat/preprocess/ReadGroup.o  ./src/meerkat/BWACaller.o  ./src/cat/Bam2Fastq.o  ./src/castle/OptionParser.o  ./src/bam2fq.o   -lbamtools-utils -ltea_lib -lm -lbamtools -lboost_system -lboost_filesystem -lboost_thread -lboost_regex -lrt -lz
+Finished building target: bam2fq
  

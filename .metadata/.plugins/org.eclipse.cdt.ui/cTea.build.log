@@ -1,20 +1,7 @@
-14:11:40 **** Incremental Build of configuration Release for project cTea ****
+15:56:44 **** Incremental Build of configuration Release for project cTea ****
 make all 
-Building file: ../src/ReadClipper.cpp
-Invoking: Cross G++ Compiler
-g++ -std=c++0x -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ReadClipper.d" -MT"src/ReadClipper.o" -o "src/ReadClipper.o" "../src/ReadClipper.cpp"
-Finished building: ../src/ReadClipper.cpp
- 
-Building file: ../src/TeaQ.cpp
-Invoking: Cross G++ Compiler
-g++ -std=c++0x -I"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/boost-1.57.0/include -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TeaQ.d" -MT"src/TeaQ.o" -o "src/TeaQ.o" "../src/TeaQ.cpp"
-Finished building: ../src/TeaQ.cpp
- 
-Building target: cTea
-Invoking: Cross G++ Linker
-g++ -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/mybamtools/lib" -L/opt/boost-1.57.0/lib -o "cTea"  ./src/ReadClipper.o ./src/TeaQ.o   -lbamtools -lbamtools-utils -lboost_system -lboost_filesystem
-Finished building target: cTea
- 
+make: Nothing to be done for `all'.
+Command canceled
 
-14:12:02 Build Finished (took 21s.650ms)
+15:56:45 Build Cancelled (took 566ms)
 

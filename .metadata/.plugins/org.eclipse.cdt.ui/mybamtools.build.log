@@ -1,4 +1,4 @@
-09:51:52 **** Build of configuration Release for project mybamtools ****
+15:02:42 **** Incremental Build of configuration Release for project mybamtools ****
 make -C /home/el114/kyu/code/mybamtools/build -j 8 all 
 make: Entering directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
 make[1]: Entering directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
@@ -10,89 +10,21 @@ make[2]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/gen
 make[2]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
 make[2]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
 make[2]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Entering directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Entering directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Entering directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Entering directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-[  6%] Building CXX object src/api/CMakeFiles/BamTools.dir/BamIndex.cpp.o
-[ 17%] [ 17%] [ 17%] [ 17%] [ 17%] [ 17%] [ 17%] Building CXX object src/api/CMakeFiles/BamTools.dir/BamMultiReader.cpp.o
-Building CXX object src/api/CMakeFiles/BamTools.dir/BamWriter.cpp.o
-Building CXX object src/api/CMakeFiles/BamTools.dir/BamReader.cpp.o
-Building CXX object src/third_party/jsoncpp/CMakeFiles/jsoncppST.dir/json_reader.cpp.o
-Building CXX object src/api/CMakeFiles/BamToolsST.dir/BamAlignment.cpp.o
-Building CXX object src/third_party/jsoncpp/CMakeFiles/jsoncpp.dir/json_reader.cpp.o
-Building CXX object src/api/CMakeFiles/BamTools.dir/BamAlignment.cpp.o
-[ 19%] Building CXX object src/api/CMakeFiles/BamTools.dir/BGZF.cpp.o
-[ 21%] Building CXX object src/third_party/jsoncpp/CMakeFiles/jsoncppST.dir/json_value.cpp.o
-[ 27%] [ 29%] [ 29%] Building CXX object src/third_party/jsoncpp/CMakeFiles/jsoncppST.dir/json_writer.cpp.o
-[ 29%] Building CXX object src/api/CMakeFiles/BamToolsST.dir/BamIndex.cpp.o
-Building CXX object src/api/CMakeFiles/BamToolsST.dir/BamMultiReader.cpp.o
-Building CXX object src/api/CMakeFiles/BamToolsST.dir/BamReader.cpp.o
-[ 31%] Building CXX object src/api/CMakeFiles/BamTools.dir/internal/BamReader_p.cpp.o
-[ 36%] [ 36%] Building CXX object src/third_party/jsoncpp/CMakeFiles/jsoncpp.dir/json_value.cpp.o
-Building CXX object src/api/CMakeFiles/BamToolsST.dir/BamWriter.cpp.o
-[ 40%] [ 40%] Building CXX object src/api/CMakeFiles/BamToolsST.dir/BGZF.cpp.o
-Building CXX object src/api/CMakeFiles/BamToolsST.dir/internal/BamReader_p.cpp.o
-[ 42%] Building CXX object src/api/CMakeFiles/BamTools.dir/internal/BamStandardIndex_p.cpp.o
-Linking CXX static library ../../../../lib/libjsoncpp.a
-[ 44%] Building CXX object src/api/CMakeFiles/BamTools.dir/internal/BamToolsIndex_p.cpp.o
-[ 46%] Building CXX object src/api/CMakeFiles/BamToolsST.dir/internal/BamStandardIndex_p.cpp.o
-[ 51%] Building CXX object src/third_party/jsoncpp/CMakeFiles/jsoncpp.dir/json_writer.cpp.o
-[ 53%] [ 53%] Building CXX object src/api/CMakeFiles/BamTools.dir/internal/BamWriter_p.cpp.o
-Building CXX object src/api/CMakeFiles/BamToolsST.dir/internal/BamToolsIndex_p.cpp.o
-make[2]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-[ 55%] [ 55%] Building CXX object src/api/CMakeFiles/BamToolsST.dir/internal/BamWriter_p.cpp.o
+[ 36%] [ 48%] [ 46%] [ 55%] Built target jsoncpp
+Built target BamTools
 Built target jsoncppST
-Linking CXX shared library ../../../../lib/libjsoncpp.so
-Linking CXX shared library ../../../lib/libbamtools.so
-make[2]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-Linking CXX static library ../../../lib/libbamtools.a
-[ 55%] Built target jsoncpp
-make[2]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-[ 55%] Built target BamTools
+Built target BamToolsST
 make[2]: Entering directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
 make[2]: Entering directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
 make[2]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
 make[2]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
+[ 63%] [ 72%] Built target BamTools-utils
+Built target BamTools-utilsST
 make[2]: Entering directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Entering directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-[ 70%] [ 70%] [ 70%] [ 70%] [ 70%] [ 70%] [ 70%] Building CXX object src/utils/CMakeFiles/BamTools-utils.dir/bamtools_fasta.cpp.o
-Building CXX object src/utils/CMakeFiles/BamTools-utilsST.dir/bamtools_fasta.cpp.o
-Building CXX object src/utils/CMakeFiles/BamTools-utilsST.dir/bamtools_pileup_engine.cpp.o
-Building CXX object src/utils/CMakeFiles/BamTools-utils.dir/bamtools_options.cpp.o
-Building CXX object src/utils/CMakeFiles/BamTools-utilsST.dir/bamtools_utilities.cpp.o
-Building CXX object src/utils/CMakeFiles/BamTools-utilsST.dir/bamtools_options.cpp.o
-Building CXX object src/utils/CMakeFiles/BamTools-utils.dir/bamtools_pileup_engine.cpp.o
-[ 70%] Built target BamToolsST
-[ 72%] Building CXX object src/utils/CMakeFiles/BamTools-utils.dir/bamtools_utilities.cpp.o
-Linking CXX static library ../../../lib/libbamtools-utils.a
-Linking CXX shared library ../../../lib/libbamtools-utils.so
-make[2]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-[ 72%] Built target BamTools-utilsST
-[ 72%] Built target BamTools-utils
-make[2]: Entering directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-make[2]: Entering directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
-[ 89%] [ 89%] [ 89%] [ 89%] [ 89%] [ 89%] [ 89%] [ 89%] Building CXX object src/toolkit/CMakeFiles/bamtools.dir/bamtools_count.cpp.o
-Building CXX object src/toolkit/CMakeFiles/bamtools.dir/bamtools_convert.cpp.o
-Building CXX object src/toolkit/CMakeFiles/bamtools.dir/bamtools_coverage.cpp.o
-Building CXX object src/toolkit/CMakeFiles/bamtools.dir/bamtools_header.cpp.o
-Building CXX object src/toolkit/CMakeFiles/bamtools.dir/bamtools_index.cpp.o
-Building CXX object src/toolkit/CMakeFiles/bamtools.dir/bamtools_filter.cpp.o
-Building CXX object src/toolkit/CMakeFiles/bamtools.dir/bamtools_merge.cpp.o
-Building CXX object src/toolkit/CMakeFiles/bamtools.dir/bamtools_random.cpp.o
-[ 91%] Building CXX object src/toolkit/CMakeFiles/bamtools.dir/bamtools_revert.cpp.o
-[ 93%] [ 95%] Building CXX object src/toolkit/CMakeFiles/bamtools.dir/bamtools_sort.cpp.o
-Building CXX object src/toolkit/CMakeFiles/bamtools.dir/bamtools_split.cpp.o
-[100%] [100%] Building CXX object src/toolkit/CMakeFiles/bamtools.dir/bamtools_stats.cpp.o
-Building CXX object src/toolkit/CMakeFiles/bamtools.dir/bamtools.cpp.o
-Linking CXX executable ../../../bin/bamtools
 make[2]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
 [100%] Built target bamtools
 make[1]: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
 make: Leaving directory `/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/build'
 
-09:52:32 Build Finished (took 40s.725ms)
+15:02:45 Build Finished (took 3s.378ms)
 
