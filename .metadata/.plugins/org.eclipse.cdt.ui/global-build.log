@@ -541,3 +541,307 @@ Invoking: Cross G++ Linker
 g++ -static -pthread -fopenmp -L/opt/boost-1.57.0/lib/ -L"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/lib" -L"/n/data1/hms/dbmi/park/alee/kyu/eclipse/workspaces/genomics/lib" -o "bam2fq"  ./src/third/faidx.o ./src/third/gzstream.o ./src/third/razf.o ./src/third/xfaidx.o  ./src/meerkat/preprocess/ReadGroup.o  ./src/meerkat/BWACaller.o  ./src/cat/Bam2Fastq.o  ./src/castle/OptionParser.o  ./src/bam2fq.o   -lbamtools-utils -ltea_lib -lm -lbamtools -lboost_system -lboost_filesystem -lboost_thread -lboost_regex -lrt -lz
 Finished building target: bam2fq
  
+16:09:07 **** Incremental Build of configuration Release for project bam2fq ****
+make -j40 all 
+Building file: ../src/third/faidx.c
+Building file: ../src/third/xfaidx.cpp
+Building file: ../src/third/razf.c
+Building file: ../src/third/gzstream.cpp
+Building file: ../src/meerkat/preprocess/ReadGroup.cpp
+Building file: ../src/meerkat/BWACaller.cpp
+Building file: ../src/castle/OptionParser.cpp
+Building file: ../src/bam2fq.cpp
+Building file: ../src/cat/Bam2Fastq.cpp
+Invoking: Cross GCC Compiler
+gcc -static -pthread -fopenmp -std=c11 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/third/faidx.d" -MT"src/third/faidx.o" -o "src/third/faidx.o" "../src/third/faidx.c"
+Invoking: Cross G++ Compiler
+g++ -static -pthread -fopenmp -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/third/xfaidx.d" -MT"src/third/xfaidx.o" -o "src/third/xfaidx.o" "../src/third/xfaidx.cpp"
+Invoking: Cross GCC Compiler
+gcc -static -pthread -fopenmp -std=c11 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/third/razf.d" -MT"src/third/razf.o" -o "src/third/razf.o" "../src/third/razf.c"
+Invoking: Cross G++ Compiler
+g++ -static -pthread -fopenmp -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/third/gzstream.d" -MT"src/third/gzstream.o" -o "src/third/gzstream.o" "../src/third/gzstream.cpp"
+Invoking: Cross G++ Compiler
+g++ -static -pthread -fopenmp -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/preprocess/ReadGroup.d" -MT"src/meerkat/preprocess/ReadGroup.o" -o "src/meerkat/preprocess/ReadGroup.o" "../src/meerkat/preprocess/ReadGroup.cpp"
+Invoking: Cross G++ Compiler
+g++ -static -pthread -fopenmp -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/BWACaller.d" -MT"src/meerkat/BWACaller.o" -o "src/meerkat/BWACaller.o" "../src/meerkat/BWACaller.cpp"
+Invoking: Cross G++ Compiler
+g++ -static -pthread -fopenmp -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/bam2fq.d" -MT"src/bam2fq.o" -o "src/bam2fq.o" "../src/bam2fq.cpp"
+Invoking: Cross G++ Compiler
+g++ -static -pthread -fopenmp -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cat/Bam2Fastq.d" -MT"src/cat/Bam2Fastq.o" -o "src/cat/Bam2Fastq.o" "../src/cat/Bam2Fastq.cpp"
+Invoking: Cross G++ Compiler
+g++ -static -pthread -fopenmp -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/castle/OptionParser.d" -MT"src/castle/OptionParser.o" -o "src/castle/OptionParser.o" "../src/castle/OptionParser.cpp"
+../src/third/faidx.c: In function ‘fai_insert_index’:
+../src/third/faidx.c:57:2: warning: implicit declaration of function ‘strdup’ [-Wimplicit-function-declaration]
+  idx->name[idx->n] = strdup(name);
+  ^
+../src/third/faidx.c:57:20: warning: assignment makes pointer from integer without a cast [enabled by default]
+  idx->name[idx->n] = strdup(name);
+                    ^
+Finished building: ../src/third/razf.c
+ 
+Finished building: ../src/third/faidx.c
+ 
+Finished building: ../src/third/gzstream.cpp
+ 
+Finished building: ../src/third/xfaidx.cpp
+ 
+Finished building: ../src/castle/OptionParser.cpp
+ 
+Finished building: ../src/meerkat/preprocess/ReadGroup.cpp
+ 
+Finished building: ../src/bam2fq.cpp
+ 
+Finished building: ../src/cat/Bam2Fastq.cpp
+ 
+Finished building: ../src/meerkat/BWACaller.cpp
+ 
+Building target: bam2fq
+Invoking: Cross G++ Linker
+g++ -static -pthread -fopenmp -L/opt/boost-1.57.0/lib/ -L"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/lib" -L"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/lib" -o "bam2fq"  ./src/third/faidx.o ./src/third/gzstream.o ./src/third/razf.o ./src/third/xfaidx.o  ./src/meerkat/preprocess/ReadGroup.o  ./src/meerkat/BWACaller.o  ./src/cat/Bam2Fastq.o  ./src/castle/OptionParser.o  ./src/bam2fq.o   -lbamtools-utils -ltea_lib -lm -lbamtools -lboost_system -lboost_filesystem -lboost_thread -lboost_regex -lrt -lz
+Finished building target: bam2fq
+ 
+16:18:41 **** Incremental Build of configuration Release for project bam2fq ****
+make -j40 all 
+Building file: ../src/cat/Bam2Fastq.cpp
+Invoking: Cross G++ Compiler
+g++ -static -pthread -fopenmp -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cat/Bam2Fastq.d" -MT"src/cat/Bam2Fastq.o" -o "src/cat/Bam2Fastq.o" "../src/cat/Bam2Fastq.cpp"
+Finished building: ../src/cat/Bam2Fastq.cpp
+ 
+Building target: bam2fq
+Invoking: Cross G++ Linker
+g++ -static -pthread -fopenmp -L/opt/boost-1.57.0/lib/ -L"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/lib" -L"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/lib" -o "bam2fq"  ./src/third/faidx.o ./src/third/gzstream.o ./src/third/razf.o ./src/third/xfaidx.o  ./src/meerkat/preprocess/ReadGroup.o  ./src/meerkat/BWACaller.o  ./src/cat/Bam2Fastq.o  ./src/castle/OptionParser.o  ./src/bam2fq.o   -lbamtools-utils -ltea_lib -lm -lbamtools -lboost_system -lboost_filesystem -lboost_thread -lboost_regex -lrt -lz
+Finished building target: bam2fq
+ 
+16:21:26 **** Incremental Build of configuration Release for project bam2fq ****
+make -j40 all 
+Building file: ../src/cat/Bam2Fastq.cpp
+Invoking: Cross G++ Compiler
+g++ -static -pthread -fopenmp -std=c++0x -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cat/Bam2Fastq.d" -MT"src/cat/Bam2Fastq.o" -o "src/cat/Bam2Fastq.o" "../src/cat/Bam2Fastq.cpp"
+Finished building: ../src/cat/Bam2Fastq.cpp
+ 
+Building target: bam2fq
+Invoking: Cross G++ Linker
+g++ -static -pthread -fopenmp -L/opt/boost-1.57.0/lib/ -L"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/lib" -L"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/lib" -o "bam2fq"  ./src/third/faidx.o ./src/third/gzstream.o ./src/third/razf.o ./src/third/xfaidx.o  ./src/meerkat/preprocess/ReadGroup.o  ./src/meerkat/BWACaller.o  ./src/cat/Bam2Fastq.o  ./src/castle/OptionParser.o  ./src/bam2fq.o   -lbamtools-utils -ltea_lib -lm -lbamtools -lboost_system -lboost_filesystem -lboost_thread -lboost_regex -lrt -lz
+Finished building target: bam2fq
+ 
+12:51:13 **** Build of configuration Debug for project tea ****
+make -j40 all 
+Building file: ../src/third/gzstream.cpp
+Building file: ../src/third/faidx.c
+Building file: ../src/third/razf.c
+Building file: ../src/tea/TEAOptionParser.cpp
+Building file: ../src/meerkat/preprocess/ReadGroup.cpp
+Building file: ../src/tea/TEA.cpp
+Building file: ../src/meerkat/BWACaller.cpp
+Building file: ../src/castle/OptionParser.cpp
+Building file: ../src/tea/ResultCompartor.cpp
+Building file: ../src/tea.cpp
+Building file: ../src/third/xfaidx.cpp
+Invoking: Cross G++ Compiler
+g++ -static -std=c++11 -pthread -fopenmp -D__cplusplus=201103L -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/third/gzstream.d" -MT"src/third/gzstream.o" -o "src/third/gzstream.o" "../src/third/gzstream.cpp"
+Invoking: Cross GCC Compiler
+gcc -static -pthread -fopenmp -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/third/faidx.d" -MT"src/third/faidx.o" -o "src/third/faidx.o" "../src/third/faidx.c"
+Invoking: Cross GCC Compiler
+gcc -static -pthread -fopenmp -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/third/razf.d" -MT"src/third/razf.o" -o "src/third/razf.o" "../src/third/razf.c"
+Invoking: Cross G++ Compiler
+g++ -static -std=c++11 -pthread -fopenmp -D__cplusplus=201103L -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/tea/TEAOptionParser.d" -MT"src/tea/TEAOptionParser.o" -o "src/tea/TEAOptionParser.o" "../src/tea/TEAOptionParser.cpp"
+Invoking: Cross G++ Compiler
+g++ -static -std=c++11 -pthread -fopenmp -D__cplusplus=201103L -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/preprocess/ReadGroup.d" -MT"src/meerkat/preprocess/ReadGroup.o" -o "src/meerkat/preprocess/ReadGroup.o" "../src/meerkat/preprocess/ReadGroup.cpp"
+Invoking: Cross G++ Compiler
+g++ -static -std=c++11 -pthread -fopenmp -D__cplusplus=201103L -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/tea/TEA.d" -MT"src/tea/TEA.o" -o "src/tea/TEA.o" "../src/tea/TEA.cpp"
+Invoking: Cross G++ Compiler
+g++ -static -std=c++11 -pthread -fopenmp -D__cplusplus=201103L -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/BWACaller.d" -MT"src/meerkat/BWACaller.o" -o "src/meerkat/BWACaller.o" "../src/meerkat/BWACaller.cpp"
+Invoking: Cross G++ Compiler
+g++ -static -std=c++11 -pthread -fopenmp -D__cplusplus=201103L -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/castle/OptionParser.d" -MT"src/castle/OptionParser.o" -o "src/castle/OptionParser.o" "../src/castle/OptionParser.cpp"
+Invoking: Cross G++ Compiler
+g++ -static -std=c++11 -pthread -fopenmp -D__cplusplus=201103L -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/tea/ResultCompartor.d" -MT"src/tea/ResultCompartor.o" -o "src/tea/ResultCompartor.o" "../src/tea/ResultCompartor.cpp"
+Invoking: Cross G++ Compiler
+g++ -static -std=c++11 -pthread -fopenmp -D__cplusplus=201103L -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/tea.d" -MT"src/tea.o" -o "src/tea.o" "../src/tea.cpp"
+Invoking: Cross G++ Compiler
+g++ -static -std=c++11 -pthread -fopenmp -D__cplusplus=201103L -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/third/xfaidx.d" -MT"src/third/xfaidx.o" -o "src/third/xfaidx.o" "../src/third/xfaidx.cpp"
+Finished building: ../src/third/faidx.c
+Finished building: ../src/third/razf.c
+ 
+ 
+Finished building: ../src/third/gzstream.cpp
+ 
+Finished building: ../src/third/xfaidx.cpp
+ 
+Finished building: ../src/meerkat/preprocess/ReadGroup.cpp
+ 
+Finished building: ../src/tea/TEAOptionParser.cpp
+ 
+Finished building: ../src/castle/OptionParser.cpp
+ 
+Finished building: ../src/tea.cpp
+ 
+Finished building: ../src/meerkat/BWACaller.cpp
+ 
+Finished building: ../src/tea/ResultCompartor.cpp
+ 
+Finished building: ../src/tea/TEA.cpp
+ 
+Building target: tea
+Invoking: Cross G++ Linker
+g++ -static -std=c++11 -pthread -fopenmp -L/opt/boost-1.57.0/lib/ -L/home/el114/kyu/code/mybamtools/lib -L"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/lib" -o "tea"  ./src/third/faidx.o ./src/third/gzstream.o ./src/third/razf.o ./src/third/xfaidx.o  ./src/tea/ResultCompartor.o ./src/tea/TEA.o ./src/tea/TEAOptionParser.o  ./src/meerkat/preprocess/ReadGroup.o  ./src/meerkat/BWACaller.o  ./src/castle/OptionParser.o  ./src/tea.o   -lbamtools-utils -ltea_lib -lm -lbamtools -lboost_system -lboost_filesystem -lboost_thread -lboost_regex -lrt -lz
+Finished building target: tea
+ 
+12:55:00 **** Incremental Build of configuration Debug for project tea ****
+make -j40 all 
+make: Nothing to be done for `all'.
+12:57:33 **** Incremental Build of configuration Debug for project tea ****
+make -j40 all 
+make: Nothing to be done for `all'.
+12:59:36 **** Incremental Build of configuration Debug for project tea ****
+make -j40 all 
+Building file: ../src/tea/TEA.cpp
+Invoking: Cross G++ Compiler
+g++ -static -std=c++11 -pthread -fopenmp -D__cplusplus=201103L -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/tea/TEA.d" -MT"src/tea/TEA.o" -o "src/tea/TEA.o" "../src/tea/TEA.cpp"
+Finished building: ../src/tea/TEA.cpp
+ 
+Building target: tea
+Invoking: Cross G++ Linker
+g++ -static -std=c++11 -pthread -fopenmp -L/opt/boost-1.57.0/lib/ -L/home/el114/kyu/code/mybamtools/lib -L"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/lib" -o "tea"  ./src/third/faidx.o ./src/third/gzstream.o ./src/third/razf.o ./src/third/xfaidx.o  ./src/tea/ResultCompartor.o ./src/tea/TEA.o ./src/tea/TEAOptionParser.o  ./src/meerkat/preprocess/ReadGroup.o  ./src/meerkat/BWACaller.o  ./src/castle/OptionParser.o  ./src/tea.o   -lbamtools-utils -ltea_lib -lm -lbamtools -lboost_system -lboost_filesystem -lboost_thread -lboost_regex -lrt -lz
+Finished building target: tea
+ 
+13:01:02 **** Incremental Build of configuration Debug for project tea ****
+make -j40 all 
+make: Nothing to be done for `all'.
+13:03:07 **** Incremental Build of configuration Debug for project tea ****
+make -j40 all 
+Building file: ../src/tea/TEA.cpp
+Invoking: Cross G++ Compiler
+g++ -static -std=c++11 -pthread -fopenmp -D__cplusplus=201103L -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/tea/TEA.d" -MT"src/tea/TEA.o" -o "src/tea/TEA.o" "../src/tea/TEA.cpp"
+Finished building: ../src/tea/TEA.cpp
+ 
+Building target: tea
+Invoking: Cross G++ Linker
+g++ -static -std=c++11 -pthread -fopenmp -L/opt/boost-1.57.0/lib/ -L/home/el114/kyu/code/mybamtools/lib -L"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/lib" -o "tea"  ./src/third/faidx.o ./src/third/gzstream.o ./src/third/razf.o ./src/third/xfaidx.o  ./src/tea/ResultCompartor.o ./src/tea/TEA.o ./src/tea/TEAOptionParser.o  ./src/meerkat/preprocess/ReadGroup.o  ./src/meerkat/BWACaller.o  ./src/castle/OptionParser.o  ./src/tea.o   -lbamtools-utils -ltea_lib -lm -lbamtools -lboost_system -lboost_filesystem -lboost_thread -lboost_regex -lrt -lz
+Finished building target: tea
+ 
+13:04:00 **** Incremental Build of configuration Debug for project tea ****
+make -j40 all 
+Building file: ../src/tea/TEA.cpp
+Invoking: Cross G++ Compiler
+g++ -static -std=c++11 -pthread -fopenmp -D__cplusplus=201103L -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/tea/TEA.d" -MT"src/tea/TEA.o" -o "src/tea/TEA.o" "../src/tea/TEA.cpp"
+Finished building: ../src/tea/TEA.cpp
+ 
+Building target: tea
+Invoking: Cross G++ Linker
+g++ -static -std=c++11 -pthread -fopenmp -L/opt/boost-1.57.0/lib/ -L/home/el114/kyu/code/mybamtools/lib -L"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/lib" -o "tea"  ./src/third/faidx.o ./src/third/gzstream.o ./src/third/razf.o ./src/third/xfaidx.o  ./src/tea/ResultCompartor.o ./src/tea/TEA.o ./src/tea/TEAOptionParser.o  ./src/meerkat/preprocess/ReadGroup.o  ./src/meerkat/BWACaller.o  ./src/castle/OptionParser.o  ./src/tea.o   -lbamtools-utils -ltea_lib -lm -lbamtools -lboost_system -lboost_filesystem -lboost_thread -lboost_regex -lrt -lz
+Finished building target: tea
+ 
+13:05:20 **** Incremental Build of configuration Debug for project tea ****
+make -j40 all 
+make: Nothing to be done for `all'.
+13:05:46 **** Clean-only build of configuration Release for project tea ****
+make -j40 clean 
+rm -rf  ./src/third/faidx.o ./src/third/gzstream.o ./src/third/razf.o ./src/third/xfaidx.o  ./src/tea/ResultCompartor.o ./src/tea/TEA.o ./src/tea/TEAOptionParser.o  ./src/meerkat/preprocess/ReadGroup.o  ./src/meerkat/BWACaller.o  ./src/castle/OptionParser.o  ./src/tea.o  ./src/third/faidx.d ./src/third/razf.d  ./src/third/gzstream.d ./src/third/xfaidx.d  ./src/tea/ResultCompartor.d ./src/tea/TEA.d ./src/tea/TEAOptionParser.d  ./src/meerkat/preprocess/ReadGroup.d  ./src/meerkat/BWACaller.d  ./src/castle/OptionParser.d  ./src/tea.d  tea
+ 
+13:05:47 **** Incremental Build of configuration Release for project tea ****
+make -j40 all 
+Building file: ../src/third/gzstream.cpp
+Building file: ../src/third/razf.c
+Building file: ../src/tea/TEA.cpp
+Building file: ../src/third/xfaidx.cpp
+Building file: ../src/meerkat/BWACaller.cpp
+Building file: ../src/third/faidx.c
+Building file: ../src/tea/ResultCompartor.cpp
+Building file: ../src/meerkat/preprocess/ReadGroup.cpp
+Building file: ../src/castle/OptionParser.cpp
+Building file: ../src/tea/TEAOptionParser.cpp
+Building file: ../src/tea.cpp
+Invoking: Cross G++ Compiler
+g++ -static -std=c++11 -pthread -fopenmp -D__cplusplus=201103L -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/third/gzstream.d" -MT"src/third/gzstream.o" -o "src/third/gzstream.o" "../src/third/gzstream.cpp"
+Invoking: Cross GCC Compiler
+gcc -static -pthread -fopenmp -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/third/razf.d" -MT"src/third/razf.o" -o "src/third/razf.o" "../src/third/razf.c"
+Invoking: Cross G++ Compiler
+g++ -static -std=c++11 -pthread -fopenmp -D__cplusplus=201103L -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/tea/TEA.d" -MT"src/tea/TEA.o" -o "src/tea/TEA.o" "../src/tea/TEA.cpp"
+Invoking: Cross G++ Compiler
+g++ -static -std=c++11 -pthread -fopenmp -D__cplusplus=201103L -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/third/xfaidx.d" -MT"src/third/xfaidx.o" -o "src/third/xfaidx.o" "../src/third/xfaidx.cpp"
+Invoking: Cross G++ Compiler
+g++ -static -std=c++11 -pthread -fopenmp -D__cplusplus=201103L -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/BWACaller.d" -MT"src/meerkat/BWACaller.o" -o "src/meerkat/BWACaller.o" "../src/meerkat/BWACaller.cpp"
+Invoking: Cross GCC Compiler
+gcc -static -pthread -fopenmp -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/third/faidx.d" -MT"src/third/faidx.o" -o "src/third/faidx.o" "../src/third/faidx.c"
+Invoking: Cross G++ Compiler
+g++ -static -std=c++11 -pthread -fopenmp -D__cplusplus=201103L -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/tea/ResultCompartor.d" -MT"src/tea/ResultCompartor.o" -o "src/tea/ResultCompartor.o" "../src/tea/ResultCompartor.cpp"
+Invoking: Cross G++ Compiler
+g++ -static -std=c++11 -pthread -fopenmp -D__cplusplus=201103L -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meerkat/preprocess/ReadGroup.d" -MT"src/meerkat/preprocess/ReadGroup.o" -o "src/meerkat/preprocess/ReadGroup.o" "../src/meerkat/preprocess/ReadGroup.cpp"
+Invoking: Cross G++ Compiler
+g++ -static -std=c++11 -pthread -fopenmp -D__cplusplus=201103L -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/castle/OptionParser.d" -MT"src/castle/OptionParser.o" -o "src/castle/OptionParser.o" "../src/castle/OptionParser.cpp"
+Invoking: Cross G++ Compiler
+g++ -static -std=c++11 -pthread -fopenmp -D__cplusplus=201103L -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/tea.d" -MT"src/tea.o" -o "src/tea.o" "../src/tea.cpp"
+Invoking: Cross G++ Compiler
+g++ -static -std=c++11 -pthread -fopenmp -D__cplusplus=201103L -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/tea/TEAOptionParser.d" -MT"src/tea/TEAOptionParser.o" -o "src/tea/TEAOptionParser.o" "../src/tea/TEAOptionParser.cpp"
+Finished building: ../src/third/razf.c
+ 
+Finished building: ../src/third/faidx.c
+ 
+Finished building: ../src/third/gzstream.cpp
+ 
+Finished building: ../src/third/xfaidx.cpp
+ 
+Finished building: ../src/meerkat/preprocess/ReadGroup.cpp
+ 
+Finished building: ../src/tea.cpp
+ 
+Finished building: ../src/tea/TEAOptionParser.cpp
+ 
+Finished building: ../src/castle/OptionParser.cpp
+ 
+Finished building: ../src/meerkat/BWACaller.cpp
+ 
+Finished building: ../src/tea/ResultCompartor.cpp
+ 
+Finished building: ../src/tea/TEA.cpp
+ 
+Building target: tea
+Invoking: Cross G++ Linker
+g++ -static -std=c++11 -pthread -fopenmp -L/opt/boost-1.57.0/lib/ -L"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/lib" -L"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/lib" -o "tea"  ./src/third/faidx.o ./src/third/gzstream.o ./src/third/razf.o ./src/third/xfaidx.o  ./src/tea/ResultCompartor.o ./src/tea/TEA.o ./src/tea/TEAOptionParser.o  ./src/meerkat/preprocess/ReadGroup.o  ./src/meerkat/BWACaller.o  ./src/castle/OptionParser.o  ./src/tea.o   -lbamtools-utils -ltea_lib -lm -lbamtools -lboost_system -lboost_filesystem -lboost_thread -lboost_regex -lrt -lz
+Finished building target: tea
+ 
+13:15:56 **** Incremental Build of configuration Release for project tea ****
+make -j40 all 
+Building file: ../src/tea/TEA.cpp
+Invoking: Cross G++ Compiler
+g++ -static -std=c++11 -pthread -fopenmp -D__cplusplus=201103L -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/tea/TEA.d" -MT"src/tea/TEA.o" -o "src/tea/TEA.o" "../src/tea/TEA.cpp"
+Finished building: ../src/tea/TEA.cpp
+ 
+Building target: tea
+Invoking: Cross G++ Linker
+g++ -static -std=c++11 -pthread -fopenmp -L/opt/boost-1.57.0/lib/ -L"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/lib" -L"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/lib" -o "tea"  ./src/third/faidx.o ./src/third/gzstream.o ./src/third/razf.o ./src/third/xfaidx.o  ./src/tea/ResultCompartor.o ./src/tea/TEA.o ./src/tea/TEAOptionParser.o  ./src/meerkat/preprocess/ReadGroup.o  ./src/meerkat/BWACaller.o  ./src/castle/OptionParser.o  ./src/tea.o   -lbamtools-utils -ltea_lib -lm -lbamtools -lboost_system -lboost_filesystem -lboost_thread -lboost_regex -lrt -lz
+Finished building target: tea
+ 
+14:13:02 **** Incremental Build of configuration Release for project tea ****
+make -j40 all 
+Building file: ../src/tea/TEA.cpp
+Invoking: Cross G++ Compiler
+g++ -static -std=c++11 -pthread -fopenmp -D__cplusplus=201103L -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/tea/TEA.d" -MT"src/tea/TEA.o" -o "src/tea/TEA.o" "../src/tea/TEA.cpp"
+Finished building: ../src/tea/TEA.cpp
+ 
+Building target: tea
+Invoking: Cross G++ Linker
+g++ -static -std=c++11 -pthread -fopenmp -L/opt/boost-1.57.0/lib/ -L"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/lib" -L"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/lib" -o "tea"  ./src/third/faidx.o ./src/third/gzstream.o ./src/third/razf.o ./src/third/xfaidx.o  ./src/tea/ResultCompartor.o ./src/tea/TEA.o ./src/tea/TEAOptionParser.o  ./src/meerkat/preprocess/ReadGroup.o  ./src/meerkat/BWACaller.o  ./src/castle/OptionParser.o  ./src/tea.o   -lbamtools-utils -ltea_lib -lm -lbamtools -lboost_system -lboost_filesystem -lboost_thread -lboost_regex -lrt -lz
+Finished building target: tea
+ 
+15:07:00 **** Incremental Build of configuration Release for project tea ****
+make -j40 all 
+make: Nothing to be done for `all'.
+15:08:11 **** Incremental Build of configuration Release for project tea ****
+make -j40 all 
+Building file: ../src/tea/TEA.cpp
+Invoking: Cross G++ Compiler
+g++ -static -std=c++11 -pthread -fopenmp -D__cplusplus=201103L -I/opt/boost-1.57.0/include -I"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/src" -I/opt/gcc/4.8.5/include/c++/4.8.5 -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/tea/TEA.d" -MT"src/tea/TEA.o" -o "src/tea/TEA.o" "../src/tea/TEA.cpp"
+Finished building: ../src/tea/TEA.cpp
+ 
+Building target: tea
+Invoking: Cross G++ Linker
+g++ -static -std=c++11 -pthread -fopenmp -L/opt/boost-1.57.0/lib/ -L"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/mybamtools/lib" -L"/n/data1/bch/genetics/lee/kyu/eclipse/workspaces/genomics/lib" -o "tea"  ./src/third/faidx.o ./src/third/gzstream.o ./src/third/razf.o ./src/third/xfaidx.o  ./src/tea/ResultCompartor.o ./src/tea/TEA.o ./src/tea/TEAOptionParser.o  ./src/meerkat/preprocess/ReadGroup.o  ./src/meerkat/BWACaller.o  ./src/castle/OptionParser.o  ./src/tea.o   -lbamtools-utils -ltea_lib -lm -lbamtools -lboost_system -lboost_filesystem -lboost_thread -lboost_regex -lrt -lz
+Finished building target: tea
+ 
+15:10:54 **** Incremental Build of configuration Release for project tea ****
+make -j40 all 
+make: Nothing to be done for `all'.
+15:14:09 **** Incremental Build of configuration Release for project tea ****
+make -j40 all 
+make: Nothing to be done for `all'.

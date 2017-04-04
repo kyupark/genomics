@@ -167,6 +167,7 @@ void Bam2Fastq::write_read_group(string& rg, vector<int64_t>& block_boundaries) 
 				string prev_read_name;
 
 				BamAlignment al;
+				string cur_rg;
 
 				string out_path_1(output_filename1 + "." + str_block_id);
 				string out_path_2(output_filename2 + "." + str_block_id);
@@ -218,23 +219,29 @@ void Bam2Fastq::write_read_group(string& rg, vector<int64_t>& block_boundaries) 
 //						pair1_quals.clear();
 //						pair2_quals.clear();
 					}
-					if("(null)" != cur_name) {
-						if (debug) {
-							cout << "[Bam2Fastq.write_read_group] debug-3 " << cur_name << "\n";
-						}
-						if(al.IsFirstMate()) {
+					if (!al.GetReadGroup(cur_rg)) {
+						cur_rg = "none";
+					}
+					if(rg == cur_rg){
+						if("(null)" != cur_name) {
 							if (debug) {
-								cout << "[Bam2Fastq.write_read_group] debug-4 pair 1\n";
+								cout << "[Bam2Fastq.write_read_group] debug-3 " << cur_name << "\n";
 							}
-							pair1_alns.push_back(al);
+							if(al.IsFirstMate()) {
+								if (debug) {
+									cout << "[Bam2Fastq.write_read_group] debug-4 pair 1\n";
+								}
+								pair1_alns.push_back(al);
 
-						} else if(al.IsSecondMate()) {
-							if (debug) {
-								cout << "[Bam2Fastq.write_read_group] debug-5 pair 2\n";
+							} else if(al.IsSecondMate()) {
+								if (debug) {
+									cout << "[Bam2Fastq.write_read_group] debug-5 pair 2\n";
+								}
+								pair2_alns.push_back(al);
 							}
-							pair2_alns.push_back(al);
 						}
 					}
+
 					cur_pos = local_data.Tell();
 					if(cur_pos >= next_block_pos) {
 						break;
@@ -259,10 +266,6 @@ void Bam2Fastq::write_read_group(string& rg, vector<int64_t>& block_boundaries) 
 		castle::ParallelRunner::run_unbalanced_load(n_cores, tasks);
 		castle::IOUtils::plain_file_merge(output_filename1, output_files_1, n_cores, false);
 		castle::IOUtils::plain_file_merge(output_filename2, output_files_2, n_cores, false);
-
-
-
-
 
 
 }

@@ -7678,6 +7678,24 @@ void TEA::generate_cbam_files() {
 	}
 }
 
+/* TODO
+ *
+	string original_input_bam_name = options.prefix + ".bam";
+	string firststat_name = options.prefix + ".firststat";
+	string input_bam_name = options.prefix + ".disc.sorted.bam";
+
+
+ * Sample
+ * MAKE it like this, use
+ * ""string input_bam_name = options.prefix + ".bam";""
+void TEA::_generate_cbam_files_sampe() {
+	string input_bam_name = options.prefix + ".bam";
+
+
+
+Copy like this  void TEA::_generate_cbam_files_mem_alt() {
+ *
+ */
 void TEA::_generate_cbam_files_mem() {
 	string original_input_bam_name = options.prefix + ".bam";
 	string firststat_name = options.prefix + ".firststat";
@@ -8135,6 +8153,7 @@ void TEA::_generate_cbam_files_mem() {
 
 	cout << checker;
 }
+
 
 void TEA::_generate_cbam_files_mem_alt() {
 	string the_prefix = options.prefix;
@@ -10647,7 +10666,8 @@ void TEA::get_cluster_alt(const string& chr, RAMIntervalVector& cl, vector<RAMRe
 //	const bool debug = false;
 	for (int64_t pos_id = 0; pos_id < max_id; ++pos_id) {
 		auto& a_ram = sram[pos_id];
-		const bool debug = chr == "1" && a_ram.pos >= 93518457 && a_ram.pos <= 93519148;
+//		const bool debug = chr == "1" && a_ram.pos >= 1508219 && a_ram.pos <= 1508937;
+		const bool debug = false;
 		if(debug) {
 			cout << a_ram.str() << "\n";
 		}
@@ -11883,9 +11903,9 @@ void TEA::output_clipped_stat(ofstream& out_p_clipped_filename, ofstream& out_n_
 	}
 	bool debug = false;
 	for (auto& an_entry : clipped_entries) {
-//		if("chr1" == an_entry.chr && 47262411 == an_entry.ram_start && 47263181 == an_entry.ram_end) {
-//			debug = true;
-//		}
+		if("chr1" == an_entry.chr && 1508219 == an_entry.ram_start && 1508937 == an_entry.ram_end) {
+			debug = true;
+		}
 		if (1 == an_entry.strand) {
 			int64_t delta = abs(an_entry.clipped_pos_rep - a_stat_entry.pbp);
 			if (delta <= options.jittering) {
@@ -12001,6 +12021,9 @@ void TEA::output_clipped_stat(ofstream& out_p_clipped_filename, ofstream& out_n_
 		}
 	}
 	if (3 == a_stat_entry.conf) {
+		if (debug) {
+			cout << "tsd=" << a_stat_entry.tsd << "\n";
+		}
 		if (a_stat_entry.tsd >= options.min_tsd && a_stat_entry.tsd <= options.max_tsd) {
 			if(debug) {
 				cout << "[TEA.output_clipped_stat] conf 4\n";
