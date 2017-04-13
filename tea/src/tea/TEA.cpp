@@ -12810,6 +12810,7 @@ void TEA::output_mate_fa(boost::unordered_map<string, boost::unordered_map<int8_
 			// ignore the first line;
 			if(!headless) {
 				getline(in_germline, line, '\n');
+				out_germline << line << "\torientation\tpolyA\tpolyT\tpclipped\tnclipped\tprammate\tnrammate\n";
 			}
 			while(getline(in_germline, line, '\n')) {
 				castle::StringUtils::c_string_multi_split(line, delim_tab, data);
@@ -12853,6 +12854,8 @@ void TEA::output_mate_fa(boost::unordered_map<string, boost::unordered_map<int8_
 				string polyA("-");
 				string polyT("-");
 
+//				const bool debug = data[2] == "8446323";
+
 				if ("-" != pclipped) {
 					int64_t the_pos = pclipped.size();
 					the_pos -= 6;
@@ -12867,15 +12870,20 @@ void TEA::output_mate_fa(boost::unordered_map<string, boost::unordered_map<int8_
 				}
 				if ("-" != nclipped) {
 					int64_t the_pos = nclipped.size();
-					the_pos -= 6;
-					if (the_pos < 0) {
-						the_pos = 0;
+					if (the_pos > 6) {
+						the_pos = 6;
 					}
-					string the_suffix = nclipped.substr(the_pos);
+					string the_suffix = nclipped.substr(0, the_pos);
 					size_t tcnt = count(the_suffix.begin(), the_suffix.end(), 'T');
 					if(tcnt >= 5) {
 						polyT = "polyT";
 					}
+
+//					if (debug) {
+//						cout << "[TEA.output_mate_fa] data: " << key_name << "\n";
+//						cout << "[TEA.output_mate_fa] the_pos: " <<  the_pos << "\n";
+//						cout << "[TEA.output_mate_fa] the_suffix: " << the_suffix << "\n";
+//					}
 				}
 				if ("polyA" == polyA && "-" == polyT) {
 					orientation = "+";
