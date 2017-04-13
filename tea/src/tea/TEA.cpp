@@ -13461,8 +13461,11 @@ void TEA::output_mate_fa_v(boost::unordered_map<string, boost::unordered_map<int
 
 			ifstream in_germline(germline_file, ios::binary);
 			ofstream out_germline(germline_contig_file, ios::binary);
-			// ignore the first line;
+
+			// adding header;
 			getline(in_germline, line, '\n');
+			out_germline << line << "\torientation\tpolyA\tpolyT\tpclipped\tnclipped\tprammate\tnrammate\n";
+
 			while(getline(in_germline, line, '\n')) {
 				castle::StringUtils::c_string_multi_split(line, delim_tab, data);
 //				string key_name = options.naive_prefix + "." + data[0] + "." + data[1] + "." + data[2] + "." + data[7];
