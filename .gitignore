@@ -1,4 +1,10 @@
+Release/
+Debug/
+/build/
+
+.log
 .metadata
+
 tmp/
 *.tmp
 *.bak

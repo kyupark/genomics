@@ -18,7 +18,7 @@ ReadClipper::~ReadClipper() {
 void sort(string clipped_file_name){
 	string cmd_sort = "sort -g -k1 -k2 " + clipped_file_name + " -o " + clipped_file_name + "-sorted";
 	system(cmd_sort.c_str());
-	cout << "Sorted " << clipped_file_name << endl;
+	cout << "Sorted " << clipped_file_name << "\n";
 }
 
 void rm_temp_all(string temp_file_name) {
@@ -33,8 +33,9 @@ void rm_temp(string temp_file_name) {
 
 void mkdir(string bam_file_name) {
 	string cmd_rm_debug_dir = "rm -rf " + bam_file_name + "-tea-debug";
-	system(cmd_rm_debug_dir.c_str());
 	string cmd_mk_debug_dir = "mkdir " + bam_file_name + "-tea-debug";
+
+	system(cmd_rm_debug_dir.c_str());
 	system(cmd_mk_debug_dir.c_str());
 }
 
@@ -51,7 +52,7 @@ void join_all(std::vector<std::thread>& tv) {
 void get_refName(string& bam_file_name) {
 	BamReader reader;
 	if ( !reader.Open(bam_file_name)) {
-		cerr << "Could not open input BAM file" << endl;
+		cerr << "Could not open input BAM file\n";
 		//return false;
 	}
 
@@ -60,16 +61,16 @@ void get_refName(string& bam_file_name) {
 	ofstream refName(refName_file_name);
 
 	for (uint64_t i=0; i < refData.size(); ++i) {
-		refName << i << "\t" << refData[i].RefName << endl;
+		refName << i << "\t" << refData[i].RefName << "\n";
 	}
 }
 
 void clip(string& bam_file_name, int64_t minimum_read_length) {
-	cout << "Clipping Reads" << endl;
+	cout << "Clipping Reads\n";
 
 	BamReader reader;
 	if ( !reader.Open(bam_file_name)) {
-		cerr << "Could not open input BAM file" << endl;
+		cerr << "Could not open input BAM file\n";
 		//return false;
 	}
 
@@ -77,9 +78,9 @@ void clip(string& bam_file_name, int64_t minimum_read_length) {
 	string f_clipped_file_name = bam_file_name + "-tea-debug/01-clipped-f";
 	string r_clipped_file_name = bam_file_name + "-tea-debug/01-clipped-r";
 	ofstream f_clipped(f_clipped_file_name);
-	cout << "Writing " << f_clipped_file_name << endl;
+	cout << "Writing " << f_clipped_file_name << "\n";
 	ofstream r_clipped(r_clipped_file_name);
-	cout << "Writing " << r_clipped_file_name << endl;
+	cout << "Writing " << r_clipped_file_name << "\n";
 
 	while(reader.GetNextAlignment(al)) {
 		if (al.IsDuplicate()) {
@@ -105,7 +106,7 @@ void clip(string& bam_file_name, int64_t minimum_read_length) {
 			else if ( type == 'H' || type == 'h') {
 				if (i == 0) {
 					if (!al.IsReverseStrand() && len >= minimum_read_length) {
-						ss_f << refID << "\t" << pos << "\t" << endl;
+						ss_f << refID << "\t" << pos << "\t\n";
 					}
 					else {
 						cursor += len;
@@ -114,7 +115,7 @@ void clip(string& bam_file_name, int64_t minimum_read_length) {
 				}
 				else if (i == al.CigarData.size()-1) {
 					if (al.IsReverseStrand() && len >= minimum_read_length) {
-						ss_r << refID << "\t" << pos+1 << "\t" << endl;
+						ss_r << refID << "\t" << pos+1 << "\t\n";
 					}
 					else {
 						cursor += len;
@@ -126,7 +127,7 @@ void clip(string& bam_file_name, int64_t minimum_read_length) {
 			else if (type == 'S' || type == 's') {
 				if (i == 0) {
 					if (!al.IsReverseStrand() && len >= minimum_read_length) {
-						ss_f << refID << "\t" << pos << "\t" << bases.substr(cursor, len) << endl;
+						ss_f << refID << "\t" << pos << "\t" << bases.substr(cursor, len) << "\n";
 					}
 					else {
 						cursor += len;
@@ -135,7 +136,7 @@ void clip(string& bam_file_name, int64_t minimum_read_length) {
 				}
 				else if (i == al.CigarData.size()-1) {
 					if (al.IsReverseStrand() && len >= minimum_read_length) {
-						ss_r << refID << "\t" << pos+1 << "\t" << bases.substr(cursor, len) << endl;
+						ss_r << refID << "\t" << pos+1 << "\t" << bases.substr(cursor, len) << "\n";
 					}
 					else {
 						cursor += len;
@@ -158,10 +159,10 @@ void clip(string& bam_file_name, int64_t minimum_read_length) {
 	}
 
 
-	cout << "Closing " << f_clipped_file_name << endl;
+	cout << "Closing " << f_clipped_file_name << "\n";
 	f_clipped.close();
 
-	cout << "Closing " << r_clipped_file_name << endl;
+	cout << "Closing " << r_clipped_file_name << "\n";
 	r_clipped.close();
 
 	vector<std::thread> threads;
@@ -189,7 +190,7 @@ void filter(string bam_file_name, char f_or_r, int64_t minimum_base_gap) {
 
 	string filtered_file_name = bam_file_name + "-tea-debug/02-filtered-" + f_or_r ;
 	ofstream filtered(filtered_file_name);
-	cout << "Writing " << filtered_file_name << endl;
+	cout << "Writing " << filtered_file_name << "\n";
 
 	bool is_previous_space = true;
 	int64_t count = 0;
@@ -214,15 +215,15 @@ void filter(string bam_file_name, char f_or_r, int64_t minimum_base_gap) {
 			else if (count == 1) {
 				if (al_current_refID == al_prev_refID
 						&& abs(al_current_pos-al_prev_pos) <= minimum_base_gap) {
-					filtered << al_prev_refID << "\t" << al_prev_pos << "\t" << al_prev_bases << endl;
-					filtered << al_current_refID << "\t" << al_current_pos << "\t" << al_current_bases << endl;
+					filtered << al_prev_refID << "\t" << al_prev_pos << "\t" << al_prev_bases << "\n";
+					filtered << al_current_refID << "\t" << al_current_pos << "\t" << al_current_bases << "\n";
 					is_previous_space = false;
 					++count;
 				}
 				else {
 					count = 1;
 					if (!is_previous_space) {
-						filtered << endl;
+						filtered << "\n";
 						is_previous_space = true;
 					}
 				}
@@ -230,14 +231,14 @@ void filter(string bam_file_name, char f_or_r, int64_t minimum_base_gap) {
 			else if (count > 1) {
 				if (al_current_refID == al_prev_refID
 						&& abs(al_current_pos-al_prev_pos) <= minimum_base_gap) {
-					filtered << al_current_refID << "\t" << al_current_pos << "\t" << al_current_bases << endl;
+					filtered << al_current_refID << "\t" << al_current_pos << "\t" << al_current_bases << "\n";
 					is_previous_space = false;
 					++count;
 				}
 				else {
 					count = 1;
 					if (!is_previous_space) {
-						filtered << endl;
+						filtered << "\n";
 						is_previous_space = true;
 					}
 				}
@@ -258,13 +259,13 @@ void filter(string bam_file_name, char f_or_r, int64_t minimum_base_gap) {
 	al_current_bases = "";
 
 	filtered.close();
-	cout << "Closing " << filtered_file_name << endl;
+	cout << "Closing " << filtered_file_name << "\n";
 
 }
 
 
 void run_filter(string& bam_file_name, int64_t minimum_base_gap) {
-	cout << "Filtering Reads" << endl;
+	cout << "Filtering Reads\n";
 
 	vector<std::thread> threads;
 
@@ -349,8 +350,8 @@ void contiggen(string bam_file_name, char f_or_r, string cap3_options, string re
 
 			if (base == "") continue;
 
-			temp_fa << ">" << chr << ":" << pos << endl;
-			temp_fa << base << endl;
+			temp_fa << ">" << chr << ":" << pos << "\n";
+			temp_fa << base << "\n";
 
 			if (cpos == 0){
 				cpos = pos;
@@ -381,7 +382,7 @@ void contiggen(string bam_file_name, char f_or_r, string cap3_options, string re
 
 				cmd_cap3 = "cap3 " + temp_fa_file_name + " " + cap3_options +
 						" > " + log_file_name;
-				// cout << cmd_cap3 << endl;
+				// cout << cmd_cap3 << "\n";
 				system(cmd_cap3.c_str());
 
 				uint64_t s_chr_index = 0;
@@ -444,14 +445,14 @@ void contiggen(string bam_file_name, char f_or_r, string cap3_options, string re
 						}
 						// TODO handle more than one contig
 						else {
-							cerr << "More than one contig: " << cap_contigs_file_name << endl;
+							cerr << "More than one contig: " << cap_contigs_file_name << "\n";
 							break;
 						}
 					}
 				}
 
-				contigs << ">" << chr << ";" << cpos << ";" << f_or_r << ";" << no_of_reads << ";" << pos_combined << ";" << base_combined << endl;
-				contigs << contig << endl;
+				contigs << ">" << chr << ";" << cpos << ";" << f_or_r << ";" << no_of_reads << ";" << pos_combined << ";" << base_combined << "\n";
+				contigs << contig << "\n";
 
 				rm_temp_all(temp_fa_file_name);
 
@@ -482,15 +483,94 @@ void contiggen(string bam_file_name, char f_or_r, string cap3_options, string re
 //	join_all(threads);
 }
 
+void pickLongestAsContig(string bam_file_name, char f_or_r, string ref_fa_file_name) {
+	vector<std::thread> threads;
+
+	ifstream in(bam_file_name + "-tea-debug/02-filtered-" + f_or_r , ifstream::binary);
+	string line;
+
+	string contigs_file_name = bam_file_name + "-tea-debug/04-contigs-" + f_or_r;
+	ofstream contigs(contigs_file_name);
+
+	string chr;
+	int64_t cpos = 0;
+	int64_t pos;
+	string pos_combined;
+	string base;
+	string base_combined;
+	string base_longest;
+	string contig;
+	int64_t no_of_reads = 0;
+
+	while(getline(in, line)){
+		if (!line.empty()) {
+			++no_of_reads;
+
+			int64_t chr_index = line.find_first_of("\t");
+			int64_t base_index = line.find_last_of("\t");
+
+			chr = line.substr(0, chr_index);
+			pos = boost::lexical_cast<int64_t>(line.substr(chr_index+1, base_index-chr_index-1));
+			base = line.substr(base_index+1);
+
+			if (cpos == 0){
+				cpos = pos;
+			}
+			else if (cpos > pos) {
+				cpos = pos;
+			}
+
+			if (base.length() > base_longest.length()) {
+				base_longest = base;
+			}
+
+			if (pos_combined.length() == 0) {
+				pos_combined = to_string(pos);
+				base_combined = base;
+			}
+			else {
+				pos_combined += "," + to_string(pos);
+				base_combined += "," + base;
+			}
+		}
+		else {
+			// In case, there were only Hard clips(empty bases)
+			if (base_longest != "") {
+				contigs << ">" << chr << ";" << cpos << ";" << f_or_r << ";" << no_of_reads << ";" << pos_combined << ";" << base_combined << "\n";
+				contigs << base_longest << "\n";
+
+			}
+
+			// reinitializing variables
+			chr = "";
+			cpos = 0;
+			pos = 0;
+			pos_combined = "";
+			base = "";
+			base_combined = "";
+			base_longest = "";
+			contig = "";
+			no_of_reads = 0;
+		}
+	}
+	contigs.close();
+
+//	threads.push_back(thread(rm_temp, bam_file_name+ ".clipped_" + f_or_r));
+//	threads.push_back(thread(rm_temp, bam_file_name+ ".filtered_" + f_or_r));
+
+	bwa_aln_samse(contigs_file_name, ref_fa_file_name);
+
+//	join_all(threads);
+}
 
 
 void run_contiggen(string& bam_file_name, string& cap3_options, string& ref_fa_file_name) {
-	cout << "Generating Reads" << endl;
+	cout << "Generating Reads\n";
 
 	string cap3_output_dir = bam_file_name + "-tea-debug/03-cap3-output";
 	string cmd_rmdir = "rm -rf " + cap3_output_dir;
-	system(cmd_rmdir.c_str());
 	string cmd_mkdir = "mkdir " + cap3_output_dir;
+	system(cmd_rmdir.c_str());
 	system(cmd_mkdir.c_str());
 
 	vector<std::thread> threads;
@@ -528,8 +608,8 @@ void filter_family(string& bam_file_name) {
 	string contigs_r_bam_file_name = bam_file_name + "-tea-debug/04-contigs-r.samse-refid";
 	string cTea_file_name = bam_file_name + "-tea-debug/05-combined-cTea-refid";
 
-	cout << "Filtering reads without family and combining f and r files" << endl;
-	string awk_script_file_name = "/home/el114/kyu/bin/script/teaify-0.3.awk";
+	cout << "Filtering reads without family and combining f and r files\n";
+	string awk_script_file_name = "/home/el114/kyu/bin/scripts/teaify-0.3.awk";
 	string cmd_awk = awk_script_file_name + " " +
 			contigs_f_bam_file_name + " " +
 			contigs_r_bam_file_name + " > " + cTea_file_name;
@@ -538,10 +618,10 @@ void filter_family(string& bam_file_name) {
 	sort(cTea_file_name);
 }
 
-void give_refName(string& bam_file_name) {
+void ReadClipper::give_refName(string& bam_file_name) {
 	BamReader reader;
 	if ( !reader.Open(bam_file_name)) {
-		cerr << "Could not open input BAM file" << endl;
+		cerr << "Could not open input BAM file\n";
 		//return false;
 	}
 
@@ -555,30 +635,47 @@ void give_refName(string& bam_file_name) {
 
 	uint64_t first_tab;
 	int64_t refID;
+	string refID_str;
 	string rest_of_line;
 
-	cout << "Giving refName instead of refID" << endl;
+	cout << "Giving refName instead of refID\n";
 	while(getline(in_tea, line)) {
+
 		first_tab = line.find_first_of("\t");
 		if (first_tab == string::npos) {
 			continue;
 		}
-		refID = boost::lexical_cast<int64_t>(line.substr(0, first_tab));
+		refID_str = line.substr(0, first_tab);
 		rest_of_line = line.substr(first_tab);
 
-		output << refData[refID].RefName << rest_of_line << endl;
-	}
-	output.close();
+		try {
+			refID = boost::lexical_cast<int64_t>(refID_str);
+		}
+		catch(boost::bad_lexical_cast& e) {
+			cout << "Error bad_lexical_cast: " << refID_str << "\n";
+			cout << "Error in this line: " << line << "\n";
+			continue;
+		}
 
+		// TODO check if refID is in refData
+		//if (refData.end() != find(refData.begin(), refData.end(), refID)) {
+			output << refData[refID].RefName << rest_of_line << "\n";
+		//}
+	}
+
+	output.close();
 }
 
 
 bool ReadClipper::clip_filter_contiggen(
 	string& bam_file_name,
-	string ref_fa_file_name,
+	string& ref_fa_file_name,
 	int64_t minimum_read_length,
 	int64_t minimum_base_gap,
 	string cap3_options ) {
+
+	string f_contigs_file_name = bam_file_name + "-tea-debug/04-contigs-f";
+	string r_contigs_file_name = bam_file_name + "-tea-debug/04-contigs-r";
 
 	mkdir(bam_file_name);
 
@@ -588,6 +685,33 @@ bool ReadClipper::clip_filter_contiggen(
 	run_filter(bam_file_name, minimum_base_gap);
 
 	run_contiggen(bam_file_name, cap3_options, ref_fa_file_name);
+
+	run_bwa(f_contigs_file_name, ref_fa_file_name);
+	run_bwa(r_contigs_file_name, ref_fa_file_name);
+
+	filter_family(bam_file_name);
+
+	give_refName(bam_file_name);
+
+	return true;
+}
+
+
+bool ReadClipper::clip_filter_pickLongestAsContig(
+	string& bam_file_name,
+	string& ref_fa_file_name,
+	int64_t minimum_read_length,
+	int64_t minimum_base_gap) {
+
+	mkdir(bam_file_name);
+
+	get_refName(bam_file_name);
+
+	clip(bam_file_name, minimum_read_length);
+	run_filter(bam_file_name, minimum_base_gap);
+
+	pickLongestAsContig(bam_file_name, 'f', ref_fa_file_name);
+	pickLongestAsContig(bam_file_name, 'r', ref_fa_file_name);
 
 	string f_contigs_file_name = bam_file_name + "-tea-debug/04-contigs-f";
 	string r_contigs_file_name = bam_file_name + "-tea-debug/04-contigs-r";
@@ -601,6 +725,7 @@ bool ReadClipper::clip_filter_contiggen(
 
 	return true;
 }
+
 
 } /* namespace TeaQ */
 
